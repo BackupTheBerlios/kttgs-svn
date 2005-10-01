@@ -1,0 +1,69 @@
+
+[[This is ROADMAP.TXT]]
+
+No Deadline
+-----------
+* Create a forms that can be filled while protocolling the tour
+* Make this forms an application for PDAs (uah)
+
+Version 0.7
+-----------
+* Create a profile image with pavement info from the xml data.
+* clean up build.xml
+
+Version 0.6
+-----------
+* Create and document a DTD or better a XML Schema.
+
+
+Version 0.5 <----------- CURRENT VERSION
+-----------
+* Improve overall layout (using css)
+* Add image links to the generated HTML output.
+* Add navigation for the HTML output
+* Add information for GPS-Systems (no idea, how to use that kind of information
+  in the future... time will show)
+* Fix a bug in the translation system.(distance, wrong translated in German)
+* Add a windrose image to show direction.
+* Add graphical pavement information 
+
+MILESTONE 0.1
+=============
+* Rethink the total project 
+* Ask for feedback.
+* Tell your feelings to the community
+
+Version 0.4 
+-----------
+* Add (multiple) css support to make the html output more flexible and
+  better looking.
+* Document the usage of the CSS system
+* Add tour type imagine (up to 0.3 this was a fake)
+* Copy original XML file to output so that users can see what is in the XML
+* Add location info (country, region-or-state, city, zip-code): This information
+  can become useful when it comes to let people select a tour from a great 
+  number of tours stored in a database.
+  
+
+Version 0.3
+-----------
+* Let the build system create a new tour guide
+* Write documentation for the end user to let
+  them build their own tour guide
+* Add zip functionality to the build system, so
+  we can package the whole system.
+  
+
+Version 0.2
+-----------
+* Rethink the idea (XML, XSL, build system, whatever)
+* Add localized texts
+* Add first images
+* Improve XSL
+* Add zip functionalily to the build system, so we can
+  zip a whole tour.
+
+Version 0.1
+-----------
+* Do a first proof of concept
+* Ask for some feedback

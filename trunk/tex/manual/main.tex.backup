@@ -1,0 +1,47 @@
+\documentclass[a4paper,10pt,titlepage]{article}
+\usepackage[latin1]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[pdftex]{graphicx}
+% \usepackage{makeidx}
+% \usepackage[pdftex]{hyperref}
+\usepackage{listings}
+\lstset{language=XML,basicstyle=\small}
+
+
+%opening
+\title{knottyTom's MTB Tour Guide System\\Handbuch 0.1pre1 f\"ur Version 0.5}
+\author{knottyTom@go.cc}
+\date{\today}
+
+\begin{document}
+\pagestyle{headings}
+\setlength{\parskip}{5pt}
+\setlength{\parindent}{0pt}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\include{goal}
+
+\newpage
+\include{pre}
+
+\newpage
+\include{installation}
+
+\newpage
+\section{Schnellstart}
+
+\newpage
+\include{tips-and-tricks}
+
+\newpage
+\section{Der Aufbau der  XML-Datei}\label{sec:xml-structure} 
+\include{xml-structure}
+
+
+\end{document}

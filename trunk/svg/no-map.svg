@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="90.000000"
+   inkscape:export-xdpi="90.000000"
+   inkscape:export-filename="/home/tom/src/biketour/svg/no-map.png"
+   sodipodi:docname="no-map.svg"
+   sodipodi:docbase="/home/tom/src/biketour/svg"
+   inkscape:version="0.41"
+   sodipodi:version="0.32"
+   id="svg1291"
+   height="50mm"
+   width="90mm">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:window-y="244"
+     inkscape:window-x="0"
+     inkscape:window-height="537"
+     inkscape:window-width="801"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm"
+     inkscape:cy="90.000000"
+     inkscape:cx="160.00000"
+     inkscape:zoom="1.2000000"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         id="Work6"
+         rdf:about="">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+           id="type9" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <text
+       transform="scale(0.486639,2.054912)"
+       sodipodi:linespacing="100%"
+       id="text1301"
+       y="56.874962"
+       x="32.464264"
+       style="font-size:61.118965;font-style:italic;font-variant:normal;font-weight:bold;font-stretch:normal;fill:#000000;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Nimbus Mono L;text-anchor:start;writing-mode:lr-tb"
+       xml:space="preserve"><tspan
+         y="56.874962"
+         x="32.464264"
+         id="tspan1303"
+         sodipodi:role="line">No Map Available</tspan></text>
+  </g>
+</svg>

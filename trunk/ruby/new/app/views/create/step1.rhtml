@@ -1,0 +1,8 @@
+<h1>Step One Of <%= create_steps_number %> (<%= @session["dir"] %>)</h1>
+<p>
+   <%= start_form_tag :action => 'step2' %>
+   <%= text_field "dir", "dir", "size" => 40, "maxlength" => 40 %>
+   <%= submit_tag "Step Two" %>
+   <%= end_form_tag %>
+</p>
+

@@ -1,0 +1,117 @@
+Hier soll der Aufbau der XML-Datei erl"autert werden. Nachfolgend
+ein Beispiel einer XML-Datei:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tour-guide>
+
+<storage-info>
+   <location 
+          country="de" 
+          region-or-state="state" 
+          city="a city" 
+          zip-code="12345">
+   </location>
+</storage-info>
+
+<general fitness-level="easy" 
+         tech-level="medium" 
+	 type="round" 
+	 duration="01:00hrs">
+   <name>The Name Of The Tour</name>
+   <distance overwerite="no" unit="km">10</distance>
+   <desc>
+       Give a short overview here
+   </desc>
+   <reach>
+      <option name="Car">
+         Explain how to get to the starting point via car.
+      </option>
+      <option name="Train">
+         Explain how to get to the starting point via train.
+      </option>
+      <option name="Plane"> 
+        Explain how to get to the starting point via plane.
+      </option>
+   </reach>
+   <maps>
+      <map>Publisher, Card number 170</map>
+   </maps>
+   <roadmap image="no-map.png"/>
+   <profile />
+</general>
+
+<crosspoints>
+   <crosspoint distance="0" elevation="310" direction="north" 
+               latitude="000" longitude="000">
+      <desc>
+         Describe where to go from here.  
+      </desc>
+      <profile-desc>Alternative text for the profile legend.</profile-desc>
+      <images>
+         <image name="drop.jpg"/>
+      </images>
+   </crosspoint>
+   
+   <track-info pavement="road">
+       <poi distance="000" image="loaded-bike.jpg">
+       <poi distance="000">
+          Point of interest text.
+       </poi>
+   </track-info>
+   
+   <crosspoint distance="500" elevation="315" direction="east" 
+               latitude="000" longitude="000">
+     <desc>Crosspint 2</desc>
+   </crosspoint>
+   
+   <track-info pavement="road">
+       <poi distance="500">Another POI.</poi>
+   </track-info>
+   
+   <crosspoint distance="500" elevation="320" direction="south" 
+               latitude="000" longitude="000">
+     <desc>Crosspoint 3.</desc>
+   </crosspoint>
+   
+   <track-info pavement="forrest.road">
+      <eatndrink distance="500" type="restaurant">
+          A restaurant.
+      </eatndrink>
+   </track-info>
+   
+   <crosspoint distance="800" elevation="330" direction="west" 
+               latitude="000" longitude="000">
+     <desc>Crosspoint 4</desc>
+     <profile-desc>Crosspoint 4 Profile Text</profile-desc>
+   </crosspoint>
+   
+   <track-info pavement="trail">
+      <anecdote distance="All the way">
+          Add an anecdote here
+      </anecdote>
+   </track-info>
+   
+   <crosspoint distance="500" elevation="430" direction="northeast" 
+               latitude="000" longitude="000">
+     <desc>Crosspoint 5</desc>
+   </crosspoint>
+   
+   <track-info pavement="trail"></track-info>
+   
+   <crosspoint distance="200" elevation="310" direction="none" 
+               latitude="000" longitude="000">
+     <desc>Back At Home!</desc>
+   </crosspoint>
+
+</crosspoints>
+
+</tour-guide>
+\end{lstlisting}
+
+\subsection{<tourguide>}
+
+\subsection{<storage-info>}
+
+\subsection{<location>}
+

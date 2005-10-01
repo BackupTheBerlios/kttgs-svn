@@ -1,0 +1,27 @@
+tour.info.heading=The Tour Info Starts Here
+how.to.get.there=How To Get There
+
+fitness.level=Fitness
+tech.level=Tech
+type=Type
+duration=Duration
+overall-distance=Distance
+
+useful.maps=Useful Maps
+overview.map=Overview Map
+crosspoint=Crosspoint
+profile=Profile Of The Tour
+distance=distance
+elevation=elevation
+direction.to.go=direction to go
+track.info=Track Info
+pavement=Pavement
+
+poi=Point of Interest
+eatndrink=EatNDrink
+anecdote=Anecdote
+
+latitude=Latitude
+longitude=Longitude
+
+

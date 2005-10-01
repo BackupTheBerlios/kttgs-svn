@@ -1,0 +1,11 @@
+
+[[This is REQUIREMENTS.TXT]]
+
+This information is meant to be useful for an experienced Java developer.
+
+You will need:
+   * Java 1.4+   (Download: http://java.sun.com/j2se/1.5.0/download.jsp)
+     Choose Java 5.0 JDK
+   * Ant 1.6.2+  (Download: http://ant.apache.org/bindownload.cgi)
+     Version 1.6.5 is the most current at time of this writing: Take
+     this version. The binary release is good enough for our plans.

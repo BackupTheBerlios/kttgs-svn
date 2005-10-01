@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   sodipodi:docname="windrose-base.svg"
+   sodipodi:docbase="/home/tom/src/biketour/svg"
+   inkscape:version="0.41"
+   sodipodi:version="0.32"
+   id="svg1308"
+   height="32px"
+   width="32px">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:window-y="152"
+     inkscape:window-x="173"
+     inkscape:window-height="537"
+     inkscape:window-width="879"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:cy="18.817680"
+     inkscape:cx="16.000000"
+     inkscape:zoom="11.312500"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         id="Work6"
+         rdf:about="">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+           id="type9" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     id="layer1">
+    <path
+       id="path1322"
+       d="M 0.0000000,17.086359 L 10.000000,22.000000 L 15.000000,32.000000 L 20.000000,22.000000 L 30.000000,17.000000 L 20.000000,12.000000 L 15.000000,2.0000000 L 10.000000,12.000000 L 0.0000000,17.086359 z "
+       style="fill:#00dd00;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#00dd00;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" />
+    <path
+       id="path2087"
+       d="M 5.1270718,7.0718232 L 10.000000,16.530387 L 5.0000000,27.000000 L 15.000000,22.000000 L 25.000000,27.000000 L 20.000000,17.000000 L 25.000000,7.0000000 L 15.000000,12.000000 L 5.1270718,7.0718232 z "
+       style="stroke-opacity:1.0000000;stroke-linejoin:miter;stroke-linecap:butt;stroke-width:1.0000000px;stroke:#00dd00;fill-rule:evenodd;fill-opacity:1.0000000;fill:#00dd00" />
+    <text
+       transform="scale(0.950649,1.051913)"
+       sodipodi:linespacing="100%"
+       id="text2089"
+       y="6.4016128"
+       x="12.956532"
+       style="writing-mode:lr-tb;text-anchor:start;font-family:Century Schoolbook L;stroke-opacity:1.0000000;stroke-linejoin:miter;stroke-linecap:butt;stroke-width:1.0000000px;stroke:none;fill-opacity:1.0000000;fill:#006a00;font-stretch:normal;font-weight:normal;font-variant:normal;font-style:normal;font-size:6.2040153"
+       xml:space="preserve"><tspan
+         style="fill-opacity:1.0000000;fill:#006a00"
+         y="6.4016128"
+         x="12.956532"
+         id="tspan2091"
+         sodipodi:role="line">N</tspan></text>
+  </g>
+</svg>

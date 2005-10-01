@@ -1,0 +1,25 @@
+
+<h1>Tour Overview</h1>
+<% if @flash["description_error"] %>
+<p class="warning">
+   Error: <%= @flash["description_error"] %>
+</p>
+<% end %>
+<p>
+   <table>
+     <tr> <td>TID:</td> <td><%= session['tid'] %> </td></tr>
+     <tr> <td>Country:</td> <td><%= session['tour'].storageInfoLocation.country %>    </td></tr>
+     <tr> <td>State/region:</td> <td><%= session['tour'].storageInfoLocation.state %> </td></tr>
+     <tr> <td>City:</td>    <td><%= session['tour'].storageInfoLocation.city %>       </td></tr>
+     <tr> <td>ZIP:</td>     <td><%= session['tour'].storageInfoLocation.zip %>        </td></tr>
+   </table>
+<p>
+<p>
+   <%= session['tour'].general.desc %>
+</p>
+<p>
+<%= link_to '[Back]', {:action => 'index'} %>
+<%= link_to '[Edit]', {:action => 'index'} %> 
+</p>
+
+

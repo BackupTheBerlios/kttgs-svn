@@ -1,0 +1,14 @@
+\section{Bevor es los geht}
+Ich schreib' ja nicht alles selber. Ein paar Sachen brauchen
+wir schon noch.
+
+\subsection{Java 1.4++}
+http://java.sun.com/j2se/1.5.0/download.jsp
+     
+Choose Java 5.0 JDK
+
+\subsection{Jakarta ANT 1.6.2+}
+http://ant.apache.org/bindownload.cgi
+
+Version 1.6.5 is the most current at time of this writing: Take
+this version. The binary release is good enough for our plans.

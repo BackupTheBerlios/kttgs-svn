@@ -1,0 +1,345 @@
+<project name="Bike Tour XML" default="dist" basedir=".">
+
+    <!-- Give user a chance to override without editing this file
+       (and without typing -D each time it compiles it) -->
+    <property file="build.properties"/>
+    <property file="${user.home}/.ant.properties"/>
+
+    <!-- Name of project and version, used to create filenames -->
+    <property name="Name" value="Bike Tour XML"/>
+    <property name="name" value="BikeTourXml"/>
+    <property name="version" value="0.5"/>
+        
+    <!-- set global properties for this build -->
+    <!-- <property name="src.dir" value="src"/> -->
+    <property name="src.dir" value="src"/>
+    <property name="lib.dir" value="lib"/>
+    <property name="build.dir" value="build"/>
+    <property name="dist.dir" value="../${name}"/>
+    <property name="doc.dir" value="doc"/>
+    <property name="doc.api.dir" value="${doc.dir}/api"/>
+    <property name="dist.api.dir" value="${dist.dir}/doc/api"/>
+    <property name="dist.doc.dir" value="${dist.dir}/doc"/>
+    <property name="dist.src.dir" value="${dist.dir}/src"/>
+    <property name="dist.lib.dir" value="${dist.dir}/lib"/>
+
+    <property name="javadoc" value="http://java.sun.com/j2se/1.3/docs/api"/>
+    <property name="javac.debug" value="on"/>
+    <property name="javac.optimize" value="off"/>
+    
+    <property name="xml.dir" value="xml"/>
+    <property name="xml.tour.dir" value="${xml.dir}/${tour.name}"/>
+    <property name="html.dir" value="html"/>
+    <property name="html.tour.dir" value="${html.dir}/${tour.name}"/>
+    <property name="xsl.dir" value="xsl"/>
+    <property name="images" value="images"/>
+    <property name="images.intern" value="images_intern"/>
+    
+
+    <path id="lib.class.path">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <patternset id="support.files">
+        <include name="**/*.dtd"/>
+        <include name="**/*.xml"/>
+        <include name="**/*.xslt"/>
+        <exclude name="${build.dir}/**/*"/>
+        <exclude name="${doc.dir}/**/*"/>
+        <exclude name="classes/**/*"/>
+        <exclude name="build.xml"/>
+        <exclude name="cirrus/hibernate/tools/codegen/test/*"/>
+    </patternset>
+
+    <patternset id="doc.files">
+        <include name="**/*.css"/>
+        <include name="**/*.jpg"/>
+        <include name="**/*.gif"/>
+        <include name="**/*.html"/>
+        <include name="**/*.pdf"/>
+        <include name="**/*.eps"/>
+    </patternset>
+    
+    <patternset id="source.files">
+        <include name="**/*.java"/>
+        <include name="**/*.properties"/>
+        <include name="**/*.ccf"/>
+    </patternset>
+
+    <!-- Tasks -->
+
+    <target name="clean" description="Cleans up build and dist directories">
+        <delete dir="${build.dir}"/>
+        <!-- <delete dir="${dist.dir}"/> -->
+    </target>
+
+    <target name="init" description="Initialize the build">
+        <tstamp>
+            <format property="subversion" pattern="yyyy-MM-dd hh:mm:ss"/>
+        </tstamp>
+        <echo message="Build ${Name}-${version} (${subversion})"/>
+        <mkdir dir="${build.dir}"/>
+        <copy todir="${build.dir}">
+            <fileset dir="${src.dir}">
+                <patternset refid="support.files"/>
+            </fileset>
+            <fileset dir=".">
+            	<include name="readme.txt"/>
+            	<include name="lgpl.txt"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="compile" depends="init" description="Compile the Java source code (remember to put j2ee.jar, junit.jar in the /lib directory)">
+		<javac
+        	srcdir="${src.dir}" 
+        	destdir="${build.dir}"
+        	classpathref="lib.class.path" 
+        	debug="${javac.debug}"
+        	optimize="${javac.optimize}"
+        	nowarn="on"/>
+    </target>
+    
+    <target name="copysource" description="Copy sources to dist dir">
+        <mkdir dir="${dist.src.dir}"/>
+        <copy todir="${dist.src.dir}">
+            <fileset dir="${src.dir}">
+                <patternset refid="source.files"/>
+                <patternset refid="support.files"/>
+            </fileset>
+        </copy>
+    </target>
+
+    <target name="copylib" description="Copy jars to lib dir">
+        <mkdir dir="${dist.lib.dir}"/>
+        <copy todir="${dist.lib.dir}">
+            <fileset dir="${lib.dir}">
+                <include name="*.jar"/>
+                <exclude name="j2ee.jar"/>
+                <exclude name="junit.jar"/>
+                <exclude name="log4j.jar"/>
+                <include name="*.txt"/>
+            </fileset>
+        </copy>
+    </target>
+    
+    <target name="jar" depends="compile" description="Build the distribution .jar file">
+        <mkdir dir="${dist.dir}"/>
+        <jar jarfile="${dist.dir}/${name}.jar" basedir="${build.dir}"/>
+    </target>
+
+    <target name="javadoc" description="Compile the Javadoc API documentation to dist dir">
+        <mkdir dir="${dist.api.dir}"/>
+        <javadoc
+        	sourcepath="${src.dir}"
+        	packagenames="*"
+        	classpathref="lib.class.path" 
+        	destdir="${dist.api.dir}" 
+        	use="true" 
+        	protected="true" 
+        	version="true" 
+        	windowtitle="${Name} API Documentation" 
+        	Overview="${doc.api.dir}/package.html"
+        	doctitle="${Name} API Documentation"
+        	stylesheetfile="${doc.api.dir}/jdstyle.css"
+        	link="${javadoc}">
+        	 
+                <!--
+        	<group title="Core API" packages="cirrus.hibernate:cirrus.hibernate.metadata"/>
+        	<group title="Extension API" packages="cirrus.hibernate.id:cirrus.hibernate.connection:cirrus.hibernate.transaction:cirrus.hibernate.type:cirrus.hibernate.sql:cirrus.hibernate.cache:cirrus.hibernate.loader:cirrus.hibernate.persister:cirrus.hibernate.engine"/>
+        	<group title="Extras" packages="cirrus.hibernate.odmg:cirrus.hibernate.cfg:cirrus.hibernate.ejb:cirrus.hibernate.jmx"/>
+                -->
+        </javadoc>
+        	
+    </target>
+
+	<target name="docbook" description="Compile docbook documentation to html and copy to dist dir">
+		<java classname="com.icl.saxon.StyleSheet" fork="true" dir="${doc.dir}/reference/src/">
+			<arg value="-o"/>
+			<arg value="../html_single/index.html"/>
+			<arg value="index.xml"/>
+			<arg value="../xsl/html/docbook.xsl"/>
+		</java>
+		<java classname="com.icl.saxon.StyleSheet" fork="true" dir="${doc.dir}/reference/src/">
+			<arg value="index.xml"/>
+			<arg value="../xsl/html/chunk.xsl"/>
+		</java>
+	</target>
+
+
+	<target name="aft" description="Compile aft documentation to html and copy to dist dir">
+		<mkdir dir="${dist.doc.dir}"/>
+		<apply executable="aft" dir="${doc.dir}" vmlauncher="false"> <!-- relative="true" -->
+			<fileset dir="${doc.dir}">
+				<include name="*.aft"/>
+			</fileset>
+		</apply>
+		<copy todir="${dist.doc.dir}">
+			<fileset dir="${doc.dir}">
+				<patternset refid="doc.files"/>
+				<exclude name="api/**/*"/>
+				<exclude name="reference/src/**/*"/>
+				<exclude name="reference/images/*.pdf"/>
+			</fileset>
+		</copy>
+	</target>
+	
+	
+	<target name="dist" depends="jar,javadoc,copysource,copylib,aft" description="Build everything">
+		<zip zipfile = "${dist.dir}.zip">
+			<zipfileset prefix="${name}-${version}" dir="${dist.dir}"/>
+		</zip>
+		<tar tarfile = "${dist.dir}.tar" >
+			<tarfileset prefix="${name}-${version}" dir="${dist.dir}"/>
+		</tar>
+		<gzip src="${dist.dir}.tar" zipfile="${dist.dir}.tar.gz"/>
+		<delete file = "${dist.dir}.tar"/>
+	</target>
+	
+    <target name="info" description="Echoes useful system properties">
+        <echo message="java.vm.info=${java.vm.info}"/>
+        <echo message="java.vm.name=${java.vm.name}"/>
+        <echo message="java.vm.vendor=${java.vm.vendor}"/>
+        <echo message="java.vm.version=${java.vm.version}"/>
+        <echo message="os.arch=${os.arch}"/>
+        <echo message="os.name=${os.name}"/>
+        <echo message="os.version=${os.version}"/>
+        <echo message="java.home = ${java.home}"/>
+        <echo message="java.class.path = ${java.class.path}"/>
+        <echo message="build.compiler = ${build.compiler}"/>
+        <echo message="file.encoding=${file.encoding}"/>
+        <echo message="user.home = ${user.home}"/>
+        <echo message="user.language=${user.language}"/>
+    </target>
+    
+    <target name="junit" depends="compile">
+        <mkdir dir="test_output"/>
+        <junit printsummary="yes" haltonfailure="yes">
+            <classpath>
+                <fileset dir="${lib.dir}">
+                    <include name="**/*.jar"/>
+                </fileset>
+                <pathelement path="${build.dir}"/>
+                <pathelement path="."/>
+            </classpath>
+            <formatter type="plain"/>
+            <formatter type="xml"/>
+            <batchtest fork="yes" todir="test_output" haltonfailure="no">
+                <fileset dir="${build.dir}">
+                    <include name="cirrus/hibernate/test/*Test.class"/>
+                    <exclude name="cirrus/hibernate/test/*PerformanceTest.class"/>
+                </fileset>
+            </batchtest>
+        </junit>
+    </target>
+    
+    <target name="junitreport" depends="junit">
+        <junitreport todir="./test_output">
+            <fileset dir="test_output">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="./test_output"/>
+        </junitreport>
+    </target>
+    
+    <target name="gen-skeleton">
+       <mkdir dir="${xml.tour.dir}"/>
+       <mkdir dir="${xml.tour.dir}/${images}"/>
+       <mkdir dir="${xml.tour.dir}/${images.intern}"/>
+       <copy tofile="${xml.tour.dir}/${tour.name}.xml" file="${xml.dir}/skeleton.xml"/>
+       <copy tofile="${xml.tour.dir}/${images}/no-map.png" file="${images}/no-map.png"/>
+    </target>
+    
+    <target name="gen-tour-html" depends="gen-lang-template, run.profile.image" description="Generate HTML">
+       <mkdir dir="${html.tour.dir}"/>
+       <mkdir dir="${html.tour.dir}/${images.intern}"/>
+       <mkdir dir="${html.tour.dir}/${images}"/>
+       <copy todir="${html.tour.dir}/${images.intern}">
+			<fileset dir="images/">
+				<include name="*.gif"/>
+            <include name="*.png"/>
+			</fileset>
+		</copy>
+      <copy todir="${html.tour.dir}/${images}">
+			<fileset dir="${xml.tour.dir}/${images}">
+				<include name="*"/>
+			</fileset>
+		</copy>
+      <copy 
+          file="css/${css}" 
+          tofile="${html.tour.dir}/biketour.css"
+      />
+      <copy todir="${html.tour.dir}">
+			<fileset dir="${xml.tour.dir}/">
+				<include name="*.xml"/>
+			</fileset>
+		</copy>
+       <xslt 
+          basedir="${xml.tour.dir}"
+          includes="*.xml"
+          destdir="${html.tour.dir}"
+          extension=".html" 
+          style="${xsl.dir}/biketour-all.${lang}.xsl">
+       </xslt>
+    </target>
+    
+    <target name="zip-tour-html" depends="gen-tour-html">
+       <zip zipfile = "${tour.name}.${lang}.zip">
+			<zipfileset dir="${html.tour.dir}"/>
+		</zip>
+    </target>
+    
+    <target name="zip-project">
+       <zip zipfile = "${name}-${version}.zip">
+			<zipfileset dir="../biketour">
+            <exclude name="*.zip"/>
+            <exclude name="lib/"/>
+            <exclude name="html/"/>
+            <exclude name="xml/nuremberg_zoo_round/"/>
+            <exclude name="xml/my_test_tour/"/>
+            <exclude name="MTG/"/>
+            <!-- <include name="xml/skeleton.xml"/> -->
+         </zipfileset>
+		</zip>
+      <zip zipfile = "${name}-${version}-libs.zip">
+			<zipfileset dir="../biketour">
+            <include name="lib/*.jar"/> 
+         </zipfileset>
+		</zip>
+    </target>
+    
+    <target name="gen-lang-template">
+       <copy file="${xsl.dir}/biketour-all.template.xsl" tofile="${xsl.dir}/biketour-all.${lang}.xsl">
+         <filterset begintoken="$" endtoken="$">
+             <filtersfile file="${xsl.dir}/lang_texts_${lang}.txt"/>
+         </filterset>
+		</copy>
+    </target>
+    
+    
+    <target name="run.profile.image" depends="run.profile.digester" description="Create profile image.">
+      <mkdir dir="${html.tour.dir}/${images.intern}"/>
+		<java fork="yes" classname="mtg.knottytom.profile.ProfileImageMain">
+         <arg value="${xml.tour.dir}/profile.map.txt"/>
+         <arg value="${html.tour.dir}/${images.intern}/profile.png"/>
+        	<classpath> 
+            <pathelement path="${lib.class.path}"/>
+            <pathelement location="${build.dir}"/>
+         </classpath>
+      </java>
+    </target>
+    
+    <target name="run.profile.digester" description="Create profile data.">
+		<java fork="yes" classname="mtg.knottytom.profile.ProfileDigesterDriver">
+         <arg value="${xml.tour.dir}/${tour.name}.xml"/>
+         <arg value="${xml.tour.dir}/profile.map.txt"/>
+        	<classpath refid="lib.class.path"> 
+         </classpath>
+         <classpath> 
+            <pathelement location="${build.dir}"/>
+         </classpath>
+      </java>
+    </target>
+</project>

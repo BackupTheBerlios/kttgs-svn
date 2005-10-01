@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry output="build" kind="src" path="src"/>
+	<classpathentry sourcepath="JRE_SRC" kind="var" rootpath="JRE_SRCROOT" path="JRE_LIB"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/commons-digester-1.7.jar"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/commons-logging-api.jar"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/tom/src/biketour-eclipse/lib/log4j-1.2.11.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

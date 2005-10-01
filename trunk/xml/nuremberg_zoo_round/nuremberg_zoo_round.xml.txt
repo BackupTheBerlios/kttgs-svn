@@ -1,0 +1,185 @@
+
+<tour-guide>
+
+<storage-info>
+   <location 
+          country="de" 
+          region-or-state="bavaria" 
+          city="Nuremberg" 
+          zip-code="90xxx">
+   </location>
+</storage-info>
+
+<!-- levels: easy, medium, high. extrem -->
+<!-- type: downhill (dh.gif), pointtopoint (tourab.gfi), round (tourr.gif), trail (trail.gif)-->
+<general fitness-level="easy" tech-level="medium" type="round" duration="01:00hrs">
+   <name>Nuernberger Tiergarten --- Kleiner Trial inklusive 'Roller Coaster'</name>
+   <distance overwerite="no" unit="km">10</distance>
+   <desc>
+       Wir starten am Tiergarten, fahren etwas uphill durch die Stromschneisse,
+       dann den 'Mini-DH' runter. Von da geht's ab in den sog. 'Roller Coaster'
+       Am Schluss fahren wird entlang der Pegnitz zurueck zum Tiergarten. Alles
+       ganze easy (nix fuer _echte_ Downhiller!), den 'DH' kann man schieben und 
+       ausserdem sind da immer Chicken Runs im Wald... an der Felsenstelle nehm' 
+       ich den auch immer.;-) Viel Spass! --- Bitte nehmt das hier nicht ernst!
+       Das ist nur eine Testdatei, um das System zu zeigen.
+   </desc>
+   <reach>
+      <option name="Mit dem Auto">Auf der A3 aus Richtung Wuerzburg oder Passau kommend
+         bei Nuernberg/Moegeldorf (Nummer ?) abfahren (Richtung Zentrum). 
+         Immmer geradeaus
+         bis man zu einem sehr grossen Platz kommt. An der Kreuzung (da steht
+         der Tiergarten schon angeschrieben) links. Dann immer geradeaus. Diese
+         Strasse fuehrt direkt zum Tiergarten. Parkplatz suchen und ab Richtung
+         Eingang.
+      </option>
+      <option name="Per Zug">Am Nuernberg Hbf aussteigen. Dann mit der Strassenbahn
+         (Nummer ?) direkt zum Tiergarten.
+      </option>
+      <option name="Und das Flugzeug"> Am Flughafen NUE aussteigen... ;) Dann via U-Bahn
+         zum Hbf. Ab dann: siehe 'Per Zug'.
+      </option>
+   </reach>
+   <maps>
+      <map>Kompass, Karte 170</map>
+   </maps>
+   <roadmap image="map.jpg"/>
+   <profile />
+</general>
+
+<!--
+Add: 
+   latitude
+   longitude
+-->
+<crosspoints>
+   <!-- first cross point, starting, distance should always be null! -->
+   <crosspoint distance="0" elevation="310" direction="north" latitude="000" longitude="000">
+      <desc>
+         Wenn wir vor dem Tiergarteneingang stehen und auf diesen blicken, dann
+         fahren wir nach rechts auf der Teerstrasse. Vorher kommt ein kleiner
+         Drop (Bild 1). Das ist ein beliebtest Piknik-Gebiet. Achtet bittet 
+         auf die Piknik-Fahrer (Bild 2)...  
+      </desc>
+      <profile-desc>Wir starten am Tiergarten</profile-desc>
+      <images>
+         <image name="drop.jpg"/>
+         <image name="loaded-bike2.jpg"/>
+      </images>
+   </crosspoint>
+   
+   <!-- some track info follows -->
+   <!-- 
+     Pavement types: road, forrest.road, trail
+   -->
+   <track-info pavement="road">
+       <!-- point of interest -->
+       <poi distance="000" image="loaded-bike.jpg">
+          Manche Fahrer ueberschaetzen die Anforderung der Tour etwas.
+       </poi>
+   </track-info>
+   
+   <!-- next crosspoint, distance measured to last crosspoint, see that we have
+        profile information, pavement will be taken from track-info.
+   -->
+   <crosspoint distance="500" elevation="315" direction="east" latitude="000" longitude="000">
+     <desc>
+        Hier geht's nach rechts auf der geteerten Strasse in den Wald.     
+        </desc>
+     <images>
+         <image name="right-turn.jpg"/>
+      </images>
+   </crosspoint>
+   
+   <track-info pavement="road">
+       <!-- point of interest -->
+       <poi distance="500" image="downhill-bike.jpg">
+          Ab und zu trifft man hier auch Downhillers...
+       </poi>
+   </track-info>
+   
+   <crosspoint distance="500" elevation="320" direction="south" latitude="000" longitude="000">
+     <desc>
+        Hier sollte der Teerweg langsam in Schotter uebergehen.     
+      </desc>
+   </crosspoint>
+   
+   <track-info pavement="forrest.road">
+      <eatndrink distance="500" type="restaurant" image="irish-pub.jpg">
+          Netter Pub... mitten im Wald?!?
+       </eatndrink>
+   </track-info>
+   
+   <crosspoint distance="800" elevation="330" direction="west" latitude="000" longitude="000">
+     <desc>
+        Wir kommen an eine Kreuzung und sollten uns direkt unter der 
+        Stromleitung befinden. Links geht es die Stromschneisse hoch. Wir
+        fahren das am rechten Waldrand hoch: Da ist der Trial! "Dumm ist nur,
+        wer Dummes tut" (Gruss an alle die links hochfahren... >;-).
+      </desc>
+      <profile-desc>Die Stromschneisse... los geht's</profile-desc>
+   </crosspoint>
+   
+   <track-info pavement="trail">
+      <anecdote distance="gesamter Weg" image="drop.jpg">
+          Wenn's gar nicht mehr geht, dann einfach ab in den Wald. Der ist
+          nicht dicht... man kann da auch gut schieben (und wird nicht gesehen
+          ;-).
+      </anecdote>
+      <anecdote distance="gesamter Weg" image="">
+          Mal was ohne Bild.
+      </anecdote>
+   </track-info>
+   
+   <crosspoint distance="500" elevation="430" direction="northeast" latitude="000" longitude="000">
+     <desc>
+        Ok, wir sind oben :-)) Jetzt am Schotterweg nach rechts. Gleich kommt
+        der 'Roller Coaster'!
+     </desc>
+     <images>
+         <image name="right-turn.jpg"/>
+      </images>
+   </crosspoint>
+   
+   
+   <!-- and so on .... -->
+   
+   <track-info pavement="trail">
+   </track-info>
+   
+   <crosspoint distance="200" elevation="600" direction="southeast" latitude="000" longitude="000">
+     <desc>
+        Ein letzter Anstieg.
+     </desc>
+   </crosspoint>
+   
+   <track-info pavement="forrest.road">
+   </track-info>
+   
+   <crosspoint distance="200" elevation="310" direction="southwest" latitude="000" longitude="000">
+     <desc>
+        Ein suedwest Punkt.
+     </desc>
+   </crosspoint>
+   
+   <track-info pavement="trail">
+   </track-info>
+   
+   <crosspoint distance="300" elevation="600" direction="northwest" latitude="000" longitude="000">
+     <desc>
+        Ein nordwest Punkt.
+     </desc>
+   </crosspoint>
+   
+   <track-info pavement="road">
+   </track-info>
+   
+   <crosspoint distance="200" elevation="310" direction="none" latitude="000" longitude="000">
+     <desc>
+        Back At Home!
+     </desc>
+   </crosspoint>
+
+</crosspoints>
+
+</tour-guide>

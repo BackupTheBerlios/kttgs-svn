@@ -1,0 +1,83 @@
+
+[[This is 5MINS-TO-YOUR-GUIDE.TXT]]
+
+Please remember: You will need to have Java and a working Ant build system! 
+
+1) Edit The File build.properties
+---------------------------------
+In the file 'build.properties' you have to modify 2 entries.
+
+1a) tour.name (A Directory Name)
+................................
+This entry specifies not the real tour name, but a subdirectory that will be
+used to hold the data of your tour. Choose a good directory name and do not
+use whitespaces here!
+
+Example (use this for your first tests):
+tour.name=my_first_tour
+
+1b) lang (Language)
+...................
+If you are german set this entry to 'lang=de'. If you want to generate a
+non-german version set this entry to 'lang=en' (which will create an 
+english tour guide).
+
+Example:
+lang=de
+
+
+2) Generate A Skeleton
+----------------------
+From the information given ind the file 'build.properties', you can generate
+a skeleton of the XML file you will use for further editing. On the command line 
+(aka DOS box under windows) type the following command:
+
+   ant gen-skeleton
+   
+This will generate a directory named 'tour.name' (this is the name you specified
+in step 1!) in the 'xml' directory. And there you will find a file named 
+'tour.name'.xml (e.g., my_first_tour.xml). This is the file that describes our
+new tour.
+
+Dont open this file now. We will look at it in step 4. Because in the next 
+step all the magic will happen... 
+
+3) Generate HTML
+----------------
+On the command like (aka DOS box under Windows) type:
+
+   ant gen-tour-html
+   
+And the magic has happened: In the directory 'html' you will now find a 
+subdirectory called 'tour.name' (this is the name you specified in step 1!).
+And there you will find a file named 'tour.name'.html (e.g., my_first_tour.html). 
+This is the HTML representation of our new tour. Open this file in the HTML 
+browser of your choice. Does it look good? I guess, that is does not. Remember 
+this is version 0.5 of this project! ;-)
+
+
+4) Write Your First Guide
+-------------------------
+To modify the tour information edit the XML file as described in 2).
+
+I am aware of the fact, that you need more information on the tags and 
+attributes you can use in the XML file (while I have used everthing possible for 
+now in the skeleton). This documentation is planned for version 0.6 or 0.7 
+(coming soon). See ROADMAP.TXT for more information.
+
+5) Add Images
+-------------
+Since version 0.5 images are support. Add them to the folder 'images'. Do
+NOT USE the folder 'images_intern'!!!. In the XML you address these pictures
+by their file names. Do not add the folder name 'images'.
+
+6) Repeat
+---------
+Repeat with 3) thru 5) until you are satiesfied... ;-)
+
+7) Modify The Look
+------------------
+It's simple to change the design of the outputted HTML: You just need some
+knowledge of the CSS language. For further information please read
+THE-CSS-SYSTEM.TXT.
+

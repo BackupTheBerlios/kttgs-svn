@@ -1,0 +1,9 @@
+section-0=road,0,310
+section-1=road,500,315
+section-2=road,500,320
+section-3=forrest.road,800,330
+section-4=trail,500,430
+section-5=trail,200,600
+section-6=forrest.road,200,310
+section-7=trail,300,600
+section-8=road,200,310
