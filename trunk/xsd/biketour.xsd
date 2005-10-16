@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema targetNamespace="http://kttgs.berlios.de/TourGuideSchema.xsd" elementFormDefault="qualified"
+	xmlns="http://kttgs.berlios.de/TourGuideSchema.xsd" xmlns:mstns="http://kttgs.berlios.de/TourGuideSchema.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="tourguide">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="guide">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="author" type="xs:string" />
+							<xs:element name="copyright" type="xs:string" />
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="tour">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="name" type="xs:string" />
+							<xs:element name="description" type="xs:string" />
+							<xs:element name="location" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="zipcode" type="xs:string" />
+										<xs:element name="city" type="xs:string" />
+										<xs:element name="region" type="xs:string" />
+										<xs:element name="country" type="xs:string" />
+										<xs:element name="reach" minOccurs="0" maxOccurs="1">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="train" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="plane" type="xs:string" minOccurs="0" maxOccurs="1" />
+													<xs:element name="car" type="xs:string" minOccurs="0" maxOccurs="1" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="distance">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="unit" use="required" type="unitType" />
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="fitnesslevel" type="levelType" />
+							<xs:element name="techlevel" type="levelType" />
+							<xs:element name="type" type="tourType" />
+							<xs:element name="duration" type="xs:time" />
+							<xs:element name="maps">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="map" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="publisher" type="xs:string" use="required" />
+														<xs:attribute name="isbn" type="xs:string" use="required" />
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="crosspoints">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="crosspoint" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="description" type="xs:string" />
+													<xs:element name="distance" type="xs:decimal" />
+													<xs:element name="direction" type="directionType" />
+													<xs:element name="elevation" type="xs:int" />
+													<xs:element name="latitude" type="xs:int" />
+													<xs:element name="longtitude" type="xs:int" />
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="levelType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="low" />
+			<xs:enumeration value="medium" />
+			<xs:enumeration value="high" />
+			<xs:enumeration value="extreme" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="unitType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="km" />
+			<xs:enumeration value="miles" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="reachType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="train" />
+			<xs:enumeration value="plane" />
+			<xs:enumeration value="car" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="tourType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="downhill" />
+			<xs:enumeration value="pointtopoint" />
+			<xs:enumeration value="round" />
+			<xs:enumeration value="trail" />
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="directionType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="north" />
+			<xs:enumeration value="east" />
+			<xs:enumeration value="south" />
+			<xs:enumeration value="west" />
+			<xs:enumeration value="northeast" />
+			<xs:enumeration value="southeast" />
+			<xs:enumeration value="southwest" />
+			<xs:enumeration value="northwest" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
