@@ -1,70 +1,108 @@
-<!ELEMENT anecdote ( #PCDATA ) >
-<!ATTLIST anecdote distance CDATA #REQUIRED >
-<!ATTLIST anecdote image CDATA #REQUIRED >
 
-<!ELEMENT crosspoint ( desc | images | profile-desc )* >
+<!-- start always w/ <tour-guide> -->
+<!ELEMENT tour-guide ( storage-info, general, crosspoints ) >
+
+<!--
+   <storage-info> is thought to be helpful for a "tour guide provider"
+   with a number of tours.
+   For now we only have <location>. Tags could be added in the future.
+-->
+<!ELEMENT storage-info ( location ) >
+<!ELEMENT location EMPTY >
+<!ATTLIST location city CDATA #REQUIRED >
+<!ATTLIST location country CDATA #REQUIRED >
+<!ATTLIST location region-or-state CDATA #REQUIRED >
+<!ATTLIST location zip-code CDATA #REQUIRED >
+
+<!-- THE <general> SECTION (start) -->
+<!--
+   Next element to come is <general>. Thru the attributes you specify
+   some helpful information wether the tour is managable by the user.
+   Via "duration" give a time in hours that it takes for YOU.
+-->
+<!ELEMENT general ( name, distance, desc, reach, maps, roadmap, profile ) >
+<!ATTLIST general duration CDATA #REQUIRED >
+<!ATTLIST general fitness-level (easy,medium,high,extrem) #REQUIRED >
+<!ATTLIST general tech-level (easy,medium,high,extrem) #REQUIRED >
+<!ATTLIST general type (downhill,pointtopoint,round,trail) "round" >
+
+<!ELEMENT name ( #PCDATA ) >
+
+<!ELEMENT distance ( #PCDATA ) >
+<!-- currently unused -->
+<!ATTLIST distance overwrite CDATA #REQUIRED >
+<!-- give a unit like: km, miles, whatever... -->
+<!ATTLIST distance unit NMTOKEN #REQUIRED >
+
+<!ELEMENT desc ( #PCDATA ) >
+
+<!ELEMENT reach ( option+ ) >
+<!ELEMENT option ( #PCDATA ) >
+<!ATTLIST option name CDATA #REQUIRED >
+
+<!ELEMENT maps ( map ) >
+<!ELEMENT map ( #PCDATA ) >
+
+<!ELEMENT roadmap EMPTY >
+<!ATTLIST roadmap image NMTOKEN #REQUIRED >
+
+<!ELEMENT profile EMPTY >
+
+<!-- THE <general> SECTION (end) -->
+
+
+<!-- THE <crosspoints> SECTION (start) -->
+
+<!ELEMENT crosspoints ( (crosspoint, track-info)+, crosspoint ) >
+
+<!ELEMENT crosspoint ( desc, images, profile-desc? ) >
 <!ATTLIST crosspoint direction NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint distance NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint elevation NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint latitude NMTOKEN #FIXED "000" >
 <!ATTLIST crosspoint longitude NMTOKEN #FIXED "000" >
 
-<!ELEMENT crosspoints ( crosspoint | track-info )* >
+<!ELEMENT track-info ( anecdote | eatndrink | poi )* >
+<!ATTLIST track-info pavement NMTOKEN #REQUIRED >
 
-<!ELEMENT desc ( #PCDATA ) >
 
-<!ELEMENT distance ( #PCDATA ) >
-<!ATTLIST distance overwerite NMTOKEN #REQUIRED >
-<!ATTLIST distance unit NMTOKEN #REQUIRED >
+
+<!ELEMENT anecdote ( #PCDATA ) >
+<!ATTLIST anecdote distance CDATA #REQUIRED >
+<!ATTLIST anecdote image CDATA #REQUIRED >
 
 <!ELEMENT eatndrink ( #PCDATA ) >
 <!ATTLIST eatndrink distance NMTOKEN #REQUIRED >
 <!ATTLIST eatndrink image NMTOKEN #REQUIRED >
 <!ATTLIST eatndrink type NMTOKEN #REQUIRED >
 
-<!ELEMENT general ( name, distance, desc, reach, maps, roadmap, profile ) >
-<!ATTLIST general duration NMTOKEN #REQUIRED >
-<!ATTLIST general fitness-level NMTOKEN #REQUIRED >
-<!ATTLIST general tech-level NMTOKEN #REQUIRED >
-<!ATTLIST general type NMTOKEN #REQUIRED >
 
 <!ELEMENT image EMPTY >
 <!ATTLIST image name NMTOKEN #REQUIRED >
 
 <!ELEMENT images ( image+ ) >
 
-<!ELEMENT location EMPTY >
-<!ATTLIST location city NMTOKEN #REQUIRED >
-<!ATTLIST location country NMTOKEN #REQUIRED >
-<!ATTLIST location region-or-state NMTOKEN #REQUIRED >
-<!ATTLIST location zip-code NMTOKEN #REQUIRED >
 
-<!ELEMENT map ( #PCDATA ) >
 
-<!ELEMENT maps ( map ) >
 
-<!ELEMENT name ( #PCDATA ) >
 
-<!ELEMENT option ( #PCDATA ) >
-<!ATTLIST option name CDATA #REQUIRED >
+
+
 
 <!ELEMENT poi ( #PCDATA ) >
 <!ATTLIST poi distance NMTOKEN #REQUIRED >
 <!ATTLIST poi image NMTOKEN #REQUIRED >
 
-<!ELEMENT profile EMPTY >
+
 
 <!ELEMENT profile-desc ( #PCDATA ) >
 
-<!ELEMENT reach ( option+ ) >
 
-<!ELEMENT roadmap EMPTY >
-<!ATTLIST roadmap image NMTOKEN #REQUIRED >
 
-<!ELEMENT storage-info ( location ) >
 
-<!ELEMENT tour-guide ( storage-info, general, crosspoints ) >
 
-<!ELEMENT track-info ( anecdote | eatndrink | poi )* >
-<!ATTLIST track-info pavement NMTOKEN #REQUIRED >
 
+
+
+
+<!-- THE <crosspoints> SECTION (end) -->
