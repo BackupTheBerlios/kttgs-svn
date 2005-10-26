@@ -22,9 +22,9 @@
 -->
 <!ELEMENT general ( name, distance, desc, reach, maps, roadmap, profile ) >
 <!ATTLIST general duration CDATA #REQUIRED >
-<!ATTLIST general fitness-level (easy,medium,high,extrem) #REQUIRED >
-<!ATTLIST general tech-level (easy,medium,high,extrem) #REQUIRED >
-<!ATTLIST general type (downhill,pointtopoint,round,trail) "round" >
+<!ATTLIST general fitness-level (easy|medium|high|extrem) #REQUIRED >
+<!ATTLIST general tech-level (easy|medium|high|extrem) #REQUIRED >
+<!ATTLIST general type (downhill|pointtopoint|round|trail) "round" >
 
 <!ELEMENT name ( #PCDATA ) >
 
@@ -32,7 +32,7 @@
 <!-- currently unused -->
 <!ATTLIST distance overwrite CDATA #REQUIRED >
 <!-- give a unit like: km, miles, whatever... -->
-<!ATTLIST distance unit NMTOKEN #REQUIRED >
+<!ATTLIST distance unit CDATA #REQUIRED >
 
 <!ELEMENT desc ( #PCDATA ) >
 
@@ -40,12 +40,25 @@
 <!ELEMENT option ( #PCDATA ) >
 <!ATTLIST option name CDATA #REQUIRED >
 
+<!-- Advise maps in this section -->
 <!ELEMENT maps ( map ) >
+<!-- Enter any data that helps the user buy or order this map. -->
 <!ELEMENT map ( #PCDATA ) >
 
+<!-- 
+  Point to a map of the tour here. Put the image of the map in
+  directory images. Refer to to the name without the the directory
+  name. Assume the we have ./images/my_map.jpg. Use it like that:
+  <roadmap image="my_map.jpg"/>
+-->
 <!ELEMENT roadmap EMPTY >
-<!ATTLIST roadmap image NMTOKEN #REQUIRED >
+<!ATTLIST roadmap image CDATA #REQUIRED >
 
+<!-- 
+  A grpahical profile of the tour will be automatically generated
+  from the tour data. Just use the tag as-is (<profile/>). If you
+  leave out the tag you will see no profile image!
+-->
 <!ELEMENT profile EMPTY >
 
 <!-- THE <general> SECTION (end) -->
@@ -53,28 +66,28 @@
 
 <!-- THE <crosspoints> SECTION (start) -->
 
-<!ELEMENT crosspoints ( (crosspoint, track-info)+, crosspoint ) >
+<!ELEMENT crosspoints ( crosspoint, (track-info, crosspoint)* ) >
 
-<!ELEMENT crosspoint ( desc, images, profile-desc? ) >
+<!ELEMENT crosspoint ( desc, images?, profile-desc? ) >
 <!ATTLIST crosspoint direction NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint distance NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint elevation NMTOKEN #REQUIRED >
 <!ATTLIST crosspoint latitude NMTOKEN #FIXED "000" >
 <!ATTLIST crosspoint longitude NMTOKEN #FIXED "000" >
 
+<!ELEMENT profile-desc ( #PCDATA ) >
+
 <!ELEMENT track-info ( anecdote | eatndrink | poi )* >
 <!ATTLIST track-info pavement NMTOKEN #REQUIRED >
 
-
-
 <!ELEMENT anecdote ( #PCDATA ) >
 <!ATTLIST anecdote distance CDATA #REQUIRED >
-<!ATTLIST anecdote image CDATA #REQUIRED >
+<!ATTLIST anecdote image CDATA #IMPLIED >
 
 <!ELEMENT eatndrink ( #PCDATA ) >
-<!ATTLIST eatndrink distance NMTOKEN #REQUIRED >
-<!ATTLIST eatndrink image NMTOKEN #REQUIRED >
-<!ATTLIST eatndrink type NMTOKEN #REQUIRED >
+<!ATTLIST eatndrink distance CDATA #REQUIRED >
+<!ATTLIST eatndrink image CDATA #IMPLIED >
+<!ATTLIST eatndrink type (restaurant|pub|gas-station|hut) #REQUIRED>
 
 
 <!ELEMENT image EMPTY >
@@ -83,26 +96,9 @@
 <!ELEMENT images ( image+ ) >
 
 
-
-
-
-
-
-
 <!ELEMENT poi ( #PCDATA ) >
-<!ATTLIST poi distance NMTOKEN #REQUIRED >
-<!ATTLIST poi image NMTOKEN #REQUIRED >
-
-
-
-<!ELEMENT profile-desc ( #PCDATA ) >
-
-
-
-
-
-
-
+<!ATTLIST poi distance CDATA #REQUIRED >
+<!ATTLIST poi image CDATA #IMPLIED>
 
 
 <!-- THE <crosspoints> SECTION (end) -->
