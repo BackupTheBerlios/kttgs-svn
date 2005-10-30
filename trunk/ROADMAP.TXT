@@ -8,12 +8,16 @@ No Deadline
 
 Version 0.7
 -----------
-* Create a profile image with pavement info from the xml data.
 * clean up build.xml
+* Build a graphical user interface using Ruby On Rails
+* Document and explain the installation of Ruby and ROR
 
 Version 0.6
 -----------
-* Create and document a DTD or better a XML Schema.
+* Create and document a DTD
+* Create a profile image with pavement info from the xml data.
+* Document the usage of the XML
+* Move everything from the old project website to BerliOS
 
 
 Version 0.5 <----------- CURRENT VERSION
