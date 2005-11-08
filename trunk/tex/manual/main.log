@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  4 SEP 2005 21:11
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  8 NOV 2005 21:57
 entering extended mode
 **main.tex
 (./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
@@ -113,7 +113,7 @@ File: lstlang1.sty 2004/02/13 1.2 listings language file
 (/usr/share/texmf/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2004/02/13 1.2 (Carsten Heinz)
 ) (./main.aux (./goal.aux)
-(./pre.aux) (./installation.aux) (./tips-and-tricks.aux) (./xml-structure.aux))
+(./pre.aux) (./installation.aux) (./quick-start.aux) (./tips-and-tricks.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -128,6 +128,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
+
 (/usr/share/texmf/tex/context/base/supp-pdf.tex
 (/usr/share/texmf/tex/context/base/supp-mis.tex
 loading : Context Support Macros / Missing
@@ -182,15 +183,16 @@ Overfull \hbox (3.44269pt too wide) in paragraph at lines 27--29
 u verbessern,
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 57.
-(/usr/share/texmf/tex/latex/base/omscmr.fd
+[2
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
- [2
-
-] [3]) [4]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+ [3]) [4]
 \openout2 = `pre.aux'.
 
  (./pre.tex) [5
@@ -209,60 +211,59 @@ ava-Bibliotheken
 ) [6
 
 
-] [7
-
 ]
+\openout2 = `quick-start.aux'.
+
+ (./quick-start.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 48.
+
+Overfull \hbox (18.32794pt too wide) in paragraph at lines 65--67
+/ecrm1000/ich-nis /ectt1000/./html/MeineSuperTour /ecrm1000/sollte sich eine Da
+tei na-mens /ectt1000/MeineSuperTour.html
+ []
+
+[7
+
+
+]) [8]
 \openout2 = `tips-and-tricks.aux'.
 
- (./tips-and-tricks.tex) [8
-
-] [9
-
-]
-\openout2 = `xml-structure.aux'.
-
- (./xml-structure.tex
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 6.
-
-Overfull \hbox (71.15181pt too wide) in paragraph at lines 50--51
-[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
- []
-
-[10
-
-]
-Overfull \hbox (4.56752pt too wide) in paragraph at lines 72--73
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+ (./tips-and-tricks.tex) [9
 
 
-Overfull \hbox (26.76228pt too wide) in paragraph at lines 95--96
-[][][][][][][][][][][][][][][][][][][][][][][][] 
- []
+] [10
 
-) [11] [12] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux)
-(./tips-and-tricks.aux) (./xml-structure.aux)) ) 
+] (./main.aux (./goal.aux) (./pre.aux)
+(./installation.aux) (./quick-start.aux) (./tips-and-tricks.aux)) ) 
 Here is how much of TeX's memory you used:
- 2825 strings out of 95257
- 36080 string characters out of 1188231
- 108385 words of memory out of 1000001
- 5833 multiletter control sequences out of 10000+50000
- 15714 words of font info for 37 fonts, out of 500000 for 1000
+ 2807 strings out of 95257
+ 36219 string characters out of 1188231
+ 90389 words of memory out of 1000001
+ 5807 multiletter control sequences out of 10000+50000
+ 18638 words of font info for 42 fonts, out of 500000 for 1000
  86 hyphenation exceptions out of 1000
- 29i,6n,59p,202b,645s stack positions out of 1500i,500n,5000p,200000b,5000s
- 61 PDF objects out of 300000
+ 29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 59 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
-{/usr/share/texmf/dvips/tetex/b
-bad153f.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb> </var/cache/fon
-ts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </var/cache/fonts/pk/ljfour/jknappen/e
-c/ecrm0500.600pk>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</usr/share/texmf/f
-onts/type1/bluesky/cm/cmr10.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecti10
-00.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> </var/cache/fonts
-/pk/ljfour/jknappen/ec/ecbx1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/
-ecbx1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </var/c
-ache/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jk
-nappen/ec/ecsl1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
-k> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on main.pdf (13 pages, 153292 bytes).
+ </var/cache
+/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk>{/usr/share/texmf/dvips/tetex/bbad1
+53f.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb> </var/cache/fonts/p
+k/ljfour/jknappen/ec/ecrm0900.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ec
+rm0500.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cac
+he/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </var/cache/fonts/pk/ljfour/jkna
+ppen/ec/ecrm0600.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk>
+{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</usr/share/texmf/fonts/type1/bluesk
+y/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> </var/cache
+/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </var/cache/fonts/pk/ljfour/jknapp
+en/ec/ecbx1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> <
+/var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljf
+our/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecsl100
+0.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </var/cache/fo
+nts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on main.pdf (11 pages, 184813 bytes).

@@ -1,0 +1,72 @@
+\section{Schnellstart}
+
+OK. Ihr habt also alles installiert. Jetzt sollte man auch mal
+testen, ob alles funktioniert \ldots und natürlich auch um seine
+Neugierde zu befriedigen ;-)
+
+Führt einfach die nachfolgenden Schritte aus. Falls etwas nicht 
+funktionieren sollte, dann schreibt eine Mail an mich und
+beschreibt die Fehlermeldung(en). Ich hoffe aber natürlich
+inständig, daß alles klappt. In dem Fall könnt ihr mir auch
+eine Mail schreiben. Einfach um mein Ego zu stärken \ldots
+
+Im folgenden muss ich mich oftmals auf Verzeichnisse beziehen.
+Wenn ich \texttt{./} (Punkt Slash) schreibe, dann meine ich damit 
+\textbf{das} Verzeichnis, in dem ihr die Zip-Dateien ausgepackt 
+habt. Alle Aktionen die nachfolgend durchgeführt werden, müssen in 
+diesem Verzeichnis gestartet werden.
+
+\subsection{Build.properties anpassen}
+Wir haben eine zentrale Steuerungsdatei, die kontrolliert welche
+Verzeichnisstruktur angelegt, welche Sprache und welches Layout
+(für HTML) verwendet werden soll. Dies Datei heißt
+\texttt{./build.properties}. Bitte öffnet und editiert diese
+mit eurem Lieblingseditor\footnote{Du nimmst jetzt den \texttt{vi}? Cool!}.
+
+Die Datei \texttt{./build.properties} sollte dann wie folgt aussehen
+(die Zeilennummern hab' ich nur zur Orientierung da, sie gehören
+\textbf{nicht} in die Datei!):
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+tour.name=MeineSuperTour
+# Currently supported languages: de, en
+lang=de
+css=biketour.css
+\end{lstlisting}
+
+\subsection{Skeleton generieren}
+Soweit so gut. Aber um irgendwas zu sehen brauchen wir ja
+'ne Tourbeschreibung. Woher nehmen, wenn nicht zaubern? Einfach
+zaubern! Das System kann ein Grundgerüst (englisch: 
+\textit{Skeleton}) anlegen. Dazu ist nur der nachfolgende 
+Aufruf von Ant notwendig. Ab auf die Kommandozeile und
+den nachfolgenden Befehl ausführen:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-skeleton
+\end{lstlisting}
+
+\subsection{HTML-Ausgabe erzeugen}
+Das Erzeugen der HTML-Datei ist genauso einfach. Auf der
+Kommandozeile tippt ihr einfach diesen Befehl:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-tour-html
+\end{lstlisting}
+
+Da könnten jetzt zwei Warnungen (englisch: \textit{warning(s)})
+auftauchen. Die könnt ihr ignorieren.
+
+\subsection{HTML im Browser bewundern}
+\textit{Jetzt kommt der große Moment, wo der Frosch ins Wasser 
+springt.} In dem Verzeichnis \texttt{./html/MeineSuperTour} sollte 
+sich eine Datei namens \texttt{MeineSuperTour.html} befinden.
+
+Öffnet diese Datei (\texttt{./html/MeineSuperTour/MeineSuperTour.html})
+in einem Browser eurer Wahl\footnote{Getestet hab' ich nur: Firefox 
+und Konquerer}. Wenn ihr jetzt 'ne Beschreibung einer fiktiven Tour
+seht, dann läuft das System. \textbf{Glückwunsch!}
+
