@@ -1,11 +1,14 @@
 package mtg.knottytom.profile;
 
-import java.io.FileInputStream;
-import java.io.IOException;
+import mtg.knottytom.profile.ProfileSection;
+
+import java.util.Properties;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Properties;
+// import java.util.Vector;
 import java.util.TreeMap;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 
 /**
@@ -32,7 +35,7 @@ public class ProfileParser {
    /**
     *  Description of the Method
     */
-   public void parse(TreeMap sections, HashMap config) throws IOException {
+   public void parse(TreeMap<Integer,ProfileSection> sections, HashMap<String, String> config) throws IOException {
       String key;
       String value;
       Properties properties = new Properties();
@@ -50,7 +53,7 @@ public class ProfileParser {
       }
    }
    
-   private void handleSection(String key, String val, TreeMap secs) {
+   private void handleSection(String key, String val, TreeMap<Integer, ProfileSection> secs) {
       // System.out.println("Handle sections: " + val);
       // System.out.println("Key: " + key);
       String spl[];
@@ -66,11 +69,10 @@ public class ProfileParser {
       // System.out.println("Spl2[1]: " + spl2[1]);
       int pos = Integer.parseInt(spl2[1]);
       // System.out.println("Pos: " + pos);
-      
-      secs.put(new Integer(pos), new ProfileSection(spl[0], dist, height));
+      secs.put(pos, new ProfileSection(spl[0], dist, height));
    }
    
-   private void handleConf(String key, String val, HashMap conf) {
+   private void handleConf(String key, String val, HashMap<String,String> conf) {
       // System.out.println("Handle conf: " + val);
       conf.put(key, val);
    }

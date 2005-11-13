@@ -1,16 +1,18 @@
 package mtg.knottytom.profile;
 
-import java.util.Iterator;
+import mtg.knottytom.profile.ProfileSection;
+
 import java.util.Vector;
+import java.util.Iterator;
 
 public class ProfileDigesterContainer {
    
-   Vector pss;
+   Vector<ProfileSection> pss;
    String storedPavement = "road";
    
    public ProfileDigesterContainer() {
       // System.out.println("ProfileDigesterContainer()");
-      pss = new Vector();
+      pss = new Vector<ProfileSection>();
    }
    
    public void addProfileSection(ProfileSection ps) {

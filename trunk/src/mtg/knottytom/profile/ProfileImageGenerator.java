@@ -1,15 +1,21 @@
 package mtg.knottytom.profile;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Graphics2D;
-import java.awt.Stroke;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import mtg.knottytom.profile.ProfileSection;
+
+// import java.util.Properties;
+// import java.util.Enumeration;
+// import java.util.HashMap;
+// import java.util.Vector;
 import java.util.Iterator;
 import java.util.TreeMap;
-
+// import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.File;
+import java.awt.image.BufferedImage;
+import java.awt.Graphics2D;
+import java.awt.Color;
+import java.awt.Stroke;
+import java.awt.BasicStroke;
 import javax.imageio.ImageIO;
 
 

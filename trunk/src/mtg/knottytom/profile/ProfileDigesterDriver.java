@@ -1,11 +1,11 @@
 package mtg.knottytom.profile;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.PrintStream;
-import java.util.Iterator;
+import mtg.knottytom.profile.ProfileSection;
+import mtg.knottytom.profile.ProfileDigesterContainer;
 
-import org.apache.commons.digester.Digester;
+import org.apache.commons.digester.*;
+import java.io.*;
+import java.util.*;
 
 public class ProfileDigesterDriver {
    
