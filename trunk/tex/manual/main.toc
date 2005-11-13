@@ -18,3 +18,7 @@
 \contentsline {subsection}{\numberline {5.2}Formulare verwenden (TODO)}{9}
 \contentsline {subsection}{\numberline {5.3}Tourerfassung mit MP3-Player (TODO)}{9}
 \contentsline {section}{\numberline {6}Der Aufbau der XML-Datei}{10}
+\contentsline {subsection}{\numberline {6.1}<tourguide>}{10}
+\contentsline {subsection}{\numberline {6.2}<storage-info> (<location>)}{11}
+\contentsline {subsection}{\numberline {6.3}<general>}{11}
+\contentsline {subsection}{\numberline {6.4}<crosspoints>}{11}
