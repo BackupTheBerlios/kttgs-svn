@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  13 NOV 2005 21:31
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  21 NOV 2005 22:32
 entering extended mode
 **main.tex
 (./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
@@ -248,33 +248,38 @@ em schlieÿen-
 [10
 
 
-]) [11] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux)
+] [11]
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 168--169
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[12] [13]) [14] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux)
 (./quick-start.aux) (./tips-and-tricks.aux) (./xml-structure.aux)) ) 
 Here is how much of TeX's memory you used:
- 2836 strings out of 95257
- 36592 string characters out of 1188231
- 91659 words of memory out of 1000001
- 5828 multiletter control sequences out of 10000+50000
- 19339 words of font info for 43 fonts, out of 500000 for 1000
+ 2861 strings out of 95257
+ 36871 string characters out of 1188231
+ 100659 words of memory out of 1000001
+ 5852 multiletter control sequences out of 10000+50000
+ 20025 words of font info for 44 fonts, out of 500000 for 1000
  86 hyphenation exceptions out of 1000
  29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
- 63 PDF objects out of 300000
+ 74 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
  </var/cach
-e/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk> </var/cache/fonts/pk/ljfour/jknap
-pen/ec/ectt0800.600pk>{/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/te
-xmf/fonts/type1/bluesky/cm/cmsy9.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/e
-crm0900.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </var/ca
-che/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jkn
-appen/ec/ecrm0800.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk
-> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk>{/usr/share/texmf/dvip
-s/tetex/f7b6d320.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/s
-hare/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> </var/cache/fonts/pk/ljfour/jknap
-pen/ec/ecti1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> 
-</var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </var/cache/fonts/pk/lj
-four/jknappen/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm10
-00.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </var/cache/f
-onts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen
-/ec/ecrm1728.600pk>
-Output written on main.pdf (12 pages, 205507 bytes).
+e/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </var/cache/fonts/pk/ljfour/jknap
+pen/ec/ecbi1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk>{
+/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/texmf/fonts/type1/bluesky
+/cm/cmsy9.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </var/ca
+che/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </var/cache/fonts/pk/ljfour/jkn
+appen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk
+> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </var/cache/fonts/pk/
+ljfour/jknappen/ec/ecrm0700.600pk>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</
+usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/
+bluesky/cm/cmsy10.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> 
+</var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </var/cache/fonts/pk/lj
+four/jknappen/ec/ecbx1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx14
+40.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </var/cache/f
+onts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </var/cache/fonts/pk/ljfour/jknappen
+/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on main.pdf (15 pages, 236931 bytes).

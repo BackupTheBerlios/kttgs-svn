@@ -20,5 +20,13 @@
 \contentsline {section}{\numberline {6}Der Aufbau der XML-Datei}{10}
 \contentsline {subsection}{\numberline {6.1}<tourguide>}{10}
 \contentsline {subsection}{\numberline {6.2}<storage-info> (<location>)}{11}
-\contentsline {subsection}{\numberline {6.3}<general>}{11}
-\contentsline {subsection}{\numberline {6.4}<crosspoints>}{11}
+\contentsline {subsection}{\numberline {6.3}Ein Wort zu Bildern}{11}
+\contentsline {subsection}{\numberline {6.4}<general>}{12}
+\contentsline {subsubsection}{\numberline {6.4.1}Die Attribute von <general>}{13}
+\contentsline {subsubsection}{\numberline {6.4.2}<distance>}{13}
+\contentsline {subsubsection}{\numberline {6.4.3}<desc>}{13}
+\contentsline {subsubsection}{\numberline {6.4.4}<reach>}{13}
+\contentsline {subsubsection}{\numberline {6.4.5}<maps>}{13}
+\contentsline {subsubsection}{\numberline {6.4.6}<roadmaps>}{13}
+\contentsline {subsubsection}{\numberline {6.4.7}<profile/>}{13}
+\contentsline {subsection}{\numberline {6.5}<crosspoints>}{13}

@@ -104,8 +104,174 @@ lange? Wie kommt man an den Startpunkt? Gibt's ne Karte?
 Ja, das braucht man alles. Deswegen gibt es das Tag
 \texttt{<general>}\ldots
 
-\subsection{<general>}
+\subsection{Ein Wort zu Bildern}
+Hmm, den Abschnitt \texttt{<general>} hab' ich ins n"achste
+Kapitel verschoben. Ich mu"s noch schnell was zu Bildern
+im Allgemeinen sagen. Dauert nicht lange, ist aber wichtig
+f"ur \textbf{alle} nachfolgenden Abschnitte.
 
+Nat"urlich unterst"utzt das System die Verwendung von Bildern.
+Ohne Bilder w"are das Ganze wohl nur, wenn "uberhaupt, die
+H"alfte wert. Dazu m"ussen die Bilder aber auch  gefunden
+werden. Aber wie?
+
+So: In dem Verzeichnis in dem die XML-Datei, "uber die wir
+hier ja reden, zu liegen kommt, existiert \footnote{Wenn das
+das Grundger"ust via \texttt{ant gen-skeleton} angelegt wurde,
+dann existiert es automatisch. Ansonsten mu"s es per Hand
+z.B. mit dem Befehl \texttt{mkdir images} unter linux-artigen
+Systemen bzw. \texttt{md images} auf einem Windows-Rechner
+angelegt werden.} ein Unterverzeichnis namens \texttt{images}.
+Hier hinein werden alle Bilder kopiert, die wir sp"ater
+ben"otigen.
+
+Gut, jetzt h"atten wird alle Bilder in unserem Verzeichnis.
+Aber wie geben wir sie in der XML-Datei an? Auch das ist
+ziemlich einfach. Schauen wir uns mal ein Beispiel an:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<image name="big_drop.jpg"/>
+\end{lstlisting}
+
+Das war's auch schon. Die Bilder werden \textbf{ohne} Angabe
+des Verzeichnisses (\texttt{images}) durch die Notation des 
+Bildnamens eingetragen. An welchen Stellen das n"otig/m"oeglich
+ist, werden wir im weiteren Verlauf erfahren.
+
+\subsection{<general>}
+Ok. Nach dem Exkurs zur Angabe von Bildern, widmen wir uns
+jetzt dem n"achsten Abschnitt der XML-Datei: \texttt{<general>}.
+Erstmal wieder ein Beispiel:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general 
+   fitness-level="easy" 
+   tech-level="medium" 
+   type="round" 
+   duration="01:00hrs">
+   
+   <name>Nuernberger Tiergarten 
+         --- Kleiner Trial inklusive 'Roller Coaster'
+   </name>
+   <distance unit="km">10</distance>
+   <desc>
+       Wir starten am Tiergarten, fahren etwas uphill durch 
+       die Stromschneisse, dann den 'Mini-DH' runter...
+   </desc>
+   <reach>
+      <option name="Mit dem Auto">Auf der A3 aus Richtung 
+         Wuerzburg oder Passau kommend bei Nuernberg/Moegeldorf 
+	 abfahren...
+      </option>
+      <option name="Per Zug">Am Nuernberg Hbf aussteigen. Dann 
+         mit der Strassenbahn direkt zum Tiergarten.
+      </option>
+   </reach>
+   <maps>
+      <map>Kompass, Karte 170</map>
+   </maps>
+   <roadmap image="map.jpg"/>
+   <profile />
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+
+\subsubsection{Die Attribute von <general>}
+Wie man aus dem Beispiel ersieht, hat <general> vier
+Attribute. Diese dienen dem/r Anwender(in) dazu, zu 
+entscheiden, ob die Tour f"uer ihn/sie geeignet ist.
+
+Die Angaben hier sind nicht ganz einfach, aber wichtig.
+Wenn du topfit bist, die Tour aber auch f"ur dich
+hart war, dann bringt das hier zum Ausdruck. Wenn
+der Downhill f"ur dich nicht ganz einfach, aber du
+technisch nicht so perfekt bist, dann setze den 
+\texttt{tech-level} nicht gleich auf \texttt{extrem}.
+
+Nachfolgend die Attribute und ihre Bedeutung (was man
+hierf"ur angeben kann, wird im Anschlu"s erl"autert):
+\begin{enumerate}
+\item fitness-level: Wie fit muss man f"uer die Tour sein?
+\item tech-level: Wie hoch ist der technische Anspruch?
+      Knifflige Wurzelpassagen? Extreme Downhills (mit
+      fetten Drops)?
+\item type: Rundtour, Single Trial, \ldots
+\item duration: Dauer der Tour. Als du sie gefahren
+      bist.
+\end{enumerate}
+
+
+So und nun zu den restlichen Tags die innerhalb von
+<general> verwendet werden k"onnen oder m"ussen\ldots
+
+\subsubsection{<distance>}
+\subsubsection{<desc>}
+\subsubsection{<reach>}
+\subsubsection{<maps>}
+\subsubsection{<roadmaps>}
+
+\subsubsection{<profile/>}
 
 
 \subsection{<crosspoints>}
+Mann-o-mann, so 'ne Menge Zeugs zu tippen. Wann kommt jetzt
+eigentlich die Beschreibung der Tour? Voila\ldots jetzt!
+
+Innerhalb des <crosspoints>-Abschnitts werden alle relevanten
+Wegpunkte der Tour beschrieben (und, optional, noch vieles
+mehr).
+
+Hier mal ein Beispiel:
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   <crosspoint 
+      distance="300" elevation="600" 
+      direction="northwest" 
+      latitude="000" longitude="000">
+     <desc> Ein nordwest Punkt.</desc>
+     <profile-desc>
+        Die Stromschneisse... los geht's
+     </profile-desc>
+   </crosspoint>
+   
+   <track-info pavement="road">
+      <anecdote distance="gesamter Weg" image="drop.jpg">
+          Wenn's gar nicht mehr geht, dann einfach ab in 
+	  den Wald. Der ist nicht dicht... man kann da 
+	  auch gut schieben (und wird nicht gesehen ;-).
+      </anecdote>
+   </track-info>
+   
+   <crosspoint distance="200" elevation="310" 
+               direction="none" 
+	       latitude="000" longitude="000">
+     <desc>Back At Home!</desc>
+   </crosspoint>
+<crosspoints>
+<tourguide>
+\end{lstlisting}
+
+WTF\footnote{Engl.: \textit{What the fuck}, Ausruf des Erstaunten\ldots ;-)}?
+Jaja, schaut kompliziert aus, is' aber auch blo"s mit Wasser
+gekocht.
+
+Gehen wir das mal analytisch an. Innerhalb von <crosspoints> 
+scheint es ein paar andere relevante Tags zu geben. Na, also:
+Richtig erkannt. Und es handelt sich dabei nur um zwei
+\begin{itemize}
+\item <crosspoint> und
+\item <track-info>
+\end{itemize}
+
+
+
+
+
