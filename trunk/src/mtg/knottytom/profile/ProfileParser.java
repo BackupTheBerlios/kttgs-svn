@@ -1,14 +1,11 @@
 package mtg.knottytom.profile;
 
-import mtg.knottytom.profile.ProfileSection;
-
-import java.util.Properties;
-import java.util.Enumeration;
-import java.util.HashMap;
-// import java.util.Vector;
-import java.util.TreeMap;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Properties;
+import java.util.TreeMap;
 
 
 /**

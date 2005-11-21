@@ -1,11 +1,7 @@
 package mtg.knottytom.profile;
 
-import mtg.knottytom.profile.ProfileParser;
-import mtg.knottytom.profile.ProfileImageGenerator;
-
 import java.io.IOException;
 import java.util.HashMap;
-// import java.util.Vector;
 import java.util.TreeMap;
 
 public class ProfileImageMain 

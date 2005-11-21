@@ -1,9 +1,7 @@
 package mtg.knottytom.profile;
 
-import mtg.knottytom.profile.ProfileSection;
-
-import java.util.Vector;
 import java.util.Iterator;
+import java.util.Vector;
 
 public class ProfileDigesterContainer {
    
