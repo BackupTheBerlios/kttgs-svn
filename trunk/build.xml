@@ -342,4 +342,15 @@
          </classpath>
       </java>
     </target>
+
+    <target name="run.config" description="Run GUI Configurator.">
+	<java fork="yes" classname="org.swixat.SwiXAT">
+        <arg value="./swixat/configurator/xml/context1.xml"/>
+       	<classpath refid="lib.class.path"></classpath>
+        <classpath> 
+           <pathelement location="${build.dir}"/>
+	   <pathelement location="."/>
+        </classpath>
+       </java>
+    </target>
 </project>
