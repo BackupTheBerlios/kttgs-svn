@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame id="hello" visible="true" size="650,300" 
+       title="knottyTom's Tour Guide Configurator"
+       layout="BorderLayout" Maximizable="false" Closable="true"
+       Resizable="true" >
+       
+   <ScriptingDataSource id="WORDS" script="bsh/getWords.bsh"/>
+   <ScriptingDataSource id="LANGS" script="bsh/getLanguages.bsh"/>
+   <ContextDataSource   id="DATA"  context="data"/>
+   
+   <panel constraints="BorderLayout.NORTH">
+      <label text="Configure Your New Tour"></label>
+   </panel>
+   
+   <panel constraints="BorderLayout.WEST" layout="GridBagLayout">
+   
+   <label text="Select the language that will be used in the output of your tour.">
+      <gridbagconstraints insets="10,10,10,10" gridx="0" gridy="1" anchor="GridBagConstraints.WEST"/>
+   </label>
+   
+   
+   <panel layout="GridBagLayout">
+        <gridbagconstraints gridx="0" gridy="2" anchor="GridBagConstraints.WEST"/>
+	<label id="label1" origin="$WORDS/language">
+	   <gridbagconstraints insets="10,10,10,10" gridx="0" gridy="0" anchor="GridBagConstraints.WEST"/>
+	</label>
+	<combobox id="lang" origin="$LANGS" ActionCommand="languageChanged">
+	   <gridbagconstraints insets="10,10,10,10" gridx="1" gridy="0" anchor="GridBagConstraints.WEST"/>
+	   <!-- <PropertyChangeEvents id="focus" onComboBoxChanged="languageChanged" /> -->
+	</combobox>
+   </panel>
+   
+   <label text="Enter a name for the folder your tour will be stored in. Allowed characters are: a-z A-z and 0-9">
+      <gridbagconstraints insets="10,10,10,10" gridx="0" gridy="3" anchor="GridBagConstraints.WEST"/>
+   </label>
+   
+   <panel layout="GridBagLayout">
+        <gridbagconstraints gridx="0" gridy="4" anchor="GridBagConstraints.WEST" insets="0,0,0,0"/>
+	<label id="label2" origin="$WORDS/tourname">
+	   <gridbagconstraints insets="10,10,10,10" gridx="0" gridy="0" anchor="GridBagConstraints.WEST"/>
+	</label>
+	<textfield id="tourname" columns="20" text="">
+	   <gridbagconstraints insets="10,10,10,10" gridx="1" gridy="0" anchor="GridBagConstraints.WEST"/>
+	</textfield>
+   </panel>
+   
+   </panel>
+   
+   <panel constraints="BorderLayout.SOUTH">
+       <button id="create" text="Create" ActionCommand="create"/>
+       <button id="cancel" text="Cancel" ActionCommand="cancel"/>
+   </panel>
+   
+</Frame>

@@ -1,0 +1,56 @@
+checkTourName(s) {
+   if(s.matches("[a-zA-Z0-9]+")) 
+      return true;
+   else          
+      return false;
+}
+
+checkInput(s) {
+   
+   if(text.length() < 5) {
+      return "Tour folder name too short:\nMust be at least 5 characters long!";
+   }
+   if(!checkTourName(s)) { // check characters here
+     return "Invalid characters in tour folder name:\nYou may only use letters (uppercase/lowercase) and digits!";
+   }
+   return "";
+}
+
+save () {
+   tn = context.getContext().getData("tourname");
+   l  = context.getContext().getData("lang");
+   System.out.println("[" + tn + "," + l + "]");
+}
+
+
+text = currentContext.getData("idMap").get("tourname").getText();
+context.getContext().setData("tourname", text);
+save();
+checkText = checkInput(text);
+if( ! checkText.equals("") ) {
+   ret = javax.swing.JOptionPane.showConfirmDialog(
+      null,
+      checkText,
+      "Problem!",
+      JOptionPane.OK_CANCEL_OPTION,
+      JOptionPane.ERROR_MESSAGE
+      );
+   if(ret == JOptionPane.CANCEL_OPTION)
+      System.exit(1);
+   else
+      return 0;
+} else {
+   ret = javax.swing.JOptionPane.showConfirmDialog(
+      null,
+      "Saved. Close window now?",
+      "Successfully saved...",
+      JOptionPane.YES_NO_OPTION,
+      JOptionPane.QUESTION_MESSAGE
+      );
+   if(ret == 0)
+      System.exit(1);
+   else
+      return 0;
+}
+
+   

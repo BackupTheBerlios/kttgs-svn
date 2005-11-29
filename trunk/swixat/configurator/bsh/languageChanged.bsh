@@ -1,0 +1,10 @@
+
+langText = currentContext.getData("idMap").get("lang").getSelectedItem();
+// System.out.println("Selected language: " + langText);
+if(langText.equals("English")) {
+   l = "en";
+} else {
+   l = "de";
+}
+context.getContext().setData("lang", l);
+return 0;
