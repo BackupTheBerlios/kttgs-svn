@@ -8,7 +8,7 @@
     <!-- Name of project and version, used to create filenames -->
     <property name="Name" value="Bike Tour XML"/>
     <property name="name" value="BikeTourXml"/>
-    <property name="version" value="0.5"/>
+    <property name="version" value="0.5.1"/>
         
     <!-- set global properties for this build -->
     <!-- <property name="src.dir" value="src"/> -->
@@ -293,7 +293,7 @@
     
     <target name="zip-project">
        <zip zipfile = "${name}-${version}.zip">
-			<zipfileset dir="../biketour">
+			<zipfileset dir=".">
             <exclude name="*.zip"/>
             <exclude name="lib/"/>
             <exclude name="html/"/>
@@ -304,7 +304,7 @@
          </zipfileset>
 		</zip>
       <zip zipfile = "${name}-${version}-libs.zip">
-			<zipfileset dir="../biketour">
+			<zipfileset dir=".">
             <include name="lib/*.jar"/> 
          </zipfileset>
 		</zip>
