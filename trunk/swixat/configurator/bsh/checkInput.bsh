@@ -1,3 +1,5 @@
+import mtg.knottytom.configuration.BuildPropertiesHandler;
+
 checkTourName(s) {
    if(s.matches("[a-zA-Z0-9]+")) 
       return true;
@@ -13,6 +15,7 @@ checkInput(s) {
    if(!checkTourName(s)) { // check characters here
      return "Invalid characters in tour folder name:\nYou may only use letters (uppercase/lowercase) and digits!";
    }
+   
    return "";
 }
 
@@ -20,10 +23,15 @@ save () {
    tn = context.getContext().getData("tourname");
    l  = context.getContext().getData("lang");
    System.out.println("[" + tn + "," + l + "]");
+   bph = new BuildPropertiesHandler();
+   bph.setTourName(tn);
+   bph.setLang(l);
+   bph.store();
 }
 
 
 text = currentContext.getData("idMap").get("tourname").getText();
+
 context.getContext().setData("tourname", text);
 save();
 checkText = checkInput(text);
@@ -40,6 +48,7 @@ if( ! checkText.equals("") ) {
    else
       return 0;
 } else {
+   save();
    ret = javax.swing.JOptionPane.showConfirmDialog(
       null,
       "Saved. Close window now?",
