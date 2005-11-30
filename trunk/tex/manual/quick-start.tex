@@ -17,11 +17,29 @@ habt. Alle Aktionen die nachfolgend durchgeführt werden, müssen in
 diesem Verzeichnis gestartet werden.
 
 \subsection{Build.properties anpassen}
+
 Wir haben eine zentrale Steuerungsdatei, die kontrolliert welche
 Verzeichnisstruktur angelegt, welche Sprache und welches Layout
-(für HTML) verwendet werden soll. Dies Datei heißt
-\texttt{./build.properties}. Bitte öffnet und editiert diese
-mit eurem Lieblingseditor\footnote{Du nimmst jetzt den \texttt{vi}? Cool!}.
+(für HTML) verwendet werden soll.
+
+Dies muss man konfigurieren. Man kann das nun mit einem Texteditor
+tun: Das ist im Abschnitt \ref{sec:properties_with_editor} 
+beschrieben.
+
+Man kann sich das Leben aber auch leichter machen und diese
+Datei mithilfe der grafischen Oberfl"ache ver"andern. Das
+ist im Abschnitt \ref{sec:properties_with_gui} erl"autert.
+Wenn ihr die Oberfl"ache verwendet, dann braucht ihr den
+Abschnitt "uber den Editor nicht zu lesen\ldots aber
+vielleicht interessiert es dich doch, wie das System funktioniert.
+
+Die Oberfl"ache hat den Vorteil, da"s Fehler (nahezu?) ausgeschlossen
+sind.
+
+\subsubsection{Mit dem Editor}\label{sec:properties_with_editor}
+Die erw"ahnte, zentrale Steuerungsdatei hei"st \texttt{./build.properties}. 
+Bitte öffnet und editiert diese mit eurem Lieblingseditor\footnote{Du 
+nimmst jetzt den \texttt{vi}? Cool!}.
 
 Die Datei \texttt{./build.properties} sollte dann wie folgt aussehen
 (die Zeilennummern hab' ich nur zur Orientierung da, sie gehören
@@ -34,6 +52,30 @@ tour.name=MeineSuperTour
 lang=de
 css=biketour.css
 \end{lstlisting}
+
+\subsubsection{Mit der grafischen Oberfl"ache}\label{sec:properties_with_gui}
+
+Die Oberfl"ache sollte intuitiv bedienbar sein. Du gibst
+einfach die Daten ein und dr"uckst den Knopf \textsc{Create}.
+Falls irgendetwas nicht korrekt ist, dann bekommst du eine
+entsprechende Fehlermeldung. Wenn keine Fehlermeldung
+erscheint, dann klickst du auf \textsc{OK} und \textit{der K"ase
+ist gegessen}. Keine Hemmungen! Man kann nichts kaputt
+machen\ldots
+
+\textbf{Wichtig!} In dem Textfeld \textsc{Tour folder name}
+gibst du bitte den Text \texttt{MeineSuperTour} ein. Wenn du da
+was anderes verwendest, dann passt die nachfolgende Beschreibung
+nicht. Also: Mach's dir leicht und mach' was ich dir gesagt
+habe\ldots... 
+
+Zum Starten der Oberfl"ache gibst du auf der Kommandozeile 
+den folgenden Befehl ein:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant run.config
+\end{lstlisting}
+
 
 \subsection{Skeleton generieren}
 Soweit so gut. Aber um irgendwas zu sehen brauchen wir ja

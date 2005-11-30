@@ -5,22 +5,25 @@ No Deadline
 -----------
 * Create a forms that can be filled while protocolling the tour
 * Make this forms an application for PDAs (uah)
+* Store tour info on a website and let retrieve via GUI.
 
-Version 0.7
------------
+Version 0.5.2
+-------------
 * clean up build.xml
 * Build a graphical user interface using Ruby On Rails
 * Document and explain the installation of Ruby and ROR
 
-Version 0.6
------------
+Version 0.5.1 <----------- CURRENT VERSION
+-------------
 * Create and document a DTD
 * Create a profile image with pavement info from the xml data.
 * Document the usage of the XML
 * Move everything from the old project website to BerliOS
+* Create a GUI to configure build.properties (which includes
+  the tour name folder and output language).
 
 
-Version 0.5 <----------- CURRENT VERSION
+Version 0.5
 -----------
 * Improve overall layout (using css)
 * Add image links to the generated HTML output.
