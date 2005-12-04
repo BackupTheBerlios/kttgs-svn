@@ -15,20 +15,27 @@
 \contentsline {subsection}{\numberline {4.2}Skeleton generieren}{9}
 \contentsline {subsection}{\numberline {4.3}HTML-Ausgabe erzeugen}{9}
 \contentsline {subsection}{\numberline {4.4}HTML im Browser bewundern}{9}
-\contentsline {section}{\numberline {5}Tips und Tricks}{10}
-\contentsline {subsection}{\numberline {5.1}Karte erstellen (TODO)}{10}
-\contentsline {subsection}{\numberline {5.2}Formulare verwenden (TODO)}{10}
-\contentsline {subsection}{\numberline {5.3}Tourerfassung mit MP3-Player (TODO)}{10}
-\contentsline {section}{\numberline {6}Der Aufbau der XML-Datei}{11}
-\contentsline {subsection}{\numberline {6.1}<tourguide>}{11}
-\contentsline {subsection}{\numberline {6.2}<storage-info> (<location>)}{12}
-\contentsline {subsection}{\numberline {6.3}Ein Wort zu Bildern}{12}
-\contentsline {subsection}{\numberline {6.4}<general>}{13}
-\contentsline {subsubsection}{\numberline {6.4.1}Die Attribute von <general>}{14}
-\contentsline {subsubsection}{\numberline {6.4.2}<distance>}{14}
-\contentsline {subsubsection}{\numberline {6.4.3}<desc>}{14}
-\contentsline {subsubsection}{\numberline {6.4.4}<reach>}{14}
-\contentsline {subsubsection}{\numberline {6.4.5}<maps>}{14}
-\contentsline {subsubsection}{\numberline {6.4.6}<roadmaps>}{14}
-\contentsline {subsubsection}{\numberline {6.4.7}<profile/>}{14}
-\contentsline {subsection}{\numberline {6.5}<crosspoints>}{14}
+\contentsline {subsection}{\numberline {4.5}Die Tour per eMail verschicken}{9}
+\contentsline {section}{\numberline {5}Der Aufbau der XML-Datei}{11}
+\contentsline {subsection}{\numberline {5.1}Learning By Doing}{11}
+\contentsline {subsection}{\numberline {5.2}<tourguide>}{12}
+\contentsline {subsection}{\numberline {5.3}<storage-info> (<location>)}{12}
+\contentsline {subsection}{\numberline {5.4}Ein Wort zu Bildern}{13}
+\contentsline {subsection}{\numberline {5.5}<general>}{13}
+\contentsline {subsubsection}{\numberline {5.5.1}Die Attribute von <general>}{14}
+\contentsline {subsubsection}{\numberline {5.5.2}<distance>}{15}
+\contentsline {subsubsection}{\numberline {5.5.3}<desc>}{15}
+\contentsline {subsubsection}{\numberline {5.5.4}<reach>}{15}
+\contentsline {subsubsection}{\numberline {5.5.5}<maps>}{15}
+\contentsline {subsubsection}{\numberline {5.5.6}<roadmaps>}{15}
+\contentsline {subsubsection}{\numberline {5.5.7}<profile/>}{15}
+\contentsline {subsection}{\numberline {5.6}<crosspoints>}{15}
+\contentsline {subsection}{\numberline {5.7}<crosspoints>}{16}
+\contentsline {subsection}{\numberline {5.8}<track-info>}{16}
+\contentsline {subsubsection}{\numberline {5.8.1}<eatndrink>}{17}
+\contentsline {subsubsection}{\numberline {5.8.2}<poi>}{17}
+\contentsline {subsubsection}{\numberline {5.8.3}<anecdote>}{18}
+\contentsline {section}{\numberline {6}Tips und Tricks}{19}
+\contentsline {subsection}{\numberline {6.1}Karte erstellen (TODO)}{19}
+\contentsline {subsection}{\numberline {6.2}Formulare verwenden (TODO)}{19}
+\contentsline {subsection}{\numberline {6.3}Tourerfassung mit MP3-Player (TODO)}{19}

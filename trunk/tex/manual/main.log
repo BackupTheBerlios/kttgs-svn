@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  30 NOV 2005 22:50
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  4 DEC 2005 22:54
 entering extended mode
 **main.tex
 (./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
@@ -113,8 +113,8 @@ File: lstlang1.sty 2004/02/13 1.2 listings language file
 (/usr/share/texmf/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2004/02/13 1.2 (Carsten Heinz)
 ) (./main.aux (./goal.aux)
-(./pre.aux) (./installation.aux) (./quick-start.aux) (./tips-and-tricks.aux)
-(./xml-structure.aux))
+(./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
+(./tips-and-tricks.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -235,17 +235,17 @@ Overfull \hbox (18.32794pt too wide) in paragraph at lines 107--109
 tei na-mens /ectt1000/MeineSuperTour.html
  []
 
-) [9]
-\openout2 = `tips-and-tricks.aux'.
-
- (./tips-and-tricks.tex) [10
-
-
-]
+[9]) [10]
 \openout2 = `xml-structure.aux'.
 
  (./xml-structure.tex
-Overfull \hbox (7.58057pt too wide) in paragraph at lines 28--31
+Overfull \hbox (5.27518pt too wide) in paragraph at lines 24--25
+[]/ecti1000/Anm.: In den XML-Beispielen sind Zeilen-num-mern ergänzt. Diese geh
+ören natür-
+ []
+
+
+Overfull \hbox (7.58057pt too wide) in paragraph at lines 59--62
 /ecrm1000/Die gesamte Tourbeschrei-bung wird in zwis-chen dem öff-nen-den und d
 em schlieÿen-
  []
@@ -253,39 +253,46 @@ em schlieÿen-
 [11
 
 
-] [12]
-Overfull \hbox (4.56752pt too wide) in paragraph at lines 168--169
+] [12] [13]
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 199--200
 [][][][][][][][][][][][][][][][][] 
  []
 
-[13] [14]) [15] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux)
-(./quick-start.aux) (./tips-and-tricks.aux) (./xml-structure.aux)) ) 
+[14] [15] [16] [17]) [18]
+\openout2 = `tips-and-tricks.aux'.
+
+ (./tips-and-tricks.tex) [19
+
+
+] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux) (./quick-start.aux)
+ (./xml-structure.aux)
+(./tips-and-tricks.aux)) ) 
 Here is how much of TeX's memory you used:
- 2865 strings out of 95257
- 36946 string characters out of 1188231
- 100686 words of memory out of 1000001
- 5855 multiletter control sequences out of 10000+50000
+ 2876 strings out of 95257
+ 37105 string characters out of 1188231
+ 98713 words of memory out of 1000001
+ 5866 multiletter control sequences out of 10000+50000
  20698 words of font info for 45 fonts, out of 500000 for 1000
  86 hyphenation exceptions out of 1000
  29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
- 78 PDF objects out of 300000
+ 91 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
- </var/cach
-e/fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </var/cache/fonts/pk/ljfour/jknap
-pen/ec/ecbi1000.600pk>{/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/te
-xmf/fonts/type1/bluesky/cm/cmsy9.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/e
-ctt0800.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/eccc1000.600pk> </var/ca
-che/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </var/cache/fonts/pk/ljfour/jkn
-appen/ec/ecrm0500.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk
-> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </var/cache/fonts/pk/
-ljfour/jknappen/ec/ecrm0600.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm
-0700.600pk>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</usr/share/texmf/fonts/t
-ype1/bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> 
-</var/cache/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </var/cache/fonts/pk/lj
-four/jknappen/ec/ecbx1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx10
-00.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </var/cache/f
-onts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen
-/ec/ecsl1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </v
-ar/cache/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on main.pdf (16 pages, 245983 bytes).
+ </var/cache/fonts/pk/ljfour/jknappen/ec/ecti0800.600
+pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk>{/usr/share/texmf/dv
+ips/tetex/bbad153f.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb> </va
+r/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </var/cache/fonts/pk/ljfour
+/jknappen/ec/eccc1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0900.6
+00pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </var/cache/fonts
+/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/
+ecrm0800.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </var/c
+ache/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk>{/usr/share/texmf/dvips/tetex/f
+7b6d320.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texm
+f/fonts/type1/bluesky/cm/cmsy10.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ec
+ti1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </var/cac
+he/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </var/cache/fonts/pk/ljfour/jkna
+ppen/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
+ </var/cache/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </var/cache/fonts/pk/l
+jfour/jknappen/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1
+728.600pk>
+Output written on main.pdf (20 pages, 273169 bytes).

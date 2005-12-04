@@ -1,4 +1,4 @@
-\section{Schnellstart}
+\section{Schnellstart}\label{sec:qickstart}
 
 OK. Ihr habt also alles installiert. Jetzt sollte man auch mal
 testen, ob alles funktioniert \ldots und natürlich auch um seine
@@ -77,7 +77,7 @@ ant run.config
 \end{lstlisting}
 
 
-\subsection{Skeleton generieren}
+\subsection{Skeleton generieren}\label{sec:qickstart-gen-skeleton}
 Soweit so gut. Aber um irgendwas zu sehen brauchen wir ja
 'ne Tourbeschreibung. Woher nehmen, wenn nicht zaubern? Einfach
 zaubern! Das System kann ein Grundgerüst (englisch: 
@@ -102,7 +102,7 @@ ant gen-tour-html
 Da könnten jetzt zwei Warnungen (englisch: \textit{warning(s)})
 auftauchen. Die könnt ihr ignorieren.
 
-\subsection{HTML im Browser bewundern}
+\subsection{HTML im Browser bewundern}\label{sec:view-html}
 \textit{Jetzt kommt der große Moment, wo der Frosch ins Wasser 
 springt.} In dem Verzeichnis \texttt{./html/MeineSuperTour} sollte 
 sich eine Datei namens \texttt{MeineSuperTour.html} befinden.
@@ -110,5 +110,25 @@ sich eine Datei namens \texttt{MeineSuperTour.html} befinden.
 Öffnet diese Datei (\texttt{./html/MeineSuperTour/MeineSuperTour.html})
 in einem Browser eurer Wahl\footnote{Getestet hab' ich nur: Firefox 
 und Konquerer}. Wenn ihr jetzt 'ne Beschreibung einer fiktiven Tour
-seht, dann läuft das System. \textbf{Glückwunsch!}
+seht, dann läuft das System. \textbf{Gl"uckwunsch!}
 
+\subsection{Die Tour per eMail verschicken}
+So, die Tour\footnote{Wie man die Tour erfasst wird im Abschnitt 
+\ref{sec:xml-structure} ab Seite \pageref{sec:xml-structure} beschrieben.} 
+h"atten wir nun. Aber wie kann man die Beschreibung einem Freund 
+zukommen lassen? Auch das ist einfach, man packt alles in eine gezippte
+Datei und verschickt sie per eMail. Wie gehen mal wieder auf die
+Kommandozeile und geben den nachfolgenden Befehl ein:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant zip-tour-html
+\end{lstlisting}
+
+Jetzt sollte im aktuellen Verzeichnis eine gezippte Datei
+entstanden sein. In unserem (Beispiel-)Fall hei"st sie
+\texttt{MeineSuperTour.zip}. Sie beinhaltet alles, was man
+zur Betrachtung der Tour im HTML-Browser ben"otigt. Der
+Empf"anger der eMail mu"s nur die Datei in einem neu
+angelegten Verzeichnis auspacken und kann sich die 
+Tourbeschreibung angucken. 
