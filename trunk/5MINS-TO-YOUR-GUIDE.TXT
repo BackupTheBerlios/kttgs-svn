@@ -5,26 +5,44 @@ Please remember: You will need to have Java and a working Ant build system!
 
 1) Edit The File build.properties
 ---------------------------------
-In the file 'build.properties' you have to modify 2 entries.
+You can do this by using your prefered text editor. That is described in
+section 1a).
 
-1a) tour.name (A Directory Name)
-................................
-This entry specifies not the real tour name, but a subdirectory that will be
-used to hold the data of your tour. Choose a good directory name and do not
-use whitespaces here!
+Since version 0.5.1 (please check your version!) you can use the the GUI.
+How this is done is explained in section 1b).
 
-Example (use this for your first tests):
-tour.name=my_first_tour
 
-1b) lang (Language)
+1a) Using An Editor
 ...................
-If you are german set this entry to 'lang=de'. If you want to generate a
-non-german version set this entry to 'lang=en' (which will create an 
-english tour guide).
+   In the file 'build.properties' you have to modify 2 entries.
+   
+   1a.1) tour.name (A Directory Name)
+   ................................
+   This entry specifies not the real tour name, but a subdirectory that will be
+   used to hold the data of your tour. Choose a good directory name and do not
+   use whitespaces here!
+   
+   Example (use this for your first tests):
+   tour.name=my_first_tour
+   
+   1a.2) lang (Language)
+   ...................
+   If you are german set this entry to 'lang=de'. If you want to generate a
+   non-german version set this entry to 'lang=en' (which will create an 
+   english tour guide).
+   
+   Example:
+   lang=de
+   
+1b) Using The GUI
+.................
+For now, the GUI is quite simple. Just select a language for the 
+generated tour and type in a name for the folder.
 
-Example:
-lang=de
+Starting the GUI is also simpe. On the command line (aka DOS box under windows) 
+type the following command:
 
+   ant. run.config
 
 2) Generate A Skeleton
 ----------------------
@@ -58,12 +76,11 @@ this is version 0.5 of this project! ;-)
 
 4) Write Your First Guide
 -------------------------
-To modify the tour information edit the XML file as described in 2).
+To modify the tour information edit the XML file as described in 2). I have
+provided a documented DTD in the './dtd' folder. This DTD will help you to
+decide what you type where. Also, the generated skeleton will use all allowed
+tags and attributes.
 
-I am aware of the fact, that you need more information on the tags and 
-attributes you can use in the XML file (while I have used everthing possible for 
-now in the skeleton). This documentation is planned for version 0.6 or 0.7 
-(coming soon). See ROADMAP.TXT for more information.
 
 5) Add Images
 -------------
