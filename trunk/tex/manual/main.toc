@@ -23,19 +23,27 @@
 \contentsline {subsection}{\numberline {5.4}Ein Wort zu Bildern}{13}
 \contentsline {subsection}{\numberline {5.5}<general>}{13}
 \contentsline {subsubsection}{\numberline {5.5.1}Die Attribute von <general>}{14}
-\contentsline {subsubsection}{\numberline {5.5.2}<distance>}{15}
-\contentsline {subsubsection}{\numberline {5.5.3}<desc>}{15}
-\contentsline {subsubsection}{\numberline {5.5.4}<reach>}{15}
-\contentsline {subsubsection}{\numberline {5.5.5}<maps>}{15}
-\contentsline {subsubsection}{\numberline {5.5.6}<roadmaps>}{15}
-\contentsline {subsubsection}{\numberline {5.5.7}<profile/>}{15}
-\contentsline {subsection}{\numberline {5.6}<crosspoints>}{15}
-\contentsline {subsection}{\numberline {5.7}<crosspoints>}{16}
-\contentsline {subsection}{\numberline {5.8}<track-info>}{16}
-\contentsline {subsubsection}{\numberline {5.8.1}<eatndrink>}{17}
-\contentsline {subsubsection}{\numberline {5.8.2}<poi>}{17}
-\contentsline {subsubsection}{\numberline {5.8.3}<anecdote>}{18}
-\contentsline {section}{\numberline {6}Tips und Tricks}{19}
-\contentsline {subsection}{\numberline {6.1}Karte erstellen (TODO)}{19}
-\contentsline {subsection}{\numberline {6.2}Formulare verwenden (TODO)}{19}
-\contentsline {subsection}{\numberline {6.3}Tourerfassung mit MP3-Player (TODO)}{19}
+\contentsline {subsubsection}{\numberline {5.5.2}<name>}{15}
+\contentsline {subsubsection}{\numberline {5.5.3}<distance>}{15}
+\contentsline {subsubsection}{\numberline {5.5.4}<desc>}{15}
+\contentsline {subsubsection}{\numberline {5.5.5}<reach>}{15}
+\contentsline {subsubsection}{\numberline {5.5.6}<maps>}{16}
+\contentsline {subsubsection}{\numberline {5.5.7}<roadmaps>}{16}
+\contentsline {subsubsection}{\numberline {5.5.8}<profile/>}{17}
+\contentsline {subsection}{\numberline {5.6}<crosspoints>}{17}
+\contentsline {subsection}{\numberline {5.7}Entfernungen}{18}
+\contentsline {subsection}{\numberline {5.8}<crosspoint>}{18}
+\contentsline {subsubsection}{\numberline {5.8.1}<crosspoint> Attribute}{19}
+\contentsline {subsubsection}{\numberline {5.8.2}<desc>}{19}
+\contentsline {subsubsection}{\numberline {5.8.3}<images>}{20}
+\contentsline {subsubsection}{\numberline {5.8.4}<profile-desc>}{20}
+\contentsline {subsection}{\numberline {5.9}<track-info>}{20}
+\contentsline {subsubsection}{\numberline {5.9.1}Attribute f"ur <eatndrink>,<poi> und <anecdote>}{21}
+\contentsline {subsubsection}{\numberline {5.9.2}<eatndrink>}{21}
+\contentsline {subsubsection}{\numberline {5.9.3}<poi>}{21}
+\contentsline {subsubsection}{\numberline {5.9.4}<anecdote>}{22}
+\contentsline {subsection}{\numberline {5.10}Keine Tags mehr!}{22}
+\contentsline {section}{\numberline {6}Tips und Tricks}{23}
+\contentsline {subsection}{\numberline {6.1}Karte erstellen (TODO)}{23}
+\contentsline {subsection}{\numberline {6.2}Formulare verwenden (TODO)}{23}
+\contentsline {subsection}{\numberline {6.3}Tourerfassung mit MP3-Player (TODO)}{23}

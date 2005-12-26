@@ -46,10 +46,10 @@ open=true
 
 [item:main.tex]
 archive=true
-column=8
+column=54
 encoding=ISO 8859-15
 highlight=LaTeX
-line=22
+line=12
 open=true
 
 [item:pre.tex]
@@ -70,16 +70,16 @@ open=true
 
 [item:tips-and-tricks.tex]
 archive=true
-column=0
+column=21
 encoding=ISO 8859-15
 highlight=LaTeX
-line=21
+line=1
 open=true
 
 [item:xml-structure.tex]
 archive=true
-column=55
+column=0
 encoding=ISO 8859-15
 highlight=LaTeX
-line=356
+line=579
 open=true

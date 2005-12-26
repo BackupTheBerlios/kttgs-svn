@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  4 DEC 2005 22:54
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  26 DEC 2005 18:15
 entering extended mode
 **main.tex
 (./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
@@ -258,24 +258,59 @@ Overfull \hbox (4.56752pt too wide) in paragraph at lines 199--200
 [][][][][][][][][][][][][][][][][] 
  []
 
-[14] [15] [16] [17]) [18]
+[14]
+Overfull \hbox (4.93538pt too wide) in paragraph at lines 254--256
+[]/ecbx1000/duration/ecrm1000/: Hi-er sollte man sowas wie /ectt1000/"01:30hrs"
+ /ecrm1000/oder /ectt1000/"1 Stunde, 30 Minuten"
+ []
+
+
+Overfull \hbox (2.44293pt too wide) in paragraph at lines 261--264
+/ecrm1000/taucht zum Beispiel in Lis-ten auf, wenn man aus mehreren Touren eine
+ auswählen
+ []
+
+[15]
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 305--306
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (16.31454pt too wide) in paragraph at lines 365--370
+[]/ecrm1000/Aber Achtung! Karten-ma-te-ri-al ist urhe-ber-lich geschützt. Du so
+ll-test (ohne Genehmi-
+ []
+
+[17] [18]
+Overfull \hbox (2.00473pt too wide) in paragraph at lines 504--508
+/ecrm1000/sind: /ectt1000/north, east, south, west, northeast, southeast, south
+west
+ []
+
+[19]
+Overfull \hbox (33.37982pt too wide) in paragraph at lines 531--533
+/ecrm1000/Innerhalb des <images>-Tag kann man bieliebig viel Bilder, die für de
+n Kreuzungspunkt
+ []
+
+[20] [21]) [22]
 \openout2 = `tips-and-tricks.aux'.
 
- (./tips-and-tricks.tex) [19
+ (./tips-and-tricks.tex) [23
 
 
-] (./main.aux (./goal.aux) (./pre.aux) (./installation.aux) (./quick-start.aux)
- (./xml-structure.aux)
+] (./main.aux (./goal.aux)
+(./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
 (./tips-and-tricks.aux)) ) 
 Here is how much of TeX's memory you used:
- 2876 strings out of 95257
- 37105 string characters out of 1188231
- 98713 words of memory out of 1000001
- 5866 multiletter control sequences out of 10000+50000
+ 2894 strings out of 95257
+ 37394 string characters out of 1188231
+ 98732 words of memory out of 1000001
+ 5884 multiletter control sequences out of 10000+50000
  20698 words of font info for 45 fonts, out of 500000 for 1000
  86 hyphenation exceptions out of 1000
  29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
- 91 PDF objects out of 300000
+ 103 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
  </var/cache/fonts/pk/ljfour/jknappen/ec/ecti0800.600
@@ -295,4 +330,4 @@ ppen/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk>
  </var/cache/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </var/cache/fonts/pk/l
 jfour/jknappen/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1
 728.600pk>
-Output written on main.pdf (20 pages, 273169 bytes).
+Output written on main.pdf (24 pages, 287695 bytes).
