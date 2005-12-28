@@ -22,19 +22,19 @@ open=false
 
 [item:goal.tex]
 archive=true
-column=36
+column=26
 encoding=ISO 8859-15
 highlight=LaTeX
-line=72
+line=135
 open=true
 
 [item:installation.tex]
 archive=true
-column=140104376
-encoding=
-highlight=
-line=0
-open=false
+column=14
+encoding=ISO 8859-15
+highlight=LaTeX
+line=27
+open=true
 
 [item:m-structure.tex]
 archive=true
@@ -62,10 +62,10 @@ open=true
 
 [item:quick-start.tex]
 archive=true
-column=58
+column=39
 encoding=ISO 8859-15
 highlight=LaTeX
-line=104
+line=19
 open=true
 
 [item:tips-and-tricks.tex]
@@ -78,8 +78,8 @@ open=true
 
 [item:xml-structure.tex]
 archive=true
-column=0
+column=50
 encoding=ISO 8859-15
 highlight=LaTeX
-line=579
+line=679
 open=true
