@@ -4,8 +4,12 @@
 No Deadline
 -----------
 * Create a forms that can be filled while protocolling the tour
-* Make this forms an application for PDAs (uah)
+* Make these forms an application for PDAs (uah)
 * Store tour info on a website and let retrieve via GUI.
+
+Version 0.5.3
+-------------
+* If the manual reveals to be stable translate it to english.
 
 Version 0.5.2
 -------------
