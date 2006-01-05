@@ -55,6 +55,7 @@ public class ProfileParser {
       // System.out.println("Key: " + key);
       String spl[];
       String spl2[];
+      boolean isCrossPoint = true;
       
       spl = val.split(",");
       // System.out.println("0:" + spl[0]);
@@ -66,7 +67,10 @@ public class ProfileParser {
       // System.out.println("Spl2[1]: " + spl2[1]);
       int pos = Integer.parseInt(spl2[1]);
       // System.out.println("Pos: " + pos);
-      secs.put(pos, new ProfileSection(spl[0], dist, height));
+      if(spl[3].equals("0")) {
+    	  isCrossPoint = false;
+      }
+      secs.put(pos, new ProfileSection(spl[0], dist, height, isCrossPoint));
    }
    
    private void handleConf(String key, String val, HashMap<String,String> conf) {

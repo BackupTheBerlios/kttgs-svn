@@ -170,6 +170,7 @@ public class ProfileImageGenerator {
       int xStart=0, yStart=0, xTo, yTo;
       String type = "";
       int run = 0;
+      boolean lastWasCrossPoint = true;
       
       itr = profileSections.values().iterator();
       
@@ -199,8 +200,16 @@ public class ProfileImageGenerator {
             // System.out.println("("+xStart+", "+yStart+", "+xTo+", "+yTo+")");
             g2d.drawLine(xStart, yStart, xTo, yTo);
             g2d.setStroke(strokeMarkLines);
-            g2d.drawLine(xStart, yOri, xStart, borders);
-            infoBox(g2d, xTo, borders, run);
+            if(lastWasCrossPoint) {
+               g2d.drawLine(xStart, yOri, xStart, borders);
+            }
+            lastWasCrossPoint = ps.isCrossPoint();
+            if(ps.isCrossPoint()) {
+               infoBox(g2d, xTo, borders, run);
+            } else {
+               // get the numbering correct.
+               run--;
+            }
             xStart = xTo;
             yStart = yTo;
          }

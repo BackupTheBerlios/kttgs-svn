@@ -8,7 +8,7 @@
     <!-- Name of project and version, used to create filenames -->
     <property name="Name" value="Bike Tour XML"/>
     <property name="name" value="BikeTourXml"/>
-    <property name="version" value="0.5.1"/>
+    <property name="version" value="0.5.2"/>
         
     <!-- set global properties for this build -->
     <!-- <property name="src.dir" value="src"/> -->
@@ -317,7 +317,6 @@
          </filterset>
 		</copy>
     </target>
-    
     
     <target name="run.profile.image" depends="run.profile.digester" description="Create profile image.">
       <mkdir dir="${html.tour.dir}/${images.intern}"/>

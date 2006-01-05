@@ -19,16 +19,6 @@
 
 <xsl:template match="tour-guide">
    <h1>knottyTom's TourGuide System</h1>
-   <p class="warning"><i>
-   Please see that this is version <b>0.5</b> of the stylesheet. While I have
-   a (project) roadmap I add features as requested by users. This version
-   will present picture links, geographic information and a menu at the top. 
-   Also, I have added a windrose (which currently holds no information) to
-   show the direction to go. And: There is a profile image that shows hints and
-   which reflects the tour. Also, I have modified the CSS in some ways. 
-   I have fixed the windrose image and added some
-   graphical pavement info. What do you think about the new CSS-Menu?
-   </i></p>
    
    <!--
    <h1>

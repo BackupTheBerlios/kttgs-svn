@@ -58,7 +58,12 @@ public class ProfileDigesterDriver {
             step++;
             out = out + ps.getType() +",";
             out = out + ps.getDist() +",";
-            out = out + ps.getHeight();
+            out = out + ps.getHeight() + ",";
+            if(ps.isCrossPoint()) {
+               out = out + "1";
+            } else {
+               out = out + "0";	
+            }
             // System.out.println("Out: " + out);
             p.println(out);
          }
