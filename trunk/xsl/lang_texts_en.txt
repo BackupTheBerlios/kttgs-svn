@@ -6,6 +6,7 @@ tech.level=Tech
 type=Type
 duration=Duration
 overall-distance=Distance
+total-uphill=Total Uphill
 
 useful.maps=Useful Maps
 overview.map=Overview Map

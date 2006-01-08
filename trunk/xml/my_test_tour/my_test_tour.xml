@@ -12,7 +12,7 @@
 
 <!-- levels: easy, medium, high. extrem -->
 <!-- type: downhill (dh.gif), pointtopoint (tourab.gfi), round (tourr.gif), trail (trail.gif)-->
-<general fitness-level="easy" tech-level="medium" type="round" duration="01:00hrs">
+<general fitness-level="easy" tech-level="medium" type="round" duration="01:00hrs" total-uphill="900m">
    <name>The Name Of The Tour</name>
    <distance overwerite="no" unit="km">10</distance>
    <desc>

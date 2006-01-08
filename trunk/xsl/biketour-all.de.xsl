@@ -114,6 +114,7 @@
         </td></tr>
         <tr><td>Dauer</td><td><xsl:value-of select="@duration"/></td></tr>
         <tr><td>Laenge</td><td><xsl:apply-templates select="distance"/></td></tr>
+	<tr><td>Hoehenmeter</td><td><xsl:value-of select="@total-uphill"/></td></tr>
      </table>
      <xsl:apply-templates select="reach"/>
      <xsl:apply-templates select="maps"/>

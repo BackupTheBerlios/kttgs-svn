@@ -6,6 +6,7 @@ tech.level=Technisches Koennen
 type=Typ
 duration=Dauer
 overall-distance=Laenge
+total-uphill=Hoehenmeter
 
 useful.maps=Empfohlenes Kartenmaterial
 overview.map=Uebersichtskarte

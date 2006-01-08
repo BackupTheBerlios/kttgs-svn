@@ -114,6 +114,7 @@
         </td></tr>
         <tr><td>$duration$</td><td><xsl:value-of select="@duration"/></td></tr>
         <tr><td>$overall-distance$</td><td><xsl:apply-templates select="distance"/></td></tr>
+	<tr><td>$total-uphill$</td><td><xsl:value-of select="@total-uphill"/></td></tr>
      </table>
      <xsl:apply-templates select="reach"/>
      <xsl:apply-templates select="maps"/>

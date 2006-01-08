@@ -19,15 +19,6 @@
 
 <xsl:template match="tour-guide">
    <h1>knottyTom's TourGuide System</h1>
-   <p class="warning"><i>
-   Please see that this is version <b>0.5pre5</b> of the stylesheet. While I have
-   a (project) roadmap I add features as requested by users. This version
-   will present picture links, geographic information and a menu at the top. 
-   Also, I have added a windrose (which currently holds no information) to
-   show the direction to go. And: There is a profile image that shows hints and
-   which really (0.5pre4 was a fake) reflects the tour. Also, I have modified 
-   the CSS in some ways. Enjoy...
-   </i></p>
    
    <!--
    <h1>
@@ -123,6 +114,7 @@
         </td></tr>
         <tr><td>Duration</td><td><xsl:value-of select="@duration"/></td></tr>
         <tr><td>Distance</td><td><xsl:apply-templates select="distance"/></td></tr>
+	<tr><td>Total Uphill</td><td><xsl:value-of select="@total-uphill"/></td></tr>
      </table>
      <xsl:apply-templates select="reach"/>
      <xsl:apply-templates select="maps"/>
@@ -175,6 +167,7 @@
    <ol>
       <xsl:apply-templates select="/tour-guide/crosspoints/crosspoint" mode="profile"/>
    </ol>
+   
 </xsl:template>
 
 <xsl:template match="crosspoints">
@@ -184,17 +177,45 @@
 <xsl:template match="crosspoint">
    <h2>Crosspoint</h2>
    <p class="crosspoint-info">
-      distance:<b><xsl:value-of select="@distance"/></b>/
-      elevation:<b><xsl:value-of select="@elevation"/></b>/
-      direction to go:<b><xsl:value-of select="@direction"/></b>
+      distance:<b><xsl:value-of select="@distance"/></b>
+      elevation:<b><xsl:value-of select="@elevation"/></b>
+      <!--  direction to go: -->
    </p>
    <p class="crosspoint-info">
-      Latitude:<b><xsl:value-of select="@latitude"/></b>/
+      Latitude:<b><xsl:value-of select="@latitude"/></b>
       Longitude:<b><xsl:value-of select="@longitude"/></b>
    </p>
-   <p>
+   <p class="windrose">
       <xsl:element name = "img" >
-         <xsl:attribute name="src">images_intern/windrose-small.gif</xsl:attribute>
+         <xsl:choose >
+           <xsl:when test = "@direction='north'" >
+              <xsl:attribute name="src">images_intern/windrose-north.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='east'" >
+              <xsl:attribute name="src">images_intern/windrose-east.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='south'" >
+              <xsl:attribute name="src">images_intern/windrose-south.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='west'" >
+              <xsl:attribute name="src">images_intern/windrose-west.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='northeast'" >
+              <xsl:attribute name="src">images_intern/windrose-northeast.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='southeast'" >
+              <xsl:attribute name="src">images_intern/windrose-southeast.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='southwest'" >
+              <xsl:attribute name="src">images_intern/windrose-southwest.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@direction='northwest'" >
+              <xsl:attribute name="src">images_intern/windrose-northwest.png</xsl:attribute>
+           </xsl:when>
+           <xsl:otherwise >
+              <xsl:attribute name="src">images_intern/windrose-error.png</xsl:attribute>
+           </xsl:otherwise>
+         </xsl:choose>
       </xsl:element>
    </p>
    <p>
@@ -235,7 +256,26 @@
 </xsl:template>
 
 <xsl:template match="track-info">
-   <h3>Track Info (<b>Pavement</b>: <xsl:value-of select="@pavement"/>)</h3>
+   <h3>Track Info</h3>
+   <p class="crosspoint-info">
+      <b>Pavement</b>: <!-- <xsl:value-of select="@pavement"/> -->
+      <xsl:element name = "img" >
+         <xsl:choose >
+           <xsl:when test = "@pavement='road'" >
+              <xsl:attribute name="src">images_intern/pavement-road.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@pavement='forrest.road'" >
+              <xsl:attribute name="src">images_intern/pavement-forrest-road.png</xsl:attribute>
+           </xsl:when>
+           <xsl:when test = "@pavement='trail'" >
+              <xsl:attribute name="src">images_intern/pavement-trail.png</xsl:attribute>
+           </xsl:when>
+           <xsl:otherwise >
+              <xsl:attribute name="src">images_intern/pavement-base.png</xsl:attribute>
+           </xsl:otherwise>
+         </xsl:choose>
+      </xsl:element>
+   </p>
     <xsl:apply-templates select="eatndrink|anecdote|poi"/>
 </xsl:template>
 

@@ -25,6 +25,7 @@
 <!ATTLIST general fitness-level (easy|medium|high|extrem) #REQUIRED >
 <!ATTLIST general tech-level (easy|medium|high|extrem) #REQUIRED >
 <!ATTLIST general type (downhill|pointtopoint|round|trail) "round" >
+<!ATTLIST general total-uphill CDATA #REQUIRED >
 
 <!-- Give your tour a stunning name -->
 <!ELEMENT name ( #PCDATA ) >
