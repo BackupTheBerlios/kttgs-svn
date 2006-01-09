@@ -28,6 +28,17 @@ public class ProfileDigesterDriver {
          digester.addSetNext( "tour-guide/crosspoints/crosspoint", "addProfileSection" );
          
          digester.addSetProperties( "tour-guide/crosspoints/track-info", "pavement", "pavement");
+         digester.addObjectCreate( "tour-guide/crosspoints/track-info/profile-points/point", ProfileSection.class);
+         
+         digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "distance", "distance");
+         digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "elevation", "height");
+         digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "icp", "crossPoint");
+         // digester.addCallMethod( "tour-guide/crosspoints/track-info/profile-points/point", "setNoCrossPoint", 0);
+         //digester.addCallParam( "tour-guide/crosspoints/track-info/profile-points/point", 0, false);
+         // digester.addBeanPropertySetter( "tour-guide/crossspoints/crosspoint", "title" );
+         digester.addSetNext( "tour-guide/crosspoints/track-info/profile-points/point", "addProfileSection" );
+         
+         //digester.addSetProperties( "tour-guide/crosspoints/track-info", "pavement", "pavement");
          /*
          digester.addObjectCreate( "catalog/magazine", Magazine.class );
          digester.addBeanPropertySetter( "catalog/magazine/name", "name" );

@@ -106,7 +106,12 @@ public class ProfileSection {
 	}
 
 	public void setCrossPoint(boolean isCrossPoint) {
+		// System.out.println("icp: " + isCrossPoint);
 		this.isCrossPoint = isCrossPoint;
+	}
+	
+	public void setNoCrossPoint() {
+		this.isCrossPoint = false;
 	}
 
 }

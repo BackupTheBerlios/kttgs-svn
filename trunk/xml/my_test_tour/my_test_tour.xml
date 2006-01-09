@@ -65,6 +65,14 @@
        <poi distance="000">
           Point of interest text.
        </poi>
+       <!--
+       <profile-points>
+           <point distance="100" elevation="200" icp="false" />
+	   <point distance="200" elevation="100" icp="false" />
+	   <point distance="300" elevation="200" icp="false" />
+	   <point distance="400" elevation="300" icp="false" />
+       </profile-points>
+       -->
    </track-info>
    
    <!-- next crosspoint, distance measured to last crosspoint, see that we have
@@ -86,6 +94,12 @@
        <poi distance="500">
           Another POI.
        </poi>
+       <profile-points>
+           <point distance="100" elevation="200" icp="false" />
+	   <point distance="200" elevation="400" icp="false" />
+	   <point distance="300" elevation="500" icp="false" />
+	   <point distance="400" elevation="400" icp="false" />
+       </profile-points>
    </track-info>
    
    <crosspoint distance="500" elevation="320" direction="south" latitude="000" longitude="000">
@@ -152,6 +166,9 @@
    </crosspoint>
    
    <track-info pavement="road">
+      <profile-points>
+           <point distance="100" elevation="1200" icp="false" />
+       </profile-points>
    </track-info>
    
    <crosspoint distance="200" elevation="310" direction="none" latitude="000" longitude="000">
