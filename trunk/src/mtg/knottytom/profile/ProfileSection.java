@@ -10,12 +10,11 @@ package mtg.knottytom.profile;
  */
 public class ProfileSection {
 	private String type = "road";
-
 	private int dist = 0;
-
 	private int height = 0;
-
 	private boolean isCrossPoint = true;
+	private String longitude = "";
+	private String latitude = "";
 
 	public ProfileSection() {
 		// System.out.println("ProfileSection()");
@@ -112,6 +111,34 @@ public class ProfileSection {
 	
 	public void setNoCrossPoint() {
 		this.isCrossPoint = false;
+	}
+
+	/**
+	 * @return Returns the latitude.
+	 */
+	public String getLatitude() {
+		return latitude;
+	}
+
+	/**
+	 * @param latitude The latitude to set.
+	 */
+	public void setLatitude(String latitude) {
+		this.latitude = latitude;
+	}
+
+	/**
+	 * @return Returns the longitude.
+	 */
+	public String getLongitude() {
+		return longitude;
+	}
+
+	/**
+	 * @param longitude The longitude to set.
+	 */
+	public void setLongitude(String longitude) {
+		this.longitude = longitude;
 	}
 
 }

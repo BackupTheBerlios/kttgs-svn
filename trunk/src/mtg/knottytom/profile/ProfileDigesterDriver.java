@@ -24,6 +24,8 @@ public class ProfileDigesterDriver {
          
          digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "distance", "distance");
          digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "elevation", "height");
+         digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "latitude", "latitude");
+         digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "longitude", "logitude");
          // digester.addBeanPropertySetter( "tour-guide/crossspoints/crosspoint", "title" );
          digester.addSetNext( "tour-guide/crosspoints/crosspoint", "addProfileSection" );
          
@@ -33,6 +35,8 @@ public class ProfileDigesterDriver {
          digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "distance", "distance");
          digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "elevation", "height");
          digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "icp", "crossPoint");
+         digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "latitude", "latitude");
+         digester.addSetProperties( "tour-guide/crosspoints/track-info/profile-points/point", "longitude", "logitude");
          // digester.addCallMethod( "tour-guide/crosspoints/track-info/profile-points/point", "setNoCrossPoint", 0);
          //digester.addCallParam( "tour-guide/crosspoints/track-info/profile-points/point", 0, false);
          // digester.addBeanPropertySetter( "tour-guide/crossspoints/crosspoint", "title" );
@@ -71,10 +75,12 @@ public class ProfileDigesterDriver {
             out = out + ps.getDist() +",";
             out = out + ps.getHeight() + ",";
             if(ps.isCrossPoint()) {
-               out = out + "1";
+               out = out + "1,";
             } else {
-               out = out + "0";	
+               out = out + "0,";	
             }
+            out = out + ps.getLongitude() + ",";
+            out = out + ps.getLatitude();
             // System.out.println("Out: " + out);
             p.println(out);
          }

@@ -113,6 +113,7 @@ public class ProfileImageGenerator {
       Iterator itr;
       ProfileSection ps;
       int totalDistance = 0;
+      int totalInnerDistance = 0;
       
       itr = profileSections.values().iterator();
       
@@ -121,9 +122,14 @@ public class ProfileImageGenerator {
       while(itr.hasNext()) {
          ps = (ProfileSection) itr.next();
          // System.out.println("ps: " + ps.getDist());
-         totalDistance = totalDistance + ps.getDist();
-         // System.out.println("total:" + totalDistance);
-         ps.setDist(totalDistance);
+         if(ps.isCrossPoint()) {
+        	totalInnerDistance = 0; 
+            totalDistance = totalDistance + ps.getDist();
+            ps.setDist(totalDistance);
+         } else {
+        	totalInnerDistance = totalDistance + ps.getDist();
+        	ps.setDist(totalInnerDistance);
+         }
       }
       
       return(totalDistance);
@@ -135,6 +141,7 @@ public class ProfileImageGenerator {
       ProfileSection ps;
       int height;
       int dist;
+      String tmp ="";
       
       itr = profileSections.values().iterator();
       
@@ -142,6 +149,7 @@ public class ProfileImageGenerator {
          ps = (ProfileSection) itr.next();
          height = ps.getHeight();
          dist = ps.getDist();
+         tmp = "("+dist+","+height+")";
          
          // System.out.println("dist: " + dist + ", height: "+height);
          
@@ -159,7 +167,7 @@ public class ProfileImageGenerator {
             dist = xOri;
          }
          ps.setDist(dist);
-         // System.out.println("dist: " + dist + ", height: "+height);
+         System.out.println(tmp+" dist: " + dist + ", height: "+height);
       }
    }
    

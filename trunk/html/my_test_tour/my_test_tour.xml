@@ -65,12 +65,8 @@
        <poi distance="000">
           Point of interest text.
        </poi>
-       <!--
        <profile-points>
-           <point distance="100" elevation="200" icp="false" />
-	   <point distance="200" elevation="100" icp="false" />
-	   <point distance="300" elevation="200" icp="false" />
-	   <point distance="400" elevation="300" icp="false" />
+           <point distance="250" elevation="0" icp="false" longitude="000" latitude="000" />
        </profile-points>
        -->
    </track-info>
@@ -95,10 +91,10 @@
           Another POI.
        </poi>
        <profile-points>
-           <point distance="100" elevation="200" icp="false" />
-	   <point distance="200" elevation="400" icp="false" />
-	   <point distance="300" elevation="500" icp="false" />
-	   <point distance="400" elevation="400" icp="false" />
+           <point distance="100" elevation="200" icp="false" longitude="000" latitude="000" />
+	   <point distance="200" elevation="1000" icp="false" longitude="000" latitude="000" />
+	   <point distance="300" elevation="0" icp="false" longitude="000" latitude="000" />
+	   <point distance="400" elevation="800" icp="false" longitude="000" latitude="000" />
        </profile-points>
    </track-info>
    
@@ -167,7 +163,7 @@
    
    <track-info pavement="road">
       <profile-points>
-           <point distance="100" elevation="1200" icp="false" />
+           <point distance="100" elevation="1200" icp="false" longitude="000" latitude="000"/>
        </profile-points>
    </track-info>
    
