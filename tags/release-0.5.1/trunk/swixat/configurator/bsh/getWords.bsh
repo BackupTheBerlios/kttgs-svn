@@ -1,0 +1,6 @@
+import java.util.HashMap;
+
+map = new HashMap();
+map.put("language", "Language:");
+map.put("tourname", "Tour Folder Name:");
+return map;

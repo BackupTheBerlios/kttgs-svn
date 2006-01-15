@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<tourguide xmlns="http://kttgs.berlios.de/TourGuideSchema.xsd">
+	<guide>
+		<author>Sven Salzwedel</author>
+		<copyright>2005</copyright>
+	</guide>
+	<tour>
+		<name>Testtour</name>
+		<description>Nur eine Testtour.</description>
+		<location>
+			<zipcode>00000</zipcode>
+			<city>Footown</city>
+			<region>Barlands</region>
+			<country>Foobarvaria</country>
+			<reach>
+				<train>This is about how we get there by train.</train>
+				<car>This is about how we get there by car.</car>
+			</reach>
+		</location>
+		<distance unit="km">4.2</distance>
+		<fitnesslevel>medium</fitnesslevel>
+		<techlevel>medium</techlevel>
+		<type>trail</type>
+		<duration>00:00:00</duration>
+		<maps>
+			<map publisher="foopub" isbn="000">Barmap</map>
+		</maps>
+		<crosspoints>
+			<crosspoint>
+				<description>This is the first Crosspoint</description>
+				<distance>10</distance>
+				<direction>north</direction>
+				<elevation>100</elevation>
+				<latitude>0</latitude>
+				<longtitude>0</longtitude>
+			</crosspoint>
+		</crosspoints>
+	</tour>
+</tourguide>

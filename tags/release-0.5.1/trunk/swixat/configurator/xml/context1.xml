@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<!--
+    Document   : context.xml
+    Created on : September 29, 2004, 1:03 PM
+    Author     : P.Marrone
+    Description:
+        Parameters of the swixat framework according to the Spring syntax.
+-->
+
+<beans>
+<!-- *** APPLICATION-SPECIFIC PARAMETERS *** -->
+    
+    <bean id="application" class="org.swixat.framework.Application">
+      <property name="title"><value>Hello, World!</value></property>
+      <property name="baseDir"><value>./swixat/configurator</value></property>
+      <property name="initialFrame"><value>xml/configFrame.xml</value></property>
+      <property name="scriptManager"><ref bean="scriptManager"/></property>
+      <property name="onStart"><value>createModel</value></property>
+   </bean>
+   
+   <bean id="createModel" class="org.swixat.commands.CommandBinder">
+        <property name="type"><value>bsh/createModel.bsh</value></property>
+    </bean>
+    
+   <bean id="create" class="org.swixat.commands.CommandBinder">
+      <property name="type">
+         <value>bsh/checkInput.bsh</value>
+      </property>
+      <!--
+      <property name="output">
+         <value>xml/helloWorldFrame3.xml</value>
+      </property>
+      -->
+      <property name="onError">
+         <value>xml/helloWorldFrame1.xml</value>
+      </property>
+   </bean>
+   
+   <bean id="cancel" class="org.swixat.commands.CommandBinder">
+      <property name="type">
+         <value>org.swixat.commands.ExitCommand</value>
+      </property>
+   </bean>
+   
+   <bean id="languageChanged" class="org.swixat.commands.CommandBinder">
+      <property name="type">
+         <value>bsh/languageChanged.bsh</value>
+      </property>
+   </bean>
+   
+        
+<!-- *** END APPLICATION-SPECIFIC PARAMETERS *** -->
+
+    <!-- Scripting features -->
+    <bean id="scriptManager" class="org.swixat.script.ScriptManager">
+        <property name="scriptEngine">
+           <value>org.swixat.script.BeanShellScripting</value>
+        </property>
+        <property name="evals">
+           <!-- Initial script code to evaluate -->
+           <list>
+              <!--value>import org.swixat.*;</value-->
+              <!--<value>add here your own statements</value>-->
+           </list>
+        </property>
+    </bean>
+    
+    <!-- TagLibrary extensions -->
+    <bean id="newTags" class="org.swixat.framework.TagLibraryExt">
+        <property name="newTags">
+            <map>
+                <entry key="ContextDataSource"><value>org.swixat.databinding.ContextDataSource</value></entry>
+                <entry key="ScriptingDataSource"><value>org.swixat.databinding.ScriptingDataSource</value></entry>
+                <entry key="Xpanel"><value>org.swixat.framework.XPanel</value></entry>
+                <entry key="WindowEvents"><value>org.swixat.commands.WindowEvents</value></entry>
+                <entry key="EventHandler"><value>org.swixat.events.GenericEventHandler</value></entry>
+		<entry key="PropertyChangeEvents"><value>org.swixat.commands.PropertyChangeEvents</value></entry>
+
+            </map>
+        </property>
+    </bean>
+    
+    <!-- Swing components SetterFactories -->
+    <bean id="SetterFactory" class="org.swixat.databinding.SetterFactory">
+        <property name="propertySetters">
+            <map>
+                <entry key="javax.swing.JLabel"><value>org.swixat.databinding.JLabelPropertySetter</value></entry>
+                <entry key="javax.swing.JTextField"><value>org.swixat.databinding.JTextPropertySetter</value></entry>
+                <entry key="javax.swing.JComboBox"><value>org.swixat.databinding.JComboPropertySetter</value></entry>
+                <entry key="javax.swing.JList"><value>org.swixat.databinding.JListPropertySetter</value></entry>
+            </map>
+        </property>
+    </bean>
+</beans>

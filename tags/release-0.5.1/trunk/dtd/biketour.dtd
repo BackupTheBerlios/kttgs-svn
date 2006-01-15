@@ -1,0 +1,179 @@
+
+<!-- start always with <tour-guide> -->
+<!ELEMENT tour-guide ( storage-info, general, crosspoints ) >
+
+<!--
+   <storage-info> is thought to be helpful for a "tour guide provider"
+   with a number of tours.
+   For now we only have <location>. Tags could be added in the future.
+-->
+<!ELEMENT storage-info ( location ) >
+<!ELEMENT location EMPTY >
+<!ATTLIST location city CDATA #REQUIRED >
+<!ATTLIST location country CDATA #REQUIRED >
+<!ATTLIST location region-or-state CDATA #REQUIRED >
+<!ATTLIST location zip-code CDATA #REQUIRED >
+
+<!-- THE <general> SECTION (start) -->
+<!--
+   Next element to come is <general>. Thru the attributes you specify
+   some helpful information wether the tour is managable by the user.
+   Via "duration" give a time in hours that it takes for YOU.
+-->
+<!ELEMENT general ( name, distance, desc, reach, maps, roadmap, profile ) >
+<!ATTLIST general duration CDATA #REQUIRED >
+<!ATTLIST general fitness-level (easy|medium|high|extrem) #REQUIRED >
+<!ATTLIST general tech-level (easy|medium|high|extrem) #REQUIRED >
+<!ATTLIST general type (downhill|pointtopoint|round|trail) "round" >
+<!ATTLIST general total-uphill CDATA #REQUIRED >
+
+<!-- Give your tour a stunning name -->
+<!ELEMENT name ( #PCDATA ) >
+
+<!--
+   Very important! Give the overall distance of the tour. Users will decide
+   on THIS information if they are fit enough to do this tour. Please dont
+   lie here.
+   <distance overwrite="no" unit="km">80</distance>
+-->
+<!ELEMENT distance ( #PCDATA ) >
+<!-- currently unused -->
+<!ATTLIST distance overwrite CDATA #REQUIRED >
+<!-- give a unit like: km, miles, whatever... -->
+<!ATTLIST distance unit CDATA #REQUIRED >
+
+<!-- Describe your tour. -->
+<!ELEMENT desc ( #PCDATA ) >
+
+<!--
+  Tell people how they can reach the start point of your tour. You can add
+  descriptions for different means of transportation:
+  <reach>
+     <option name="car">Tell it...</option>
+     <option name="train">Tell it...</option>
+  </reach>
+-->
+<!ELEMENT reach ( option+ ) >
+<!ELEMENT option ( #PCDATA ) >
+<!ATTLIST option name CDATA #REQUIRED >
+
+<!-- Advise maps in this section -->
+<!ELEMENT maps ( map ) >
+<!-- Enter any data that helps the user to buy or order this map. -->
+<!ELEMENT map ( #PCDATA ) >
+
+<!-- 
+  Point to a map of the tour here. Put the image of the map in
+  directory 'images'. Refer to the name without the the directory
+  name. Assume the we have ./images/my_map.jpg. Use it like that:
+  <roadmap image="my_map.jpg"/>
+-->
+<!ELEMENT roadmap EMPTY >
+<!ATTLIST roadmap image CDATA #REQUIRED >
+
+<!-- 
+  A graphical profile of the tour will be automatically generated
+  from the tour data. Just use the tag as-is (<profile/>). If you
+  leave out the tag you will see no profile image!
+-->
+<!ELEMENT profile EMPTY >
+
+<!-- THE <general> SECTION (end) -->
+
+
+<!-- THE <crosspoints> SECTION (start)
+   Here the real tour data will be found.
+-->
+
+<!-- 
+   Within <crosspoints> we will have: 
+   <crosspoint> <track-info> <crosspoint> <track-info> <crosspoint> and so on...
+-->
+<!ELEMENT crosspoints ( crosspoint, (track-info, crosspoint)* ) >
+
+<!--
+   <desc>: Give a helpful description to the user here
+   The attributes:
+      *) direction: Give the direction to where we should head from this 
+         crosspoint.
+      *) distance: Give the distance in meters FROM THE LAST crosspoint. Do NOT
+         give the complete distance from the start point!
+      *) elevation: Elevation in meters.
+      *) latitude: If you have add it here, else use the string "000".
+      *) longitude: If you have add it here, else use the string "000".
+   
+-->
+<!ELEMENT crosspoint ( desc, images?, profile-desc? ) >
+<!ATTLIST crosspoint direction (north|east|south|west|northeast|southeast|southwest|northwest|none) #REQUIRED >
+<!ATTLIST crosspoint distance CDATA #REQUIRED >
+<!ATTLIST crosspoint elevation CDATA #REQUIRED >
+<!ATTLIST crosspoint latitude CDATA #REQUIRED >
+<!ATTLIST crosspoint longitude CDATA #REQUIRED >
+
+<!--
+   You can add any number of pictures to any crosspoint:
+   <images>
+      <image name="file-one.jpg">
+      <image name="file-two.jpg">
+   </images>
+   What was said about addressing picture files for the <map> tag is here
+   still valid!
+-->
+<!ELEMENT images ( image+ ) >
+<!ELEMENT image EMPTY >
+<!ATTLIST image name CDATA #REQUIRED >
+
+<!-- 
+  The system can generate a profile image according the given data. In legend
+  of this profile the <desc> of each crosspoint is used. If it does not look
+  good in the image profile, enter an alternate text here. It will be used
+  instead of the text given in <desc>.
+-->
+<!ELEMENT profile-desc ( #PCDATA ) >
+
+<!-- 
+   Ok, now the track info: You remember? Between every <crosspoint> we have
+   a single <track-info> tag.
+   With the pavement attribute you specify what the, err, pavement looks
+   like.
+-->
+<!ELEMENT track-info ( anecdote | eatndrink | poi )* >
+<!ATTLIST track-info pavement (road|forrest.road|trail) #REQUIRED >
+
+<!--
+   Here you can tell the funny things that happend while you recorded the
+   tour. Like: "Here Tom smashed his bike to total break-down". You got
+   a picture of this? The better, add it with the image attribute.
+   What was said about addressing picture files for the <map> tag is here
+   still valid!
+   The distance (attribute) is measured in meters from the last crosspoint!
+-->
+<!ELEMENT anecdote ( #PCDATA ) >
+<!ATTLIST anecdote distance CDATA #REQUIRED >
+<!ATTLIST anecdote image CDATA #IMPLIED >
+
+<!--
+   People that bike your tour will get hungry and thirsty. Help them to
+   stay alive...
+   What was said about addressing picture files for the <map> tag is here
+   still valid!
+   The distance (attribute) is measured in meters from the last crosspoint!
+-->
+<!ELEMENT eatndrink ( #PCDATA ) >
+<!ATTLIST eatndrink distance CDATA #REQUIRED >
+<!ATTLIST eatndrink image CDATA #IMPLIED >
+<!ATTLIST eatndrink type (restaurant|pub|gas-station|hut) #REQUIRED>
+
+<!--
+   On your tour we will come across 'points of interest' (poi). Tell people
+   about that roman ruins, this special rock, that old oak, whatever...
+   What was said about addressing picture files for the <map> tag is here
+   still valid!
+   The distance (attribute) is measured in meters from the last crosspoint!
+-->
+<!ELEMENT poi ( #PCDATA ) >
+<!ATTLIST poi distance CDATA #REQUIRED >
+<!ATTLIST poi image CDATA #IMPLIED>
+
+
+<!-- THE <crosspoints> SECTION (end) -->

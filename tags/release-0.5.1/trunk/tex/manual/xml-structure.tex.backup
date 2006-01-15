@@ -1,0 +1,687 @@
+\section{Der Aufbau der  XML-Datei}\label{sec:xml-structure} 
+
+Der gesamte Inhalt einer Tourbeschreibung wird in einer XML-Datei abgelegt.
+Ich werde in diesem Kapitel detailliert beschreiben, wie diese Datei aufgebaut
+ist.
+
+Das Wissen um den Aufbau dieser Datei ist aus zwei Gr"unden notwendig:
+\begin{enumerate}
+\item Solange wir keine grafische Schnittstelle zur Erfassung besitzen, mu"s
+      man diese Datei per Hand erfassen. Dazu mu"s man nat"urlich wissen, wie
+      sie aufgebaut ist.
+\item Auch wenn wir irgenwann eine grafische Schnittstelle haben, mu"s ein(e)
+      Entwickler(in), die/der das System erweitern will, wissen, wie der Aufbau
+      nun exakt aussieht\footnote{Ok, es existiert eine dokumentierte DTD, aber 
+      das nur am Rande\ldots}.
+\end{enumerate}
+
+Sieht man sich die XML-Datei das erste Mal an, dann schaut das alles recht 
+komplex und konfus aus. Aber, ehrlich, so schwierig ist das alles gar nicht.
+Fangen wir mal an\ldots
+
+\textit{Anm.: In den XML-Beispielen sind Zeilennummern erg"anzt. Diese geh"oren 
+nat"urlich \textbf{nicht} in die echte Datei!
+}
+
+\subsection{Learning By Doing}
+Das, was ich nun beschreiben werde, ist etwas trocken. Ich hab' zwar versucht,
+es etwas aufzulockern, aber es mu"s ja trotzdem technisch korrekt sein und
+das f"uhrt zwangsl"aufig zu einer gewissen \textit{Trockenheit}.
+
+Interessanter is es sicher, die ganzen Sachen w"ahrend des Lesens auch
+auszuprobieren. Dann ist das Ganze nicht ganz so trocken und man sieht
+gleich, ob man alles richtig verstanden hat.
+
+Das ist sehr einfach mit dem System m"oglich: Als erstes legt man mal ein
+Skeleton an, wie ich es in Abschnitt \ref{sec:qickstart-gen-skeleton} 
+(Seite \pageref{sec:qickstart-gen-skeleton}) beschrieben habe. Falls
+du das noch nicht getan hast, dann solltest du jetzt wirklich mal
+den kompletten Abschnitt \ref{sec:qickstart} lesen.
+
+Nun kannst du mit dem Skeleton experimentieren. Hast du die Namen aus 
+Abschnitt \ref{sec:qickstart} verwendet, dann befindet sich eine 
+Datei names \texttt{MeineSuperTour.xml} im Verzeichnis 
+\texttt{./xml/MeineSuperTour}. Dies ist die XML-Datei, um die sich
+alles dreht. Du editierst diese Datei und "uberpr"ufst die "Anderungen, 
+indem du folgendes ausf"uhrst:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-tour-html
+\end{lstlisting}
+
+Um die "Anderungen im Browser sichtbar zu machen, musst du die
+Ansicht in deinem Browser aktualisieren. Welche Datei du 
+in den Browser laden musst, ist in Abschnitt \ref{sec:view-html}
+auf Seite \pageref{sec:view-html} beschrieben.
+
+\subsection{<tourguide>}
+
+Die gesamte Tourbeschreibung wird in zwischen dem "offnenden und dem
+schlie"senden \texttt{<tourguide>}-Tag eingeschlo"sen. Das Ganze sieht also
+so aus:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   <storage-info>
+      <location />
+   </storage-info>
+   <general>
+      ...
+   <general>
+   <crosspoints>
+      ...
+   </crosspoints>
+<tourguide>
+\end{lstlisting}
+
+Im Wesentlich haben wir also drei Abschnitte:
+\begin{enumerate}
+\item <storage-info>
+\item <general>
+\item <crosspoints>
+\end{enumerate}
+
+Alle Abschnitte werden nachfolgenden genauer beleuchtet. Der
+Wichtigste is \texttt{<crosspoints>}, da er die eigentlich
+Beschreibung der Tour beinhaltet. Wozu sind aber die anderen
+da? Fangen wir an mit\ldots
+
+\subsection{<storage-info> (<location>)}
+Wie schon erw"ahnt, erfassen wir ja unsere Tour nicht f"ur uns 
+selbst: Wir kennen sie ja schon. Sondern f"ur andere.
+
+Mal angenommen, du wohnst in Hamburg und f"ahrst "ubers Wochende
+nach Buttenheim in Bayern (das MTB ist nat"urlich dabei). Am
+Samstag h"attest du gute drei Stunde Zeit 'ne kleine Tour zu
+fahren. Gibt's da bekannte Touren?
+
+W"are jetzt nett, einfach ins Internet zu gehen. Das dir 
+bekannte Interface zu benutzen und mal zu gucken, was da in
+Buttenheim so geht.
+
+Genau daf"ur ist das Tag \texttt{<storage-info><location></storage-info>}
+vorhanden. Wie? Schauen wir uns das mal an:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   <storage-info>
+      <location 
+          country="de" 
+          region-or-state="Bavaria" 
+          city="Buttenheim" 
+          zip-code="96155"/>
+   </storage-info>
+   ...
+<tourguide>
+\end{lstlisting}
+
+Alles klar? Alle Infos werden mithilfe der Attribute des Tags
+\texttt{<location>} erfa"st. Wie werden diese Attribute nun 
+zur Suche benutzt? Sorry, das ist (noch?) nicht Aufgabe dieses
+Projekts. Sie sind erstmal da. Es liegt nun an demjenigen, der
+die Suchfunktion implementiert, wie clever die erfassten Daten
+genutzt werden.
+
+Eine kurze Anmerkung zum Attribut \texttt{country}: Es sollten
+die sogenannten Top Level Domains (wie sie aus dem Internet
+bekannt sind) verwendet werden. Ein einfacheres und bekannteres 
+System zur Angabe von L"andern existiert praktisch nicht.
+
+Gut. Nun haben wir (mit viel Gl"uck) drei Touren gefunden.
+Aber sind wir daf"ur auch fit genug? Dauert das nicht zu 
+lange? Wie kommt man an den Startpunkt? Gibt's ne Karte?
+Ja, das braucht man alles. Deswegen gibt es das Tag
+\texttt{<general>}\ldots
+
+\subsection{Ein Wort zu Bildern}\label{sec:image_references}
+Hmm, den Abschnitt \texttt{<general>} hab' ich ins n"achste
+Kapitel verschoben. Ich mu"s noch schnell was zu Bildern
+im Allgemeinen sagen. Dauert nicht lange, ist aber wichtig
+f"ur \textbf{alle} nachfolgenden Abschnitte.
+
+Nat"urlich unterst"utzt das System die Verwendung von Bildern.
+Ohne Bilder w"are das Ganze wohl nur, wenn "uberhaupt, die
+H"alfte wert. Dazu m"ussen die Bilder aber auch  gefunden
+werden. Aber wie?
+
+So: In dem Verzeichnis in dem die XML-Datei, "uber die wir
+hier ja reden, zu liegen kommt, existiert \footnote{Wenn das
+das Grundger"ust via \texttt{ant gen-skeleton} angelegt wurde,
+dann existiert es automatisch. Ansonsten mu"s es per Hand
+z.B. mit dem Befehl \texttt{mkdir images} unter linux-artigen
+Systemen bzw. \texttt{md images} auf einem Windows-Rechner
+angelegt werden.} ein Unterverzeichnis namens \texttt{images}.
+Hier hinein werden alle Bilder kopiert, die wir sp"ater
+ben"otigen.
+
+Gut, jetzt h"atten wird alle Bilder in unserem Verzeichnis.
+Aber wie geben wir sie in der XML-Datei an? Auch das ist
+ziemlich einfach. Schauen wir uns mal ein Beispiel an:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<image name="big_drop.jpg"/>
+\end{lstlisting}
+
+Das war's auch schon. Die Bilder werden \textbf{ohne} Angabe
+des Verzeichnisses (\texttt{images}) durch die Notation des 
+Bildnamens eingetragen. An welchen Stellen das n"otig/m"oeglich
+ist, werden wir im weiteren Verlauf erfahren.
+
+\subsection{<general>}
+Ok. Nach dem Exkurs zur Angabe von Bildern, widmen wir uns
+jetzt dem n"achsten Abschnitt der XML-Datei: \texttt{<general>}.
+Erstmal wieder ein Beispiel:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general 
+   fitness-level="easy" 
+   tech-level="medium" 
+   type="round" 
+   duration="01:00hrs">
+   
+   <name>Nuernberger Tiergarten 
+         --- Kleiner Trial inklusive 'Roller Coaster'
+   </name>
+   <distance unit="km">10</distance>
+   <desc>
+       Wir starten am Tiergarten, fahren etwas uphill durch 
+       die Stromschneisse, dann den 'Mini-DH' runter...
+   </desc>
+   <reach>
+      <option name="Mit dem Auto">Auf der A3 aus Richtung 
+         Wuerzburg oder Passau kommend bei Nuernberg/Moegeldorf 
+         abfahren...
+      </option>
+      <option name="Per Zug">Am Nuernberg Hbf aussteigen. Dann 
+         mit der Strassenbahn direkt zum Tiergarten.
+      </option>
+   </reach>
+   <maps>
+      <map>Kompass, Karte 170</map>
+   </maps>
+   <roadmap image="map.jpg"/>
+   <profile />
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+
+\subsubsection{Die Attribute von <general>}
+Wie man aus dem Beispiel ersieht, hat <general> vier
+Attribute. Diese dienen dem/r Anwender(in) dazu, zu 
+entscheiden, ob die Tour f"ur ihn/sie geeignet ist.
+
+Die Angaben hier sind nicht ganz einfach, aber wichtig.
+Wenn du topfit bist, die Tour aber auch f"ur dich
+hart war, dann bringt das hier zum Ausdruck. Wenn
+der Downhill f"ur dich nicht ganz einfach, aber du
+technisch nicht so perfekt bist, dann setze den 
+\texttt{tech-level} nicht gleich auf \texttt{extrem}.
+
+Nachfolgend die Attribute und ihre Bedeutung (was man
+hierf"ur angeben kann, wird im Anschlu"s erl"autert):
+\begin{enumerate}
+\item fitness-level: Wie fit muss man f"uer die Tour sein?
+\item tech-level: Wie hoch ist der technische Anspruch?
+      Knifflige Wurzelpassagen? Extreme Downhills (mit
+      fetten Drops)?
+\item type: Rundtour, Single Trial, \ldots
+\item duration: Dauer der Tour. Als du sie gefahren
+      bist.
+\end{enumerate}
+
+Werte f"ur \textbf{fitness-level}: \texttt{easy, medium, high} 
+oder \texttt{extrem}.
+
+Werte f"ur \textbf{tech-level}: \texttt{easy, medium, high} 
+oder \texttt{extrem}.
+
+Werte f"ur \textbf{type}:
+\begin{itemize}
+\item round $\Rightarrow$ Rundtour
+\item pointtopoint $\Rightarrow$ Tour von A nach B
+\item downhill $\Rightarrow$ Reiner Downhill
+\item trail $\Rightarrow$ Sch"oner Singletrail
+\end{itemize}
+
+\textbf{duration}: Hier sollte man sowas wie \texttt{"01:30hrs"}
+oder \texttt{"1 Stunde, 30 Minuten"} angeben.
+
+So und nun zu den restlichen Tags die innerhalb von
+<general> verwendet werden k"onnen oder m"ussen\ldots
+
+\subsubsection{<name>}
+Hier vergibst du einen kurzen, pr"agnanten Namen f"ur die
+Tour. Dieser Text taucht zum Beispiel in Listen auf, wenn man
+aus mehreren Touren eine ausw"ahlen mu"s.
+
+\subsubsection{<distance>}
+Dieses Tag dient zu Angabe der Gesamtdistanz der Tour, die 
+dein Fahrradcomputer angezeigt hat, als du sie gefahren bist.
+Es wird folgenderma"sen verwendet:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general 
+   ...
+   <distance unit="km">10</distance>
+   ...
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+Mit dem Attribute \texttt{unit} gibst du die L"angeneinheit
+an (also z.B.: km, meter, Meilen). Zwischen den beiden
+Tags notiert man dann die L"ange der Tour als Zahl.
+Und das war's auch schon.
+
+
+\subsubsection{<desc>}
+Zwischen den <desc>-Tags wird eine Beschreibung der Tour 
+erfasst. Die kann durchaus etwas l"anger sein und soll dem
+Leser richtig Lust auf die Tour machen.
+
+\subsubsection{<reach>}
+Irgendwie mu"s der Biker ja auch an den Startpunkt der Tour
+gelangen. Dazu verwenden wir das <reach>-Tag. Man kann
+mehrere Verkehrsmittel angeben. Ein Beispiel k"oennte wie
+folgt aussehen:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general 
+   ...
+   <reach>
+      <option name="Mit dem Auto">Auf der A3 aus Richtung 
+         Wuerzburg oder Passau kommend bei Nuernberg/Moegeldorf 
+         abfahren...
+      </option>
+      <option name="Per Zug">Am Nuernberg Hbf aussteigen. Dann 
+         mit der Strassenbahn direkt zum Tiergarten.
+      </option>
+   </reach>
+   ...
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+
+Innerhalb des <reach>-Tags kann man beliebig oft das Tag
+<option> verwenden. Das <option>-Tag dient dazu, die 
+verschiedenen Verkehrsmittel bzw. Anreisewege zu beschreiben.
+Das Attribute \texttt{name} verwendet man dazu, den Namen
+des Verkehrsmittel zu notieren. Innerhalb des <option>-Tag
+erfolgt dann die Erkl"arung zur Anreise.
+
+\subsubsection{<maps>}
+Zum Abradeln der Tour wird man sicher 'ne Landkarte des
+Gebiets gebrauchen k"onnen. Auch diese Information sollten
+wir dem Leser mitgeben. Innerhalt des <maps>-Tags kannst du
+mit dem <map>-Tag beliebig viele Karten angeben:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general>
+   ....
+   <maps>
+      <map>Kompass, Karte 170</map>
+      <map>Andere Firma, Andere Karte 21</map>
+      ...
+   </maps>
+   ...
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+
+\subsubsection{<roadmaps>}
+Du hast auch eine digitalisierte Karte der Tour (mit eingezeichnetem
+Weg der Tour)? Na, dann sollten wir die auch anzeigen. Dazu
+gen"ugt es, den Namen des Bildes im \texttt{image} Attribute
+des <roadmap>-Tags anzugeben:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+   ...
+<general>
+   ...
+   <roadmap image="map.jpg"/>
+   ...
+</general>   
+   ...
+<tourguide>
+\end{lstlisting}
+
+Aber Achtung! Kartenmaterial ist urheberlich gesch"utzt. Du
+solltest (ohne Genehmigung) nicht einfach eine Karte einscannen
+und deiner Tour beilegen. Sofern du die Karte (wie auch immer)
+selbst gezeichnet oder eine Genehmigung hast, dann kannst du
+sie ohne Bedenken verwenden.
+
+\subsubsection{<profile/>}
+Das ist ein seltsames Tag: Man muss es n"amlich einfach nur
+hinschreiben\ldots und man kann es auch einfach weglassen. Aber
+dann fehlt eine wichtige Information, die noch dazu automatisch
+generiert werden wuerde: Das grafische Profil der Tour.
+
+Da das Tag allein f"ur sich steht sollte man den Slash/Schr"agstrich
+(\texttt{.../>}) vor der schlie"senden Klammer nicht vergessen!
+
+\subsection{<crosspoints>}
+Mann-o-mann, so 'ne Menge Zeugs zu tippen. Wann kommt jetzt
+eigentlich die Beschreibung der Tour? Voila\ldots jetzt!
+
+Innerhalb des <crosspoints>-Abschnitts werden alle relevanten
+Wegpunkte der Tour beschrieben (und, optional, noch vieles
+mehr).
+
+Hier mal ein Beispiel:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   <crosspoint 
+      distance="300" elevation="600" 
+      direction="northwest" 
+      latitude="000" longitude="000">
+     <desc> Ein nordwest Punkt.</desc>
+     <profile-desc>
+        Die Stromschneisse... und los
+     </profile-desc>
+   </crosspoint>
+   
+   <track-info pavement="road">
+      <anecdote distance="gesamter Weg" image="drop.jpg">
+          Wenn's gar nicht mehr geht, dann einfach ab in 
+          den Wald. Der ist nicht dicht... man kann da 
+          auch gut schieben (und wird nicht gesehen ;-).
+      </anecdote>
+   </track-info>
+   
+   <crosspoint distance="200" elevation="310" 
+               direction="none" 
+               latitude="000" longitude="000">
+     <desc>Back At Home!</desc>
+   </crosspoint>
+<crosspoints>
+<tourguide>
+\end{lstlisting}
+
+WTF\footnote{Engl.: \textit{What the fuck}, Ausruf des Erstaunten\ldots ;-)}?
+Jaja, schaut kompliziert aus, is' aber auch blo"s mit Wasser
+gekocht.
+
+Gehen wir das mal analytisch an. Innerhalb von <crosspoints> 
+scheint es ein paar andere relevante Tags zu geben. Na, also:
+Richtig erkannt. Und es handelt sich dabei nur um zwei
+\begin{itemize}
+\item <crosspoint> und
+\item <track-info>
+\end{itemize}
+
+
+\begin{footnotesize}
+\textit{Anm. d. A.: Dem h"aufigen Leser technischer Dokumente wird nun auffallen --- 
+und ihn vielleicht verwirren ---, da"s ich die Einschachtelungstiefe des XML-Dokuments
+auch durch die Struktur dieses Dokuments wiedergegeben habe. Dies wird nun bewu"st 
+durchbrochen. Es ist der schiere Umfung und die Strukturtiefe der nachfolgenden 
+zwei Abschnitte, die dieses Vorgehen vern"unftig erscheinen lassen.}
+\end{footnotesize}
+
+
+\subsection{Entfernungen}\label{sec:crosspoints-distances-explained}
+Folgt man 'ner fremden Tour, dann ist es nat"urlich wichtig zu
+wissen, wo auf der Strecke man gerade ist. Viele Touren geben dazu
+die Positionen der Kreuzungspunkte in der totalen Distanz zum
+Startpunkt an. Das funktioniert nat"urlich theoretisch auch: In
+einer perfekten Welt.
+
+Aber in einer perfekten Welt misst mein Fahrradcomputer auch perfekt.
+Und: Ein perfekter Fahrer verf"ahrt sich nie.
+
+Meine Realit"at sieht aber so aus: Bis zum Kreuzungspunkt 3 hat alles
+gepasst. Den Kreuzungspunkt 4 finde ich aber nicht. Ich bin schon 
+1000 Meter darueber. Also: Zur"uck zum Punkt 3. Ok, ich nehm' den
+anderen Weg. Nun bin ich also 2x1000 Meter "uber der Angabe in der
+Tourbeschreibung. Das muss ich nat"urlich bei allen weiteren Angaben
+in Betracht ziehen.
+
+knottyTom's Tour Guide System zaehlt deswegen anders. Alle Entfernungen
+werden im Abstand zum letzten Kreuzungspunkt angegeben.
+
+\subsection{<crosspoint>}
+Das <crosspoint>-Tag dient dazu, einen Kreuzungspunkt im
+Verlauf der Tour zu beschreiben. Dazu verwenden wir f"unf
+Attribute und zwei Subtags.
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   <crosspoint 
+      distance="300" elevation="600" 
+      direction="northwest" 
+      latitude="000" longitude="000">
+     <desc> Ein nordwest Punkt.</desc>
+     <profile-desc>
+        Die Stromschneisse... und los
+     </profile-desc>
+   </crosspoint>
+   
+   <track-info pavement="road">
+      ....
+   </track-info>
+   
+   <crosspoint distance="200" elevation="310" 
+               direction="none" 
+               latitude="000" longitude="000">
+     <desc>Back At Home!</desc>
+   </crosspoint>
+<crosspoints>
+<tourguide>
+\end{lstlisting}
+
+\subsubsection{<crosspoint> Attribute}
+
+Die Attribute (und ihre Bedeutung) lauten wie folgt.
+\begin{itemize}
+\item \texttt{distance}: Das ist der Abstand zum letzten Kreuzungspunkt
+      in \textbf{Metern}. Der erste <crosspoint> hat also immer die
+      \texttt{distance="0"} (Null)!
+\item \texttt{elevation}: H"ohe des Punktes in \textbf{Metern}.
+\item \texttt{direction}: Hiermit gibt man die Richtung an, in die es nach
+      diesem Punkt weitergeht, mit einer von acht Himmelsrichtungen
+      an. M"ogliche Werte sind: \texttt{north, east, south, west, northeast,
+      southeast, southwest} und \texttt{northwest}.
+\item \texttt{latitude}: Breitengrad (\textit{wird bisher nicht verwendet})
+\item \texttt{longitude}: L"angengrad (\textit{wird bisher nicht verwendet})
+\end{itemize}
+
+\subsubsection{<desc>}
+Dieses Tag dient der Beschreibung des Kreu\-zungs\-punktes. Das ist,
+auch wenn man das nicht gleich erkennt, eines der wichtigsten Tags
+der ganzen Beschreibung! 
+
+An so einem Punkt mu"s sicher Fahrer wieder neu orientieren und
+"uberpr"ufen, ob er noch auf der richtigen Route ist. Gib ihm/ihr
+an dieser Stelle Hinweise, wie es jetzt weitergeht. Vorallem dann,
+wenn sich der Weg gabelt oder es irgendwo nicht leicht ersichtlich 
+in den Wald geht. Du solltest also so Angaben machen wie:
+\begin{itemize}
+\item \textit{Hier gabelt sich der Weg in drei Schotterwege. Wir
+   nehmen den mittleren.}
+\item \textit{Hinter der alten Eiche geht es rechts in den Waldweg.}      
+\item \textit{Bisher waren wir auf "gelb Kreis", jetzt fahren wir auf
+   "rot Viereck" weiter.}
+\end{itemize}
+
+\subsubsection{<images>}
+Innerhalb des <images>-Tag kann man bieliebig viel Bilder, die
+f"ur den Kreuzungspunkt relevant sind angeben. 
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   <crosspoint...> 
+     <desc> Ein nordwest Punkt.</desc>
+     <images>
+        <image name="einBild.jpg"/>
+        <image name="anderesBild.jpg"/>
+        ....
+     <images>
+   </crosspoint>
+   ....
+<crosspoints>
+<tourguide>
+\end{lstlisting}
+
+\subsubsection{<profile-desc>}
+Wie ich ja schon erw"ahnt habe, kann das System automatisch 
+ein grafisches Profil der Tour aus den erfassten Daten generieren.
+Dazu geh"ort auch eine Legende, die die einzelnen Punkt des Profil
+kommentiert.
+
+Dazu wird normalerweise der Text aus dem <desc>-Tag verwendet. Dieser
+kann aber oftmals zu lang oder einfach unpassend f"ur eine Legende
+sein. 
+
+Deshalb kann man mithilfe des <profile-desc>-Tags diesen Text
+"uberschreiben. Das Tag ist zwar optional, ich w"urde aber dennoch
+Gebrauch davon machen.
+
+\subsection{<track-info>}
+Innerhalb des <trackinfo>-Tags werden Daten erfa"st, die zwischen
+zwei Kreu\-zungs\-punkten von Interesse f"uer den Fahrer der Tour sind,
+bzw. sein k"onnten.
+
+Dazu geh"oren z.B. Sachen wie: Wie schaut der Stra"senbelag aus?
+Wo gibt's was zu futtern? Gibt's auch was zu sehen? Geschichten zur 
+eigenen Tour.
+
+Den Stra"senbelag gibt man im Attribute \texttt{pavement} des
+Tags an also z.B. so \texttt{<trackinfo pavement="trail">} an.
+Erlaubte Werte und ihre Bedeutung sind:
+\begin{itemize}
+\item \texttt{road} $\Rightarrow$ Asphaltierte Stra"se
+\item \texttt{forrest.road} $\Rightarrow$ Wald- oder Feldweg
+\item \texttt{trail} $\Rightarrow$ Schmaler Wanderweg
+\end{itemize}
+
+Das Ganze sieht also z.B. wie folgt aus:
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   ...
+   <track-info pavement="road">
+      ...
+   </track-info>
+   ...
+<crosspoints>
+<tourguide>
+\end{lstlisting}
+
+Innerhalb des <track-info>-Tags sind die Tags <eatndrink>, <poi> 
+und <anecdote> erlaubt, aber allesamt sind optional. Sie haben alle 
+zwei einheitliche Attribute. Sehen wir uns die als Erstes an.
+
+\subsubsection{Attribute f"ur <eatndrink>,<poi> und <anecdote>}
+Wir haben die beiden Attribute:
+\begin{itemize}
+\item \texttt{distance} und
+\item \texttt{image} (optional)
+\end{itemize}
+
+Mit \texttt{distance} wird die Entfernung zum letzten Kreuzungspunkt
+angegeben. Genaueres dazu findest du in Absschnitt 
+\ref{sec:crosspoints-distances-explained} auf Seite 
+\pageref{sec:crosspoints-distances-explained}.
+
+\texttt{image} dient dazu ein Bild anzugeben. Es gilt alles
+das, was ich in Abschnitt \ref{sec:image_references} auf Seite
+\pageref{sec:image_references} zu Bildern geschrieben
+habe.
+
+
+\subsubsection{<eatndrink>}
+Die Leute die deine Tour abradeln, werden sicher Hunger und
+Durst bekommen. Hilf ihnen und beschreib', wo es was zu
+Futtern gibt. Die Beschreibung erfolgt innerhalb der Tags. Hier 
+ein Beispiel:
+\begin{lstlisting}{}
+<eatndrink distance="1200" image="dead_sow.jpg">
+    "Zur Toten Sau" ist ein uriges und guenstiges fraenkisches 
+    Lokal. Man sollte unbedingt das "Schaeufala" probieren.
+    Fuer Vegetarier... ne, fuer solche Menschen gibt es da
+    aber schon gar nix. >;-)
+</eatndrink>
+\end{lstlisting}
+
+
+\subsubsection{<poi>}
+POI steht fuer \textit{point of interest}, also ein 'interessanter
+Punkt'. Das kann nun sehr vieles sein: Ein uralte Eiche. Reste eines
+r"omischen Walls. Ein Wasserfall. Eine Felsformation.
+
+Ich finde man sollte mit dem MTB nicht nur durch die Gegend rasen,
+sondern sich auch (hin und wieder) die Gegend ansehen, durch die man
+f"ahrt. Wenn ich nur m"oglichst schnell unterwegs sein m"ochte  dann 
+k"onnte ich mir ja auch ein Rennrad anschaffen\ldots 
+
+Mit <poi> kann man auf solche Punkte hinweisen, z.B. so:
+\begin{lstlisting}{}
+<poi distance="400" image="rocks.jpg">
+    Hier befindet man sich auf der sog. "Retterner Kanzel".
+    Man sollte sich wirklich die Zeit nehmen und mal fuer
+    5 Minuten "ins Land" zu blicken...
+</poi>
+\end{lstlisting}
+
+\subsubsection{<anecdote>}
+Ihr habt sicher ein paar Sachen beim Erkunden und Erfassen
+der Tour erlebt, die der Nachwelt erhalten bleiben sollten,
+auch wenn sie nicht relevant f"ur die Tour selber sind.
+Egal, notiert auch das im <anecdote>-Tag z.B. wie folgt:
+\begin{lstlisting}{}
+<anecdote distance="640" image="broken_bike.jpg">
+    Bei der Abfahrt hat es mich so zerlegt, dass ich mein
+    Bike wegschmeissen konnte. Und Martin hatte nichts
+    Besseres zu tun als mein Leid auch noch zu 
+    fotografieren... ;-)
+</anecdote>
+\end{lstlisting}
+
+%%%%%%%%%%%%%%%%
+%% The END
+\subsection{Keine Tags mehr!}
+Das war heftig, oder? Aber ich hab' eine positive "Uberraschung:
+Das waren alle Tags. Jetzt solltest du alles kennen was zur 
+Erfassung einer Tour notwendig ist.
+
+Falls du dennoch Probleme haben solltest, dann schick' mir
+halt mal eine eMail an die Adresse, die auf dem Deckblatt
+angegeben ist. Vielleicht kann ich dir ne L"osung schicken
+und diese Dokumentation verbessern.
+
+Falls du es geschafft hast, eine Tour zu erfassen, dann kannst
+du die zip-Datei der Tour vielleicht auch irgendwo im Internet
+hochladen. Ich versuche einen Index aller Touren aufzubauen,
+die mit \textsc{kttgs} erfassst worden sind. Schick' mir aber
+bitte nur den Link/URL zu der zip-Datei, sonst l"auft wom"oglich
+meine Mailbox "uber.
+
+

@@ -1,0 +1,85 @@
+[General]
+img_extIsRegExp=false
+img_extensions=.eps .pdf .dvi .ps .fig .gif .jpg .jpeg .png
+masterDocument=
+name=BikeTour
+pkg_extIsRegExp=false
+pkg_extensions=.cls .sty .dtx
+src_extIsRegExp=false
+src_extensions=.tex .ltx .bib .mp
+
+[Tools]
+MakeIndex=
+QuickBuild=
+
+[item:biketour.kilepr]
+archive=true
+column=0
+encoding=UTF-8
+highlight=None
+line=0
+open=false
+
+[item:goal.tex]
+archive=true
+column=26
+encoding=ISO 8859-15
+highlight=LaTeX
+line=135
+open=true
+
+[item:installation.tex]
+archive=true
+column=14
+encoding=ISO 8859-15
+highlight=LaTeX
+line=27
+open=true
+
+[item:m-structure.tex]
+archive=true
+column=0
+encoding=ISO 8859-15
+highlight=LaTeX
+line=0
+open=true
+
+[item:main.tex]
+archive=true
+column=54
+encoding=ISO 8859-15
+highlight=LaTeX
+line=12
+open=true
+
+[item:pre.tex]
+archive=true
+column=0
+encoding=ISO 8859-15
+highlight=LaTeX
+line=20
+open=true
+
+[item:quick-start.tex]
+archive=true
+column=39
+encoding=ISO 8859-15
+highlight=LaTeX
+line=19
+open=true
+
+[item:tips-and-tricks.tex]
+archive=true
+column=21
+encoding=ISO 8859-15
+highlight=LaTeX
+line=1
+open=true
+
+[item:xml-structure.tex]
+archive=true
+column=50
+encoding=ISO 8859-15
+highlight=LaTeX
+line=679
+open=true

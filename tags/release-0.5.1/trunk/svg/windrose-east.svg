@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="32px"
+   height="32px"
+   id="svg1308"
+   sodipodi:version="0.32"
+   inkscape:version="0.41"
+   sodipodi:docbase="/home/tom/src/biketour/svg"
+   sodipodi:docname="windrose-east.svg"
+   inkscape:export-filename="/home/tom/src/biketour/svg/windrose-east.png"
+   inkscape:export-xdpi="90.000000"
+   inkscape:export-ydpi="90.000000">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="17.238095"
+     inkscape:cx="15.707182"
+     inkscape:cy="21.514423"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     inkscape:grid-bbox="true"
+     inkscape:document-units="px"
+     inkscape:window-width="879"
+     inkscape:window-height="537"
+     inkscape:window-x="85"
+     inkscape:window-y="149" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         rdf:about=""
+         id="Work6">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           id="type9"
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:#00c700;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#008700;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+       d="M 0.0000000,17.086359 L 13.093923,18.906077 L 15.000000,32.000000 L 16.994475,18.640884 L 30.000000,17.000000 L 16.994475,14.917127 L 15.000000,2.0000000 L 13.005525,14.917127 L 0.0000000,17.086359 z "
+       id="path1322"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#00c700;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#008700;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+       d="M 6.9226519,9.1629834 L 13.005525,16.795580 L 7.0524862,25.024862 L 14.911602,18.640884 L 22.969613,24.911602 L 16.640884,17.176796 L 22.969613,8.9723757 L 14.911602,15.093923 L 6.9226519,9.1629834 z "
+       id="path2087"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#db0000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#db0000;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000"
+       d="M 28.146744,17.047594 L 14.529416,14.715672 L 14.503993,18.617143 L 28.146744,17.047594 z "
+       id="path2190"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/tom/src/biketour/svg/windrose-north.png"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-ydpi="90.000000" />
+    <text
+       xml:space="preserve"
+       style="font-size:6.2040153;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#00090e;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Century Schoolbook L;text-anchor:start;writing-mode:lr-tb"
+       x="9.3493404"
+       y="6.6335273"
+       id="text2089"
+       sodipodi:linespacing="100%"
+       transform="scale(0.950649,1.051913)"
+       inkscape:export-filename="/home/tom/src/biketour/svg/windrose-north.png"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-ydpi="90.000000"><tspan
+         sodipodi:role="line"
+         id="tspan2091"
+         x="9.3493404"
+         y="6.6335273">N</tspan></text>
+  </g>
+</svg>

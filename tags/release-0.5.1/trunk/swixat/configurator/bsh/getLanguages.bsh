@@ -1,0 +1,6 @@
+import java.util.Vector;
+
+v = new Vector();
+v.add(new String("English"));
+v.add(new String("German"));
+return v.toArray();

@@ -1,0 +1,17 @@
+[[This is THE-CSS-SYSTEM.TXT]]
+
+The current layout system is quite simple:
+
+a) We have a number of CSS files in the 'css' subdirectory. You can name your
+   css-file whatever you want, but please leave the original 'biketour.css' 
+   intact!
+
+b) In file 'build.properties' we have an entry named 'css'. Change this for
+   example to:
+   
+      css=my_super_cool.css
+      
+   Where 'my_super_cool.css' is the filename you have choosen.
+   
+Done you are. In the process of building the HTML from your XML the css file
+will be copied to the location where the HTML file will be generated.

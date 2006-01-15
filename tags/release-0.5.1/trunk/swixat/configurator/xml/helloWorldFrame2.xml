@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Frame id="hello" visible="true" size="250,80" title="Tom's Test"
+       layout="BorderLayout" Maximizable="false" Closable="true"
+       Resizable="false" >
+   <panel constraints="BorderLayout.NORTH">
+       <button id="b1" text="Greetings" ActionCommand="hello"/>
+   </panel>
+</Frame>

@@ -1,0 +1,26 @@
+tour.info.heading=Detaillierte Tourinformationen
+how.to.get.there=Anreise
+
+fitness.level=Kondition
+tech.level=Technisches Koennen
+type=Typ
+duration=Dauer
+overall-distance=Laenge
+total-uphill=Hoehenmeter
+
+useful.maps=Empfohlenes Kartenmaterial
+overview.map=Uebersichtskarte
+crosspoint=Abzweigung
+profile=Tour-Profil
+distance=Entfernung
+elevation=Hoehe
+direction.to.go=Weiter in Richtung
+track.info=Informationen zum Streckenabschnitt
+pavement=Streckenbelag
+
+poi=Interessanter Punkt
+eatndrink=Lokal/Restaurant
+anecdote=Anekdote
+
+latitude=Breitengrad
+longitude=Laengengrad

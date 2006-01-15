@@ -1,0 +1,92 @@
+
+[[This is ROADMAP.TXT]]
+
+No Deadline
+-----------
+* Create forms that can be filled while protocolling the tour
+* Make these forms an application for PDAs (uah)
+* Store tour info on a website and let retrieve via GUI.
+ 
+Version 0.5.4
+-------------
+* If the manual reveals to be stable translate it to english.
+
+Version 0.5.3
+-------------
+* Build a graphical user interface using Ruby On Rails
+* Document and explain the installation of Ruby and ROR
+
+Version 0.5.2 <----------- CURRENT VERSION
+-------------
+* Add additional profile data.
+* Update the DTD (extended profile!).
+* Explain the usage of extended profile info in the manual.
+* Create a printable PDF that shows the tour and can
+  be used while on tour.
+* Document a real tour as example.
+* Add total for uphill (I really missed that information!).
+* Explain in the manual.
+* Update the DTD (total uphill).
+
+
+Version 0.5.1
+-------------
+* Create and document a DTD
+* Create a profile image with pavement info from the xml data.
+* Document the usage of the XML
+* Move everything from the old project website to BerliOS
+* Create a GUI to configure build.properties (which includes
+  the tour name folder and output language).
+
+
+Version 0.5
+-----------
+* Improve overall layout (using css)
+* Add image links to the generated HTML output.
+* Add navigation for the HTML output
+* Add information for GPS-Systems (no idea, how to use that kind of information
+  in the future... time will show)
+* Fix a bug in the translation system.(distance, wrong translated in German)
+* Add a windrose image to show direction.
+* Add graphical pavement information 
+
+MILESTONE 0.1
+=============
+* Rethink the total project 
+* Ask for feedback.
+* Tell your feelings to the community
+
+Version 0.4 
+-----------
+* Add (multiple) css support to make the html output more flexible and
+  better looking.
+* Document the usage of the CSS system
+* Add tour type imagine (up to 0.3 this was a fake)
+* Copy original XML file to output so that users can see what is in the XML
+* Add location info (country, region-or-state, city, zip-code): This information
+  can become useful when it comes to let people select a tour from a great 
+  number of tours stored in a database.
+  
+
+Version 0.3
+-----------
+* Let the build system create a new tour guide
+* Write documentation for the end user to let
+  them build their own tour guide
+* Add zip functionality to the build system, so
+  we can package the whole system.
+  
+
+Version 0.2
+-----------
+* Rethink the idea (XML, XSL, build system, whatever)
+* Add localized texts
+* Add first images
+* Improve XSL
+* Add zip functionalily to the build system, so we can
+  zip a whole tour.
+
+Version 0.1
+-----------
+* Do a first proof of concept
+* Ask for some feedback

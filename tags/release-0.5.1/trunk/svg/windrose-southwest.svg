@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg
+   xmlns:xml="http://www.w3.org/XML/1998/namespace"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://web.resource.org/cc/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://inkscape.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="90.000000"
+   inkscape:export-xdpi="90.000000"
+   inkscape:export-filename="/home/tom/src/biketour/svg/windrose-southwest.png"
+   sodipodi:docname="windrose-southwest.svg"
+   sodipodi:docbase="/home/tom/src/biketour/svg"
+   inkscape:version="0.41"
+   sodipodi:version="0.32"
+   id="svg1308"
+   height="32px"
+   width="32px">
+  <defs
+     id="defs3" />
+  <sodipodi:namedview
+     inkscape:window-y="149"
+     inkscape:window-x="85"
+     inkscape:window-height="537"
+     inkscape:window-width="879"
+     inkscape:document-units="px"
+     inkscape:grid-bbox="true"
+     showgrid="true"
+     inkscape:current-layer="layer1"
+     inkscape:cy="11.990233"
+     inkscape:cx="15.707182"
+     inkscape:zoom="17.238095"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata4">
+    <rdf:RDF
+       id="RDF5">
+      <cc:Work
+         id="Work6"
+         rdf:about="">
+        <dc:format
+           id="format7">image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage"
+           id="type9" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1"
+     id="layer1">
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path1322"
+       d="M 0.0000000,17.086359 L 13.093923,18.906077 L 15.000000,32.000000 L 16.994475,18.640884 L 30.000000,17.000000 L 16.994475,14.917127 L 15.000000,2.0000000 L 13.005525,14.917127 L 0.0000000,17.086359 z "
+       style="fill:#00c700;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#008700;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" />
+    <path
+       sodipodi:nodetypes="ccccccccc"
+       id="path2087"
+       d="M 6.9226519,9.1629834 L 13.005525,16.795580 L 7.0524862,25.024862 L 14.911602,18.640884 L 22.969613,24.911602 L 16.640884,17.176796 L 22.969613,8.9723757 L 14.911602,15.093923 L 6.9226519,9.1629834 z "
+       style="fill:#00c700;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#008700;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" />
+    <path
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-filename="/home/tom/src/biketour/svg/windrose-north.png"
+       sodipodi:nodetypes="cccc"
+       id="path2190"
+       d="M 7.0404031,25.013990 L 14.758808,17.891503 L 13.574058,16.811395 L 7.0404031,25.013990 z "
+       style="fill:#db0000;fill-opacity:1.0000000;fill-rule:evenodd;stroke:#db0000;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000" />
+    <text
+       inkscape:export-ydpi="90.000000"
+       inkscape:export-xdpi="90.000000"
+       inkscape:export-filename="/home/tom/src/biketour/svg/windrose-north.png"
+       transform="scale(0.950649,1.051913)"
+       sodipodi:linespacing="100%"
+       id="text2089"
+       y="6.6335273"
+       x="9.3493404"
+       style="font-size:6.2040153;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;fill:#00090e;fill-opacity:1.0000000;stroke:none;stroke-width:1.0000000px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1.0000000;font-family:Century Schoolbook L;text-anchor:start;writing-mode:lr-tb"
+       xml:space="preserve"><tspan
+         y="6.6335273"
+         x="9.3493404"
+         id="tspan2091"
+         sodipodi:role="line">N</tspan></text>
+  </g>
+</svg>

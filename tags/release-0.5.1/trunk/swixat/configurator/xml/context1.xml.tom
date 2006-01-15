@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//Spring/DTD BEAN/EN"
+"http://www.spingframework.org/dtd/spring-beans.dtd">
+
+<beans>
+
+   <bean id="application" class="org.swixat.framework.Application">
+      <property name="title"><value>Hello, World!</value></property>
+      <property name="baseDir"><value>.</value></property>
+      <property name="initialFrame"><value>xml/helloWorldFrame1.xml</value></property>
+      <property name="scriptManager"><ref bean="scriptManager"/></property>
+   </bean>
+
+</beans>

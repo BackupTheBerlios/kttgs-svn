@@ -1,0 +1,142 @@
+\section{Was ist/wird/kann das?}
+
+Ich fahre gerne mit meinem MTB durch die Gegend. Anfangs einfach 
+so ins Blaue hinein, dann nahm ich schon mal 'ne Karte mit, als
+ich so fit war auch mal in Gegenden vorzudringen, wo ich mich
+nicht mehr so gut auskannte.
+
+Irgendwann entdeckte ich dann, dass man im Buchhandel auch Bücher
+kaufen konnte, die komplette Touren beschrieben. ``Super Sache'',
+dachte ich mir.
+
+Anfangs\ldots diese Bücher sind ja nicht ganz billig. Naja, mal
+im Internet gucken: Vielleicht gibt es da ja auch was. Nicht
+schlecht getippt, da gab es wirklich schon 'ne Menge Sachen. Aber
+irgendwie war jede(r) Autor(in) und jede Website der Meinung, ein
+eigenes System schaffen zu müssen.
+
+Alles war bissl anders formatiert, bei manchen Beschreibung fehlten mir 
+einfach ein paar Infos zur Tour. Alles in Allem nicht gerade das, was
+einen Software-Entwickler vom Hocker reißt: Ich brauch' Struktur und
+die Möglickeit, die vorhandenen Informatioen so aufbereiten zu können,
+wie ich sie gerne lese (oder zumindest verschiedene wählbare Einstellungen).
+
+Jetzt wird so manch' eine(r) sagen: ``Ganz schön frech, da bekommt 
+er die Infos für lau und beschwert sich auch noch darüber''. Stimmt!
+
+Aber frech wäre es nur dann, wenn man sich nicht daran macht, das zu
+verbessern, was man kritisiert. Das mache ich mit diesem Projekt.
+
+\subsection{Häufig geäußertes Mißverständnis}
+Natürlich macht es wenig Sinn eine Tour (doch etwas) umständlich über
+dieses System zu erfassen, um die erfassten Daten nur persönlich zu
+nutzen. Denn: Wenn man so 'ne Tour mal gefahren ist, dann kann man
+sie meist \textit{blind} wieder abfahren. Genau!
+
+Das Ziel ist vielmehr, die erfasste Tour anderen Bikern zur Verfügung
+zu stellen. Einmal erfasst kann man sie jedem Interessierten zum
+Beispiel per eMail zukommen lassen.
+
+Das \textit{ferne} Ziel ist es natürlich alle Touren zentral auf
+einem Rechner im Internet zu sammeln, damit Leute durch die Sammlung
+blättern, sich eine passende aussuchen können und dann alles an
+Infos zur Verfügung haben, was sie zum Abradeln der Tour brauchen.
+
+Man hätte eine einheitliche Oberfläche um \textit{seine} Tour zu
+finden. Hat man sie gefunden, hätte man einen einheitlichen
+Aufbau der Tourbeschreibung. Das ist das Ziel. Das ist meine Idee
+\ldots
+
+\subsection{Enttäuschte Hoffnungen}
+Ja, es tut mir leid, aber dies ist erst Version 0.5.1 des Projekts.
+Ich enttäusche euch lieber gleich, bevor ich zu viele Hoffnungen
+wecke.
+
+Dieses System ist derzeit keine Software mit der man eine Tourbeschreibung
+mit Hilfe einer grafischen Benutzerschnittstelle erfassen kann. Es bietet
+auch keine Datenbankunterstützung.
+
+Wenn ihr nicht aus dem Unix/Linux-Bereich kommt, dann fragt ihr
+euch sicher was das (in das ich so viel Freizeit investiere) überhaupt 
+soll. Immerhin kann ich sagen, dass dieses System auch unter Windows
+und vermutlich auch am Mac läuft. Aber wenn ihr es nicht mögt auf der
+Kommandozeile Befehle zu tippen, dann solltet ihr mal wieder zu einem
+späteren Zeitpunkt hierher zurückkommen.
+
+Aber vielleicht lest ihr euch doch noch den nächsten Abschnitt durch \ldots
+
+\subsection{Ist-Zustand der Version 0.5.1}
+Ok, nach dem letzten Abschnitt mag man sich fragen: ``Ja, was kann
+es denn überhaupt''? Gute Frage. Ich werde versuchen sie hier zu beantworten.
+
+Ich habe erstmal versucht, eine XML-Struktur zu schaffen, die es dem
+Autor der Tour ermöglicht, möglichst alle Daten, die relevant sind,
+zu erfassen. Das sind derzeit Punkte wie:
+
+\begin{itemize}
+\item Es werden Daten erfasst, die dazu dienen, die Tour in einem Online-System
+      verfügbar zu machen.
+\item Erfasst wird: Technisches Können, Fitness, Typ der Tour, Dauer, Gesamtlaenge.
+\item Daten zur Anreise
+\item Einbindung einer Karte als GIF, JPG oder PNG. Ausserdem Hinweise zu gedruckten
+      Karten.
+\item Detaillierte Informationen zum Streckenabschnitt.
+   \begin{itemize}
+       \item Höhe
+       \item Entfernung zum letzten Wegpunkt
+       \item Breitengrad
+       \item Längengrad
+       \item Staßenbelag/Wegbeschaffenheit (grafische Darstellung)
+       \item Interessante Punkte
+       \item Restaurants/Lokale/Kneipen
+       \item Anekdoten
+       \item Orientierung: Windrose zeigt den weiteren Weg 
+       \item Orientierung: Beliebige Anzahl an Bildern beschreiben die Tour
+   \end{itemize}
+\item Und natürlich: Beschreibungen, Beschreibungen, \ldots
+\end{itemize}
+
+Ferner wird automatisch ein Profil (mit grafischer Darstellung des 
+Streckenbelags) der Tour generiert. Die Ausgabe ist prinzipiell in jeder
+Sprache (derzeit wird aber nur Deutsch und Englisch unterstützt) möglich.
+Ausserdem sollte das alles auf Windows, Linux (mein Entwicklunssystem) und
+Mac (nicht getestet) laufen.
+
+\subsection{Pläne}
+Da gibt es \textbf{so} viele. Jetzt schreib' ich erstmal dieses Handbuch
+zu Ende. Dann gibt es da so simple Dinger wie:
+\begin{itemize}
+\item Gedruckte Formulare zur Erfassung der Tour.
+\item Tips und Tricks: Wie male ich 'ne Karte?
+\item Stylesheet für Druckformat.
+\item Mehrtagestouren.
+\item \ldots
+\end{itemize}
+
+Und dann so Hämmer wie:
+\begin{itemize}
+\item Grafische Benutzerschnittstelle (da läuft schon was ;-).
+\item GPS-Systeme: Wie kann man die anbinden?
+\item Wie kann man Höhenprofile einbinden, die von anderen Systemen aufgezeichnet werden.
+\item \textit{totally weird}: Audio-Ausgabe der Tour via MP3-Player.
+\item \textit{bit weird}: Tips und Tricks: Wie erfasse ich die Tour mit 'nem MP3-Player?
+\end{itemize}
+
+Ihr seht schon, da kommt noch einiges. Und ich hocke hier alleine rum.
+Also, wenn ihr Lust habt hier mitzuwerkln $\Longrightarrow$ bitte melden!
+Ich kann jeden brauchen: Coder, Designer, Tester, Writer, Biker, Visionär,
+Hardware, \ldots
+
+\subsection{Weitere Informationsquellen}
+F"ur jegliches Feedback bin ich nat"urlich dankbar.
+
+Ein zentraler Anlaufpunkt ist nat"urlich die 
+Projektseite\footnote{http://developer.berlios.de/projects/kttgs/} des Projekts
+auf BerliOS. Neuigkeiten gibt es auch auf der Homepage\footnote{http://kttgs.berlios.de/}
+und die neuesten Versions im Download-Bereich\footnote{http://kttgs.berlios.de/\#download}.
+Man kann sich nat"urlich auch auf einer der
+Mailinglisten\footnote{$http://developer.berlios.de/mail/?group_id=4839$} registrieren
+oder die Foren\footnote{http://developer.berlios.de/forum/?group_id=4839} besuchen.
+
+Ihr k"onnt mir nat"urlich auch ganz zwanglos eine Email schreiben.
+Die Adresse ist auf dem Deckblatt angegeben.

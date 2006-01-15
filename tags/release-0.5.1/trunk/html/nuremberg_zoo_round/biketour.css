@@ -1,0 +1,116 @@
+body { background-color:lightgreen;
+     margin-left:100px; }
+     
+h1 { font-size:120%;
+     font-family:Helvetica,Arial,sans-serif;
+     /* color:#FF0000;
+        font-style:italic;
+        border-bottom:solid thin black;
+     */
+     color: darkgreen;
+     margin-left:-70px;
+   }
+h2 { font-size:110%;
+     font-family:Helvetica,Arial,sans-serif;
+     /*
+        color:#FF0000;
+        font-style:italic;
+     */
+     color: darkgreen;
+     margin-left:-50px;
+   }
+   
+h3 { font-size:100%;
+     font-family:Helvetica,Arial,sans-serif;
+     /* color:#FF0000; */
+     color: darkgreen;
+     font-style:italic;
+     margin-left:-30px;
+   }
+   
+p  { font-size:80%;
+        font-family:Helvetica,Arial, serif;
+        color: darkgreen;
+        margin-top:0px
+      }
+      
+p.warning  
+{ 
+        font-size:90%;
+        font-family:Helvetica,Arial, serif;
+        color: darkgreen;
+        margin-top:0px;
+        margin-right:20px;
+        padding:10px;
+        border: 2px dashed red;
+}
+      
+td  { font-size:100%;
+        font-family:Helvetica,Arial,sans-serif;
+        color: darkgreen;
+        margin-top:0px
+      }      
+      
+ol>li  { font-size:80%;
+        font-family:Helvetica,Arial,sans-serif;
+        color: darkgreen;
+        margin-top:0px
+      }
+      
+ul>li  { font-size:80%;
+        font-family:Helvetica,Arial,sans-serif;
+        color: darkgreen;
+        margin-top:0px
+      }      
+
+p.crosspoint-info 
+{
+   font-size:80%;
+   font-family:Helvetica,Arial,sans-serif;
+   color: darkgreen;
+   margin-bottom:3px;
+   border: 1px dashed darkgreen;
+}
+
+p.windrose 
+{
+   /*
+   font-size:80%;
+   font-family:Helvetica,Arial,sans-serif;
+   color: darkgreen;
+   margin-bottom:3px; 
+   border: 1px dashed darkgreen; 
+   */
+   margin-left:-50px;
+   margin-top: -40px;
+}
+
+/*
+a.menu {
+   font-size:80%;
+   font-family:Arial,sans-serif;
+}
+*/
+
+#navcontainer a
+{
+   /* display: block; */
+   font-size:95%;
+   font-family:Helvetica,Arial,sans-serif;
+   color: #FFF;
+   background-color: darkgreen;
+   margin-left: 10px;
+   /*
+   width: 9em;
+   padding: .2em .8em;
+   */
+   padding: 5px;
+   text-decoration: none;
+}
+
+#navcontainer a:hover
+{
+   background-color: lightgreen;
+   color: darkgreen;
+}
+

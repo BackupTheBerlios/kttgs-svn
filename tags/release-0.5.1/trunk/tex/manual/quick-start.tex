@@ -1,0 +1,137 @@
+\section{Schnellstart}\label{sec:qickstart}
+
+OK. Ihr habt also alles installiert. Jetzt sollte man auch mal
+testen, ob alles funktioniert \ldots und natürlich auch um seine
+Neugierde zu befriedigen ;-)
+
+Führt einfach die nachfolgenden Schritte aus. Falls etwas nicht 
+funktionieren sollte, dann schreibt eine Mail an mich und
+beschreibt die Fehlermeldung(en). Ich hoffe aber natürlich
+inständig, daß alles klappt. In dem Fall könnt ihr mir auch
+eine Mail schreiben. Einfach um mein Ego zu stärken \ldots
+
+Im folgenden muss ich mich oftmals auf Verzeichnisse beziehen.
+Wenn ich \texttt{./} (Punkt Slash) schreibe, dann meine ich damit 
+\textbf{das} Verzeichnis, in dem ihr die Zip-Dateien ausgepackt 
+habt. Alle Aktionen die nachfolgend durchgeführt werden, müssen in 
+diesem Verzeichnis gestartet werden.
+
+Wenn ihr in dem Verzeichnis eine Datei namens \texttt{build.xml}
+seht, dann seid ihr vermutlich richtig.
+
+\subsection{Build.properties anpassen}
+
+Wir haben eine zentrale Steuerungsdatei, die kontrolliert welche
+Verzeichnisstruktur angelegt, welche Sprache und welches Layout
+(für HTML) verwendet werden soll.
+
+Dies muss man konfigurieren. Man kann das nun mit einem Texteditor
+tun: Das ist im Abschnitt \ref{sec:properties_with_editor} 
+beschrieben.
+
+Man kann sich das Leben aber auch leichter machen und diese
+Datei mithilfe der grafischen Oberfl"ache ver"andern. Das
+ist im Abschnitt \ref{sec:properties_with_gui} erl"autert.
+Wenn ihr die Oberfl"ache verwendet, dann braucht ihr den
+Abschnitt "uber den Editor nicht zu lesen\ldots aber
+vielleicht interessiert es dich doch, wie das System funktioniert.
+
+Die Oberfl"ache hat den Vorteil, da"s Fehler (nahezu?) ausgeschlossen
+sind.
+
+\subsubsection{Mit dem Editor}\label{sec:properties_with_editor}
+Die erw"ahnte, zentrale Steuerungsdatei hei"st \texttt{./build.properties}. 
+Bitte öffnet und editiert diese mit eurem Lieblingseditor\footnote{Du 
+nimmst jetzt den \texttt{vi}? Cool!}.
+
+Die Datei \texttt{./build.properties} sollte dann wie folgt aussehen
+(die Zeilennummern hab' ich nur zur Orientierung da, sie gehören
+\textbf{nicht} in die Datei!):
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+tour.name=MeineSuperTour
+# Currently supported languages: de, en
+lang=de
+css=biketour.css
+\end{lstlisting}
+
+\subsubsection{Mit der grafischen Oberfl"ache}\label{sec:properties_with_gui}
+
+Die Oberfl"ache sollte intuitiv bedienbar sein. Du gibst
+einfach die Daten ein und dr"uckst den Knopf \textsc{Create}.
+Falls irgendetwas nicht korrekt ist, dann bekommst du eine
+entsprechende Fehlermeldung. Wenn keine Fehlermeldung
+erscheint, dann klickst du auf \textsc{OK} und \textit{der K"ase
+ist gegessen}. Keine Hemmungen! Man kann nichts kaputt
+machen\ldots
+
+\textbf{Wichtig!} In dem Textfeld \textsc{Tour folder name}
+gibst du bitte den Text \texttt{MeineSuperTour} ein. Wenn du da
+was anderes verwendest, dann passt die nachfolgende Beschreibung
+nicht. Also: Mach's dir leicht und mach' was ich dir gesagt
+habe\ldots... 
+
+Zum Starten der Oberfl"ache gibst du auf der Kommandozeile 
+den folgenden Befehl ein:
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant run.config
+\end{lstlisting}
+
+
+\subsection{Skeleton generieren}\label{sec:qickstart-gen-skeleton}
+Soweit so gut. Aber um irgendwas zu sehen brauchen wir ja
+'ne Tourbeschreibung. Woher nehmen, wenn nicht zaubern? Einfach
+zaubern! Das System kann ein Grundgerüst (englisch: 
+\textit{Skeleton}) anlegen. Dazu ist nur der nachfolgende 
+Aufruf von Ant notwendig. Ab auf die Kommandozeile und
+den nachfolgenden Befehl ausführen:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-skeleton
+\end{lstlisting}
+
+\subsection{HTML-Ausgabe erzeugen}
+Das Erzeugen der HTML-Datei ist genauso einfach. Auf der
+Kommandozeile tippt ihr einfach diesen Befehl:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-tour-html
+\end{lstlisting}
+
+Da könnten jetzt zwei Warnungen (englisch: \textit{warning(s)})
+auftauchen. Die könnt ihr ignorieren.
+
+\subsection{HTML im Browser bewundern}\label{sec:view-html}
+\textit{Jetzt kommt der große Moment, wo der Frosch ins Wasser 
+springt.} In dem Verzeichnis \texttt{./html/MeineSuperTour} sollte 
+sich eine Datei namens \texttt{MeineSuperTour.html} befinden.
+
+Öffnet diese Datei (\texttt{./html/MeineSuperTour/MeineSuperTour.html})
+in einem Browser eurer Wahl\footnote{Getestet hab' ich nur: Firefox 
+und Konquerer}. Wenn ihr jetzt 'ne Beschreibung einer fiktiven Tour
+seht, dann läuft das System. \textbf{Gl"uckwunsch!}
+
+\subsection{Die Tour per eMail verschicken}
+So, die Tour\footnote{Wie man die Tour erfasst wird im Abschnitt 
+\ref{sec:xml-structure} ab Seite \pageref{sec:xml-structure} beschrieben.} 
+h"atten wir nun. Aber wie kann man die Beschreibung einem Freund 
+zukommen lassen? Auch das ist einfach, man packt alles in eine gezippte
+Datei und verschickt sie per eMail. Wie gehen mal wieder auf die
+Kommandozeile und geben den nachfolgenden Befehl ein:
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant zip-tour-html
+\end{lstlisting}
+
+Jetzt sollte im aktuellen Verzeichnis eine gezippte Datei
+entstanden sein. In unserem (Beispiel-)Fall hei"st sie
+\texttt{MeineSuperTour.zip}. Sie beinhaltet alles, was man
+zur Betrachtung der Tour im HTML-Browser ben"otigt. Der
+Empf"anger der eMail mu"s nur die Datei in einem neu
+angelegten Verzeichnis auspacken und kann sich die 
+Tourbeschreibung angucken. 

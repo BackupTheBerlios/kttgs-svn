@@ -1,0 +1,340 @@
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  28 DEC 2005 22:31
+entering extended mode
+**main.tex
+(./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
+LaTeX2e <2001/06/01>
+Babel <v3.7h> and hyphenation patterns for american, nohyphenation, catalan, ir
+ish, icelandic, swedish, loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2001/04/21 v1.4e Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2001/04/21 v1.4e Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2001/07/10 v0.99a Input encoding file 
+
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2001/07/10 v0.99a Input encoding file 
+))
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2001/03/01 v3.7h The Babel package
+
+(/usr/share/texmf/tex/generic/babel/ngermanb.ldf
+Language: ngermanb 2001/02/06 v2.6m new German support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2001/03/01 v3.7h Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+
+Package babel Warning: No hyphenation patterns were loaded for
+(babel)                the language `ngerman'
+(babel)                I will use the patterns loaded for \language=0 instead.
+
+\l@ngerman = a dialect from \language0
+\l@naustrian = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 73.
+)) (/usr/share/texmf/tex/latex/base/fontenc.sty
+Package: fontenc 2001/06/05 v1.94 Standard LaTeX package
+
+(/usr/share/texmf/tex/latex/base/t1enc.def
+File: t1enc.def 2001/06/05 v1.94 Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 38.
+))
+(/usr/share/texmf/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/share/texmf/tex/latex/graphics/graphics.sty
+Package: graphics 2001/07/07 v1.0n Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/share/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2001/08/31 v1.1 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 80.
+
+(/usr/share/texmf/tex/latex/graphics/pdftex.def
+File: pdftex.def 2002/06/19 v0.03k graphics/color for pdftex
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/share/texmf/tex/latex/listings/listings.sty
+Package: listings 2004/02/13 1.2 (Carsten Heinz)
+\lst@mode=\count89
+\lst@gtempboxa=\box26
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen106
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen107
+\lst@width=\dimen108
+\lst@newlines=\count93
+\lst@lineno=\count94
+\c@lstlisting=\count95
+\lst@maxwidth=\dimen109
+
+(/usr/share/texmf/tex/latex/listings/lstpatch.sty
+File: lstpatch.sty 2004/02/18 1.2b (Carsten Heinz)
+)
+(/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/02/13 1.2 (Carsten Heinz)
+\c@lstnumber=\count96
+\lst@skipnumbers=\count97
+\lst@framebox=\box27
+)
+(/usr/share/texmf/tex/latex/config/listings.cfg
+File: listings.cfg 2004/02/13 1.2 listings configuration
+))
+(/usr/share/texmf/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/02/13 1.2 listings language file
+)
+(/usr/share/texmf/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2004/02/13 1.2 (Carsten Heinz)
+) (./main.aux (./goal.aux)
+(./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
+(./tips-and-tricks.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+ (/usr/share/texmf/tex/context/base/supp-pdf.tex
+(/usr/share/texmf/tex/context/base/supp-mis.tex
+loading : Context Support Macros / Missing
+\protectiondepth=\count98
+\scratchcounter=\count99
+\scratchtoks=\toks16
+\scratchdimen=\dimen110
+\scratchskip=\skip43
+\scratchmuskip=\muskip10
+\scratchbox=\box28
+\scratchread=\read1
+\scratchwrite=\write3
+\zeropoint=\dimen111
+\minusone=\count100
+\thousandpoint=\dimen112
+\emptytoks=\toks17
+\nextbox=\box29
+\nextdepth=\dimen113
+\everyline=\toks18
+\!!counta=\count101
+\!!countb=\count102
+\recursecounter=\count103
+)
+loading : Context Support Macros / PDF
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPtoPDFconversion=\toks19
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 22.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 22.
+ [1
+
+{/var/lib/texmf/dvips/config/pdftex.map}] (./main.toc
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+ [1])
+\tf@toc=\write4
+\openout4 = `main.toc'.
+
+ [2]
+\openout2 = `goal.aux'.
+
+ (./goal.tex
+Overfull \hbox (3.44269pt too wide) in paragraph at lines 27--29
+[]/ecrm1000/Aber frech wäre es nur dann, wenn man sich nicht daran macht, das z
+u verbessern,
+ []
+
+[3
+
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
+ (/usr/share/texmf/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+ [4]
+Overfull \hbox (12.2601pt too wide) in paragraph at lines 133--140
+[]/ecrm1000/Ein zen-traler An-lauf-punkt ist die Pro-jek-t-seite[] des Pro-jek-
+ts auf BerliOS. Neuigkeit-
+ []
+
+) [5]
+\openout2 = `pre.aux'.
+
+ (./pre.tex) [6
+
+
+]
+\openout2 = `installation.aux'.
+
+ (./installation.tex
+Overfull \hbox (5.831pt too wide) in paragraph at lines 12--18
+[]/ecrm1000/Wir brauchen das Ba-sis-sys-tem (base sys-tem) und die be-nutzten J
+ava-Bibliotheken
+ []
+
+) [7
+
+
+]
+\openout2 = `quick-start.aux'.
+
+ (./quick-start.tex
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 14.
+ (/usr/share/texmf/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [8
+
+
+]
+Overfull \hbox (36.51517pt too wide) in paragraph at lines 69--74
+[]/ecbx1000/Wichtig! /ecrm1000/In dem Textfeld /eccc1000/Tour fold-er name /ecr
+m1000/gib-st du bitte den Text /ectt1000/MeineSuperTour
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 93.
+
+Overfull \hbox (18.32794pt too wide) in paragraph at lines 110--112
+/ecrm1000/ich-nis /ectt1000/./html/MeineSuperTour /ecrm1000/sollte sich eine Da
+tei na-mens /ectt1000/MeineSuperTour.html
+ []
+
+[9]) [10]
+\openout2 = `xml-structure.aux'.
+
+ (./xml-structure.tex
+Overfull \hbox (5.27518pt too wide) in paragraph at lines 24--25
+[]/ecti1000/Anm.: In den XML-Beispielen sind Zeilen-num-mern ergänzt. Diese geh
+ören natür-
+ []
+
+
+Overfull \hbox (7.58057pt too wide) in paragraph at lines 59--62
+/ecrm1000/Die gesamte Tourbeschrei-bung wird in zwis-chen dem öff-nen-den und d
+em schlieÿen-
+ []
+
+[11
+
+
+] [12] [13]
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 199--200
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[14]
+Overfull \hbox (4.93538pt too wide) in paragraph at lines 254--256
+[]/ecbx1000/duration/ecrm1000/: Hi-er sollte man sowas wie /ectt1000/"01:30hrs"
+ /ecrm1000/oder /ectt1000/"1 Stunde, 30 Minuten"
+ []
+
+
+Overfull \hbox (2.44293pt too wide) in paragraph at lines 261--264
+/ecrm1000/taucht zum Beispiel in Lis-ten auf, wenn man aus mehreren Touren eine
+ auswählen
+ []
+
+[15]
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 305--306
+[][][][][][][][][][][][][][][][][] 
+ []
+
+[16]
+Overfull \hbox (16.31454pt too wide) in paragraph at lines 365--370
+[]/ecrm1000/Aber Achtung! Karten-ma-te-ri-al ist urhe-ber-lich geschützt. Du so
+ll-test (ohne Genehmi-
+ []
+
+[17] [18]
+Overfull \hbox (2.00473pt too wide) in paragraph at lines 504--508
+/ecrm1000/sind: /ectt1000/north, east, south, west, northeast, southeast, south
+west
+ []
+
+[19]
+Overfull \hbox (33.37982pt too wide) in paragraph at lines 531--533
+/ecrm1000/Innerhalb des <images>-Tag kann man bieliebig viel Bilder, die für de
+n Kreuzungspunkt
+ []
+
+[20] [21]) [22]
+\openout2 = `tips-and-tricks.aux'.
+
+ (./tips-and-tricks.tex) [23
+
+
+] (./main.aux (./goal.aux)
+(./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
+(./tips-and-tricks.aux)) ) 
+Here is how much of TeX's memory you used:
+ 2894 strings out of 95257
+ 37394 string characters out of 1188231
+ 98735 words of memory out of 1000001
+ 5884 multiletter control sequences out of 10000+50000
+ 20698 words of font info for 45 fonts, out of 500000 for 1000
+ 86 hyphenation exceptions out of 1000
+ 29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
+ 112 PDF objects out of 300000
+ 0 named destinations out of 131072
+ 0 words of extra memory for PDF output out of 65536
+ </var/cache/fonts/pk/ljfour/jknappen/ec/ecti0800.600
+pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk>{/usr/share/texmf/dv
+ips/tetex/bbad153f.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb> </va
+r/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </var/cache/fonts/pk/ljfour
+/jknappen/ec/eccc1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0900.6
+00pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </var/cache/fonts
+/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/
+ecrm0800.600pk>{/usr/share/texmf/dvips/tetex/aae443f0.enc}</usr/share/texmf/fon
+ts/type1/bluesky/cm/cmmi6.pfb>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</usr/
+share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/blues
+ky/cm/cmmi8.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </var/
+cache/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk></usr/share/texmf/fonts/type1/
+bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> </var
+/cache/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </var/cache/fonts/pk/ljfour/
+jknappen/ec/ecbx1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
+0pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </var/cache/fonts/
+pk/ljfour/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/e
+csl1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </var/ca
+che/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
+Output written on main.pdf (24 pages, 304682 bytes).

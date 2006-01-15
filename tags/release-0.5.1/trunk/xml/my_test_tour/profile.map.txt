@@ -1,0 +1,15 @@
+section-0=road,0,310,1,000,000
+section-1=road,250,0,0,000,000
+section-2=road,500,315,1,000,000
+section-3=road,100,200,0,000,000
+section-4=road,200,1000,0,000,000
+section-5=road,300,0,0,000,000
+section-6=road,400,800,0,000,000
+section-7=road,500,320,1,000,000
+section-8=forrest.road,800,330,1,000,000
+section-9=trail,500,430,1,000,000
+section-10=trail,200,600,1,000,000
+section-11=forrest.road,200,310,1,000,000
+section-12=trail,300,600,1,000,000
+section-13=road,100,1200,0,000,000
+section-14=road,200,310,1,000,000

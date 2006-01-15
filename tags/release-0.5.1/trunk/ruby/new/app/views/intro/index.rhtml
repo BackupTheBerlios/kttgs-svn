@@ -1,0 +1,76 @@
+<h1>Welcome</h1>
+<p>
+Nice to see you. This is the start screen of my application.
+From here you have three options:
+<ul>
+  <li>Open a stored tour, or</li>
+  <li>Create a totally new tour, or</li>
+  <li>Download a tour</li>
+</ul>
+</p>
+
+<h2>Open A Stored Tour</h2>
+<p>
+   You want to work on a given tour? Select it from
+   the list below.
+</p>
+
+<% if @flash["edit_error"] %>
+<p class="warning">
+   Error: <%= @flash["edit_error"] %>
+</p>
+<% end %>
+<p>
+  <table border="3">
+  <% for tour in controller.stored_tours_list do %>
+     <tr>
+        <td><%= link_to 'Show Description', {:action => 'description', :tid => tour.tid} %></td>
+        <td><%= link_to 'Edit', {:action => 'edit'} %></td>
+        <td><%= tour.storageInfoLocation.display %></td>
+        <td><%= tour.tid %></td>
+     </tr>
+  <% end %>
+  </table>
+</p>
+
+<h2>Create A New Tour</h2>
+
+<% if @flash["create_error"] %>
+<p class="warning">
+   Error: <%= @flash["create_error"] %>
+</p>
+<% end %>
+
+<p>
+   Cool! You are about to make up a totally new tour.
+   Fill in a name and get going... ;-)
+</p>
+<p>
+   <%= start_form_tag :action => 'create' %>
+   <%= text_field "dir", "dir", "size" => 40, "maxlength" => 40 %>
+   <%= submit_tag "Create" %>
+   <%= end_form_tag %>
+</p>
+
+
+<h2>Download A Tour</h2>
+
+<% if @flash["download_error"] %>
+<p class="warning">
+   Error: <%= @flash["download_error"] %>
+</p>
+<% end %>
+<p>
+   You can even <%= link_to '[Download]', {:action => 'download'} %> a tour
+   stored on a remote system.
+</p>
+<p><b>
+   Caution! While the rest of this application will work w/o a connection
+   to internet this feature needs to connect to internet. I will tell you
+   when we no longer need the connection. Anyway, check your controls!
+</b></p>
+<p><b>
+   Security: This application just downloads a zipped file. No security
+   issues here. But once unzipped, bad things can happen. Be aware of
+   this.
+</b></p>
