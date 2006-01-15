@@ -5,14 +5,19 @@
 <!--
    <storage-info> is thought to be helpful for a "tour guide provider"
    with a number of tours.
-   For now we only have <location>. Tags could be added in the future.
+   For now we only have <location> and <authoring>. Tags could be added 
+   in the future.
 -->
-<!ELEMENT storage-info ( location ) >
+<!ELEMENT storage-info ( location, authoring ) >
 <!ELEMENT location EMPTY >
 <!ATTLIST location city CDATA #REQUIRED >
 <!ATTLIST location country CDATA #REQUIRED >
 <!ATTLIST location region-or-state CDATA #REQUIRED >
 <!ATTLIST location zip-code CDATA #REQUIRED >
+
+<!ELEMENT authoring EMPTY >
+<!ATTLIST authoring author CDATA #REQUIRED >
+<!ATTLIST authoring creation-date CDATA #REQUIRED >
 
 <!-- THE <general> SECTION (start) -->
 <!--

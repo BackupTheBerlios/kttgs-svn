@@ -8,6 +8,9 @@
           region-or-state="state" 
           city="a city" 
           zip-code="12345"/>
+   <authoring 
+      author="email@not-real.com"
+      creation-date="YYYYMMDD"/>
 </storage-info>
 
 <!-- levels: easy, medium, high. extrem -->
