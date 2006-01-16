@@ -72,7 +72,7 @@ so aus:
    <crosspoints>
       ...
    </crosspoints>
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 Im Wesentlich haben wir also drei Abschnitte:
@@ -114,7 +114,7 @@ vorhanden. Wie? Schauen wir uns das mal an:
           zip-code="96155"/>
    </storage-info>
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 Alles klar? Alle Infos werden mithilfe der Attribute des Tags
@@ -134,6 +134,40 @@ Aber sind wir daf"ur auch fit genug? Dauert das nicht zu
 lange? Wie kommt man an den Startpunkt? Gibt's ne Karte?
 Ja, das braucht man alles. Deswegen gibt es das Tag
 \texttt{<general>}\ldots
+
+\subsection{<storage-info> (<authoring>)}
+Nat"urlich sollte sich auch der Autor der Tour verewigen
+k"onnen. Dazu dient das Tag <authoring> innerhalb von
+<storage-info>.
+
+Im Attribute \texttt{author} sollte der Autor seine eMail-Adresse
+angeben. Dann kann man ihm bei Unklarheiten eine eMail
+schicken.
+
+Man sollte auch im Attribute \texttt{creation-date} das
+Erstellungsdatum der Tour angeben. Es k"onnte ja sein, da"s
+jemand die Tour 10 Jahre nach der Erfassung abfahren will.
+Dann k"onnte es durchaus sein, da"s nicht mehr alle Angaben
+(auch eine 100-j"ahrige Eiche kann mal gef"allt worden
+sein) so stimmen. Der Leser kann sich dann darauf 
+einstellen.
+
+Als Datumsformat wird das Muster \texttt{YYYYMMDD}
+\footnote{4stelliges Jahr, 2stelliges Monat und 2stelliger Tag.}
+verwendet. D.h., da"s der 27. Januar 2006 als 
+\texttt{creation-date="20062701"} notiert wird.
+
+
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+<storage-info>
+   <location ... />
+          
+   <authoring 
+      author="email@not-real.com"
+      creation-date="YYYYMMDD"   />
+</storage-info>
+\end{lstlisting}{}
 
 \subsection{Ein Wort zu Bildern}\label{sec:image_references}
 Hmm, den Abschnitt \texttt{<general>} hab' ich ins n"achste
@@ -210,7 +244,7 @@ Erstmal wieder ein Beispiel:
    <profile />
 </general>   
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 \subsubsection{Die Attribute von <general>}
@@ -276,7 +310,7 @@ Es wird folgenderma"sen verwendet:
    ...
 </general>   
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 Mit dem Attribute \texttt{unit} gibst du die L"angeneinheit
 an (also z.B.: km, meter, Meilen). Zwischen den beiden
@@ -312,7 +346,7 @@ folgt aussehen:
    ...
 </general>   
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 Innerhalb des <reach>-Tags kann man beliebig oft das Tag
@@ -341,7 +375,7 @@ mit dem <map>-Tag beliebig viele Karten angeben:
    ...
 </general>   
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 \subsubsection{<roadmaps>}
@@ -359,7 +393,7 @@ des <roadmap>-Tags anzugeben:
    ...
 </general>   
    ...
-<tourguide>
+</tourguide>
 \end{lstlisting}
 
 Aber Achtung! Kartenmaterial ist urheberlich gesch"utzt. Du
@@ -414,8 +448,8 @@ Hier mal ein Beispiel:
                latitude="000" longitude="000">
      <desc>Back At Home!</desc>
    </crosspoint>
-<crosspoints>
-<tourguide>
+</crosspoints>
+</tourguide>
 \end{lstlisting}
 
 WTF\footnote{Engl.: \textit{What the fuck}, Ausruf des Erstaunten\ldots ;-)}?
@@ -489,8 +523,8 @@ Attribute und zwei Subtags.
                latitude="000" longitude="000">
      <desc>Back At Home!</desc>
    </crosspoint>
-<crosspoints>
-<tourguide>
+</crosspoints>
+</tourguide>
 \end{lstlisting}
 
 \subsubsection{<crosspoint> Attribute}
@@ -545,8 +579,8 @@ f"ur den Kreuzungspunkt relevant sind angeben.
      <images>
    </crosspoint>
    ....
-<crosspoints>
-<tourguide>
+</crosspoints>
+</tourguide>
 \end{lstlisting}
 
 \subsubsection{<profile-desc>}
@@ -591,8 +625,8 @@ Das Ganze sieht also z.B. wie folgt aus:
       ...
    </track-info>
    ...
-<crosspoints>
-<tourguide>
+</crosspoints>
+</tourguide>
 \end{lstlisting}
 
 Innerhalb des <track-info>-Tags sind die Tags <eatndrink>, <poi> 

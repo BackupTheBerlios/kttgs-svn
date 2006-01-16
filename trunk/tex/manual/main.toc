@@ -12,39 +12,45 @@
 \contentsline {section}{\numberline {4}Schnellstart}{8}
 \contentsline {subsection}{\numberline {4.1}Build.properties anpassen}{8}
 \contentsline {subsubsection}{\numberline {4.1.1}Mit dem Editor}{8}
-\contentsline {subsubsection}{\numberline {4.1.2}Mit der grafischen Oberfl"ache}{8}
+\contentsline {subsubsection}{\numberline {4.1.2}Mit der grafischen Oberfl"ache}{9}
 \contentsline {subsection}{\numberline {4.2}Skeleton generieren}{9}
 \contentsline {subsection}{\numberline {4.3}HTML-Ausgabe erzeugen}{9}
 \contentsline {subsection}{\numberline {4.4}HTML im Browser bewundern}{9}
-\contentsline {subsection}{\numberline {4.5}Die Tour per eMail verschicken}{9}
+\contentsline {subsection}{\numberline {4.5}Die Tour per eMail verschicken}{10}
 \contentsline {section}{\numberline {5}Der Aufbau der XML-Datei}{11}
 \contentsline {subsection}{\numberline {5.1}Learning By Doing}{11}
 \contentsline {subsection}{\numberline {5.2}<tourguide>}{12}
 \contentsline {subsection}{\numberline {5.3}<storage-info> (<location>)}{12}
-\contentsline {subsection}{\numberline {5.4}Ein Wort zu Bildern}{13}
-\contentsline {subsection}{\numberline {5.5}<general>}{13}
-\contentsline {subsubsection}{\numberline {5.5.1}Die Attribute von <general>}{14}
-\contentsline {subsubsection}{\numberline {5.5.2}<name>}{15}
-\contentsline {subsubsection}{\numberline {5.5.3}<distance>}{15}
-\contentsline {subsubsection}{\numberline {5.5.4}<desc>}{15}
-\contentsline {subsubsection}{\numberline {5.5.5}<reach>}{15}
-\contentsline {subsubsection}{\numberline {5.5.6}<maps>}{16}
-\contentsline {subsubsection}{\numberline {5.5.7}<roadmaps>}{16}
-\contentsline {subsubsection}{\numberline {5.5.8}<profile/>}{17}
-\contentsline {subsection}{\numberline {5.6}<crosspoints>}{17}
-\contentsline {subsection}{\numberline {5.7}Entfernungen}{18}
-\contentsline {subsection}{\numberline {5.8}<crosspoint>}{18}
-\contentsline {subsubsection}{\numberline {5.8.1}<crosspoint> Attribute}{19}
-\contentsline {subsubsection}{\numberline {5.8.2}<desc>}{19}
-\contentsline {subsubsection}{\numberline {5.8.3}<images>}{20}
-\contentsline {subsubsection}{\numberline {5.8.4}<profile-desc>}{20}
-\contentsline {subsection}{\numberline {5.9}<track-info>}{20}
-\contentsline {subsubsection}{\numberline {5.9.1}Attribute f"ur <eatndrink>,<poi> und <anecdote>}{21}
-\contentsline {subsubsection}{\numberline {5.9.2}<eatndrink>}{21}
-\contentsline {subsubsection}{\numberline {5.9.3}<poi>}{21}
-\contentsline {subsubsection}{\numberline {5.9.4}<anecdote>}{22}
-\contentsline {subsection}{\numberline {5.10}Keine Tags mehr!}{22}
-\contentsline {section}{\numberline {6}Tips und Tricks}{23}
-\contentsline {subsection}{\numberline {6.1}Karte erstellen (TODO)}{23}
-\contentsline {subsection}{\numberline {6.2}Formulare verwenden (TODO)}{23}
-\contentsline {subsection}{\numberline {6.3}Tourerfassung mit MP3-Player (TODO)}{23}
+\contentsline {subsection}{\numberline {5.4}<storage-info> (<authoring>)}{13}
+\contentsline {subsection}{\numberline {5.5}Ein Wort zu Bildern}{13}
+\contentsline {subsection}{\numberline {5.6}<general>}{14}
+\contentsline {subsubsection}{\numberline {5.6.1}Die Attribute von <general>}{15}
+\contentsline {subsubsection}{\numberline {5.6.2}<name>}{15}
+\contentsline {subsubsection}{\numberline {5.6.3}<distance>}{15}
+\contentsline {subsubsection}{\numberline {5.6.4}<desc>}{16}
+\contentsline {subsubsection}{\numberline {5.6.5}<reach>}{16}
+\contentsline {subsubsection}{\numberline {5.6.6}<maps>}{17}
+\contentsline {subsubsection}{\numberline {5.6.7}<roadmaps>}{17}
+\contentsline {subsubsection}{\numberline {5.6.8}<profile/>}{17}
+\contentsline {subsection}{\numberline {5.7}<crosspoints>}{18}
+\contentsline {subsection}{\numberline {5.8}Entfernungen}{19}
+\contentsline {subsection}{\numberline {5.9}<crosspoint>}{19}
+\contentsline {subsubsection}{\numberline {5.9.1}<crosspoint> Attribute}{19}
+\contentsline {subsubsection}{\numberline {5.9.2}<desc>}{20}
+\contentsline {subsubsection}{\numberline {5.9.3}<images>}{20}
+\contentsline {subsubsection}{\numberline {5.9.4}<profile-desc>}{21}
+\contentsline {subsection}{\numberline {5.10}<track-info>}{21}
+\contentsline {subsubsection}{\numberline {5.10.1}Attribute f"ur <eatndrink>,<poi> und <anecdote>}{21}
+\contentsline {subsubsection}{\numberline {5.10.2}<eatndrink>}{22}
+\contentsline {subsubsection}{\numberline {5.10.3}<poi>}{22}
+\contentsline {subsubsection}{\numberline {5.10.4}<anecdote>}{22}
+\contentsline {subsection}{\numberline {5.11}Keine Tags mehr!}{23}
+\contentsline {section}{\numberline {6}Aufrufen der Funktionen}{24}
+\contentsline {subsection}{\numberline {6.1}Neue Tour vorbereiten}{24}
+\contentsline {subsection}{\numberline {6.2}Grundger"ust/Skeleton anlegen}{24}
+\contentsline {subsection}{\numberline {6.3}Web-Seite generieren}{24}
+\contentsline {subsection}{\numberline {6.4}Tour per eMail verschicken}{24}
+\contentsline {section}{\numberline {7}Tips und Tricks}{25}
+\contentsline {subsection}{\numberline {7.1}Karte erstellen (TODO)}{25}
+\contentsline {subsection}{\numberline {7.2}Formulare verwenden (TODO)}{25}
+\contentsline {subsection}{\numberline {7.3}Tourerfassung mit MP3-Player (TODO)}{25}

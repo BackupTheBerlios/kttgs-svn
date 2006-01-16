@@ -27,6 +27,7 @@ Version 0.5.2 <----------- CURRENT VERSION
 * Add total for uphill (I really missed that information!).
 * Explain in the manual.
 * Update the DTD (total uphill).
+* Add a section to the manual documenting all ant calls.
 
 
 Version 0.5.1

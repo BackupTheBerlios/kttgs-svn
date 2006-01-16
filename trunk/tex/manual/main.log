@@ -1,4 +1,4 @@
-This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  28 DEC 2005 22:31
+This is pdfeTeX, Version 3.14159-1.10b-2.1 (Web2C 7.4.5) (format=pdflatex 2005.5.22)  16 JAN 2006 23:12
 entering extended mode
 **main.tex
 (./main.tex{/usr/share/texmf/pdftex/config/pdftex.cfg}
@@ -114,7 +114,7 @@ File: lstlang1.sty 2004/02/13 1.2 listings language file
 File: lstmisc.sty 2004/02/13 1.2 (Carsten Heinz)
 ) (./main.aux (./goal.aux)
 (./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
-(./tips-and-tricks.aux))
+(./ant-calls.aux) (./tips-and-tricks.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
@@ -129,7 +129,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
 LaTeX Font Info:    ... okay on input line 17.
- (/usr/share/texmf/tex/context/base/supp-pdf.tex
+
+(/usr/share/texmf/tex/context/base/supp-pdf.tex
 (/usr/share/texmf/tex/context/base/supp-mis.tex
 loading : Context Support Macros / Missing
 \protectiondepth=\count98
@@ -227,15 +228,15 @@ File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 
 
 ]
-Overfull \hbox (36.51517pt too wide) in paragraph at lines 69--74
+Overfull \hbox (36.51517pt too wide) in paragraph at lines 73--78
 []/ecbx1000/Wichtig! /ecrm1000/In dem Textfeld /eccc1000/Tour fold-er name /ecr
 m1000/gib-st du bitte den Text /ectt1000/MeineSuperTour
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 93.
+(Font)              <9> on input line 97.
 
-Overfull \hbox (18.32794pt too wide) in paragraph at lines 110--112
+Overfull \hbox (18.32794pt too wide) in paragraph at lines 114--116
 /ecrm1000/ich-nis /ectt1000/./html/MeineSuperTour /ecrm1000/sollte sich eine Da
 tei na-mens /ectt1000/MeineSuperTour.html
  []
@@ -259,82 +260,89 @@ em schlieÿen-
 
 
 ] [12] [13]
-Overfull \hbox (4.56752pt too wide) in paragraph at lines 199--200
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 233--234
 [][][][][][][][][][][][][][][][][] 
  []
 
 [14]
-Overfull \hbox (4.93538pt too wide) in paragraph at lines 254--256
+Overfull \hbox (4.93538pt too wide) in paragraph at lines 288--290
 []/ecbx1000/duration/ecrm1000/: Hi-er sollte man sowas wie /ectt1000/"01:30hrs"
  /ecrm1000/oder /ectt1000/"1 Stunde, 30 Minuten"
  []
 
 
-Overfull \hbox (2.44293pt too wide) in paragraph at lines 261--264
+Overfull \hbox (2.44293pt too wide) in paragraph at lines 295--298
 /ecrm1000/taucht zum Beispiel in Lis-ten auf, wenn man aus mehreren Touren eine
  auswählen
  []
 
 [15]
-Overfull \hbox (4.56752pt too wide) in paragraph at lines 305--306
+Overfull \hbox (4.56752pt too wide) in paragraph at lines 339--340
 [][][][][][][][][][][][][][][][][] 
  []
 
 [16]
-Overfull \hbox (16.31454pt too wide) in paragraph at lines 365--370
+Overfull \hbox (16.31454pt too wide) in paragraph at lines 399--404
 []/ecrm1000/Aber Achtung! Karten-ma-te-ri-al ist urhe-ber-lich geschützt. Du so
 ll-test (ohne Genehmi-
  []
 
-[17] [18]
-Overfull \hbox (2.00473pt too wide) in paragraph at lines 504--508
+[17] [18] [19]
+Overfull \hbox (2.00473pt too wide) in paragraph at lines 538--542
 /ecrm1000/sind: /ectt1000/north, east, south, west, northeast, southeast, south
 west
  []
 
-[19]
-Overfull \hbox (33.37982pt too wide) in paragraph at lines 531--533
+
+Overfull \hbox (33.37982pt too wide) in paragraph at lines 565--567
 /ecrm1000/Innerhalb des <images>-Tag kann man bieliebig viel Bilder, die für de
 n Kreuzungspunkt
  []
 
-[20] [21]) [22]
+[20] [21] [22]) [23]
+\openout2 = `ant-calls.aux'.
+
+ (./ant-calls.tex) [24
+
+
+]
 \openout2 = `tips-and-tricks.aux'.
 
- (./tips-and-tricks.tex) [23
+ (./tips-and-tricks.tex) [25
 
 
-] (./main.aux (./goal.aux)
-(./pre.aux) (./installation.aux) (./quick-start.aux) (./xml-structure.aux)
-(./tips-and-tricks.aux)) ) 
+]
+(./main.aux (./goal.aux) (./pre.aux) (./installation.aux) (./quick-start.aux)
+(./xml-structure.aux) (./ant-calls.aux) (./tips-and-tricks.aux)) ) 
 Here is how much of TeX's memory you used:
- 2894 strings out of 95257
- 37394 string characters out of 1188231
- 98735 words of memory out of 1000001
- 5884 multiletter control sequences out of 10000+50000
+ 2909 strings out of 95257
+ 37588 string characters out of 1188231
+ 101017 words of memory out of 1000001
+ 5892 multiletter control sequences out of 10000+50000
  20698 words of font info for 45 fonts, out of 500000 for 1000
  86 hyphenation exceptions out of 1000
  29i,8n,59p,223b,621s stack positions out of 1500i,500n,5000p,200000b,5000s
- 112 PDF objects out of 300000
+ 119 PDF objects out of 300000
  0 named destinations out of 131072
  0 words of extra memory for PDF output out of 65536
- </var/cache/fonts/pk/ljfour/jknappen/ec/ecti0800.600
-pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbi1000.600pk>{/usr/share/texmf/dv
-ips/tetex/bbad153f.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmsy9.pfb> </va
-r/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </var/cache/fonts/pk/ljfour
-/jknappen/ec/eccc1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0900.6
-00pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0500.600pk> </var/cache/fonts
-/pk/ljfour/jknappen/ec/ectt1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/
-ecrm0800.600pk>{/usr/share/texmf/dvips/tetex/aae443f0.enc}</usr/share/texmf/fon
-ts/type1/bluesky/cm/cmmi6.pfb>{/usr/share/texmf/dvips/tetex/f7b6d320.enc}</usr/
-share/texmf/fonts/type1/bluesky/cm/cmr8.pfb></usr/share/texmf/fonts/type1/blues
-ky/cm/cmmi8.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </var/
-cache/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk></usr/share/texmf/fonts/type1/
-bluesky/cm/cmr10.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmsy10.pfb> </var
-/cache/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </var/cache/fonts/pk/ljfour/
-jknappen/ec/ecbx1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1000.60
-0pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </var/cache/fonts/
-pk/ljfour/jknappen/ec/ecrm1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/e
-csl1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </var/ca
-che/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk>
-Output written on main.pdf (24 pages, 304682 bytes).
+ </var/cache/
+fonts/pk/ljfour/jknappen/ec/ecti0800.600pk> </var/cache/fonts/pk/ljfour/jknappe
+n/ec/ecbi1000.600pk>{/usr/share/texmf/dvips/tetex/bbad153f.enc}</usr/share/texm
+f/fonts/type1/bluesky/cm/cmsy9.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecc
+c1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ectt0800.600pk> </var/cach
+e/fonts/pk/ljfour/jknappen/ec/ecrm0900.600pk> </var/cache/fonts/pk/ljfour/jknap
+pen/ec/ecrm0500.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> 
+</var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk>{/usr/share/texmf/dvips/
+tetex/aae443f0.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmmi6.pfb>{/usr/sha
+re/texmf/dvips/tetex/f7b6d320.enc}</usr/share/texmf/fonts/type1/bluesky/cm/cmr8
+.pfb></usr/share/texmf/fonts/type1/bluesky/cm/cmmi8.pfb> </var/cache/fonts/pk/l
+jfour/jknappen/ec/ecrm0600.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm0
+700.600pk></usr/share/texmf/fonts/type1/bluesky/cm/cmr10.pfb></usr/share/texmf/
+fonts/type1/bluesky/cm/cmsy10.pfb> </var/cache/fonts/pk/ljfour/jknappen/ec/ecti
+1000.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </var/cache
+/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </var/cache/fonts/pk/ljfour/jknapp
+en/ec/ecbx1440.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> <
+/var/cache/fonts/pk/ljfour/jknappen/ec/ecsl1000.600pk> </var/cache/fonts/pk/ljf
+our/jknappen/ec/ecrm1200.600pk> </var/cache/fonts/pk/ljfour/jknappen/ec/ecrm172
+8.600pk>
+Output written on main.pdf (26 pages, 313663 bytes).

@@ -10,7 +10,7 @@
 
 
 %opening
-\title{knottyTom's MTB Tour Guide System\\Handbuch 0.1 f\"ur Version 0.5.1}
+\title{knottyTom's MTB Tour Guide System\\Handbuch 0.2 f\"ur Version ab 0.5.2}
 \author{knottyTom@berlios.de}
 \date{\today}
 
@@ -38,6 +38,9 @@
 
 \newpage
 \include{xml-structure}
+
+\newpage
+\include{ant-calls}
 
 \newpage
 \include{tips-and-tricks}
