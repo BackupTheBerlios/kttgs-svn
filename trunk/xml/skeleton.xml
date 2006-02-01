@@ -3,11 +3,19 @@
 <tour-guide>
 
 <storage-info>
+   <!-- Give location information of the tour here -->
    <location 
           country="de" 
           region-or-state="state" 
           city="a city" 
           zip-code="12345"/>
+   <!-- Let us know about the author of the tour and the date he/she did it. 
+        Use a valid email addresse to let people send you feedback and
+	questions.
+   -->
+   <authoring 
+      author="email@not-real.com"
+      creation-date="YYYYMMDD"/>
 </storage-info>
 
 <!-- levels: easy, medium, high. extrem -->
@@ -65,6 +73,23 @@
        <poi distance="000">
           Point of interest text.
        </poi>
+       <!--
+          Extra profile information. Will show up in profile image! I
+	  encourage you to use this tag. Profile information only included 
+	  in the <crosspoint> tags will not really give an impression about
+	  what the tour is like.
+	  For technical reasons you have to set the attribute 'icp' to
+	  "false" without exception (and you _have_ to set it)!
+	  The attribute 'distance' is measured to last <crosspoint>.
+	  Not preceding <point>!
+       -->
+       <profile-points>
+           <point distance="100" elevation="200" icp="false" longitude="000" latitude="000" />
+	   <point distance="200" elevation="1000" icp="false" longitude="000" latitude="000" />
+	   <point distance="300" elevation="0" icp="false" longitude="000" latitude="000" />
+	   <!-- distance="400" means: 400 meters away from last <crosspoint>! -->
+	   <point distance="400" elevation="800" icp="false" longitude="000" latitude="000" />
+       </profile-points>
    </track-info>
    
    <!-- next crosspoint, distance measured to last crosspoint, see that we have

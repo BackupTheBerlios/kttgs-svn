@@ -142,7 +142,7 @@
    With the pavement attribute you specify what the, err, pavement looks
    like.
 -->
-<!ELEMENT track-info ( anecdote | eatndrink | poi )* >
+<!ELEMENT track-info (( anecdote | eatndrink | poi )*, profile-points?) >
 <!ATTLIST track-info pavement (road|forrest.road|trail) #REQUIRED >
 
 <!--
@@ -180,5 +180,22 @@
 <!ATTLIST poi distance CDATA #REQUIRED >
 <!ATTLIST poi image CDATA #IMPLIED>
 
+<!--
+ Extra profile information. Will show up in profile image! I
+ encourage you to use this tag. Profile information only included 
+ in the <crosspoint> tags will not really give an impresson about
+ what the tour is like.
+ For technical reasons you have to set the attribute 'icp' to
+ "false" without exception (and you _have_ to set it)!
+ The attribute 'distance' is measured to last <crosspoint>.
+ Not preceding <point>!
+-->
+<!ELEMENT profile-points (point*) >
+<!ELEMENT point EMPTY >
+<!ATTLIST point distance CDATA #REQUIRED >
+<!ATTLIST point elevation CDATA #REQUIRED >
+<!ATTLIST point latitude CDATA #REQUIRED >
+<!ATTLIST point longitude CDATA #REQUIRED >
+<!ATTLIST point icp CDATA #REQUIRED >
 
 <!-- THE <crosspoints> SECTION (end) -->
