@@ -39,14 +39,14 @@ How this is done is explained in section 1b).
 For now, the GUI is quite simple. Just select a language for the 
 generated tour and type in a name for the folder.
 
-Starting the GUI is also simpe. On the command line (aka DOS box under windows) 
+Starting the GUI is also simple. On the command line (aka DOS box under windows) 
 type the following command:
 
    ant. run.config
 
 2) Generate A Skeleton
 ----------------------
-From the information given ind the file 'build.properties', you can generate
+From the information given in the file 'build.properties', you can generate
 a skeleton of the XML file you will use for further editing. On the command line 
 (aka DOS box under windows) type the following command:
 
@@ -71,7 +71,7 @@ subdirectory called 'tour.name' (this is the name you specified in step 1!).
 And there you will find a file named 'tour.name'.html (e.g., my_first_tour.html). 
 This is the HTML representation of our new tour. Open this file in the HTML 
 browser of your choice. Does it look good? I guess, that is does not. Remember 
-this is version 0.5 of this project! ;-)
+this is version 0.5.1 of this project! ;-)
 
 
 4) Write Your First Guide
