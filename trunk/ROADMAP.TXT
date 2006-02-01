@@ -6,6 +6,16 @@ No Deadline
 * Create forms that can be filled while protocolling the tour
 * Make these forms an application for PDAs (uah)
 * Store tour info on a website and let retrieve via GUI.
+* Let people use the system to record done tours (and
+  do statistics).
+* Map tours using 'GoogleMaps'
+...
+...
+...
+* Sell the system to Google and bike round the world for the 
+  rest of my life --- ooh, yeah! ;-D
+* Uh!? No, now the project is handed over to the community!
+  I still will provide guides of my tours...
  
 Version 0.5.4
 -------------
@@ -15,6 +25,7 @@ Version 0.5.3
 -------------
 * Build a graphical user interface using Ruby On Rails
 * Document and explain the installation of Ruby and ROR
+* Document a real tour as example.
 
 Version 0.5.2 <----------- CURRENT VERSION
 -------------
@@ -23,11 +34,11 @@ Version 0.5.2 <----------- CURRENT VERSION
 * Explain the usage of extended profile info in the manual.
 * Create a printable PDF that shows the tour and can
   be used while on tour.
-* Document a real tour as example.
 * Add total for uphill (I really missed that information!).
 * Explain in the manual.
 * Update the DTD (total uphill).
 * Add a section to the manual documenting all ant calls.
+* Add author email and creation date information
 
 
 Version 0.5.1
