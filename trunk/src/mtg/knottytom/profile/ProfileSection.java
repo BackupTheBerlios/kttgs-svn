@@ -15,6 +15,7 @@ public class ProfileSection {
 	private boolean isCrossPoint = true;
 	private String longitude = "";
 	private String latitude = "";
+	private boolean addToLegend = true;
 
 	public ProfileSection() {
 		// System.out.println("ProfileSection()");
@@ -30,11 +31,12 @@ public class ProfileSection {
 	 * @param h
 	 *            Height
 	 */
-	public ProfileSection(String t, int d, int h, boolean icp) {
+	public ProfileSection(String t, int d, int h, boolean icp, boolean atl) {
 		type = t;
 		dist = d;
 		height = h;
 		isCrossPoint = icp;
+		addToLegend = atl;
 	}
 
 	/**
@@ -139,6 +141,14 @@ public class ProfileSection {
 	 */
 	public void setLongitude(String longitude) {
 		this.longitude = longitude;
+	}
+
+	public void setShowInProfile(boolean val) {
+		addToLegend = val;
+	}
+	
+	public boolean getShowInProfile() {
+		return addToLegend;
 	}
 
 }

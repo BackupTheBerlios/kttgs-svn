@@ -213,7 +213,9 @@ public class ProfileImageGenerator {
             }
             lastWasCrossPoint = ps.isCrossPoint();
             if(ps.isCrossPoint()) {
-               infoBox(g2d, xTo, borders, run);
+               if(ps.getShowInProfile()) {
+                  infoBox(g2d, xTo, borders, run);
+	       }
             } else {
                // get the numbering correct.
                run--;

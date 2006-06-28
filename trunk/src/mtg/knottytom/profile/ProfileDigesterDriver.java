@@ -26,6 +26,7 @@ public class ProfileDigesterDriver {
          digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "elevation", "height");
          digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "latitude", "latitude");
          digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "longitude", "logitude");
+         digester.addSetProperties( "tour-guide/crosspoints/crosspoint", "showInProfile", "showInProfile");
          // digester.addBeanPropertySetter( "tour-guide/crossspoints/crosspoint", "title" );
          digester.addSetNext( "tour-guide/crosspoints/crosspoint", "addProfileSection" );
          
@@ -75,6 +76,11 @@ public class ProfileDigesterDriver {
             out = out + ps.getDist() +",";
             out = out + ps.getHeight() + ",";
             if(ps.isCrossPoint()) {
+               out = out + "1,";
+            } else {
+               out = out + "0,";	
+            }
+            if(ps.getShowInProfile()) {
                out = out + "1,";
             } else {
                out = out + "0,";	

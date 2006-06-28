@@ -56,6 +56,7 @@ public class ProfileParser {
       String spl[];
       String spl2[];
       boolean isCrossPoint = true;
+      boolean addToLegend  = true;
       
       spl = val.split(",");
       // System.out.println("0:" + spl[0]);
@@ -70,7 +71,10 @@ public class ProfileParser {
       if(spl[3].equals("0")) {
     	  isCrossPoint = false;
       }
-      secs.put(pos, new ProfileSection(spl[0], dist, height, isCrossPoint));
+      if(spl[4].equals("0")) {
+    	  addToLegend =false;
+      }
+      secs.put(pos, new ProfileSection(spl[0], dist, height, isCrossPoint, addToLegend));
    }
    
    private void handleConf(String key, String val, HashMap<String,String> conf) {
