@@ -48,7 +48,9 @@
 <!ATTLIST distance unit CDATA #REQUIRED >
 
 <!-- Describe your tour. -->
-<!ELEMENT desc ( #PCDATA ) >
+<!-- <!ELEMENT desc ( #PCDATA ) > -->
+<!ELEMENT desc ( para* ) >
+<!ELEMENT para ( #PCDATA ) >
 
 <!--
   Tell people how they can reach the start point of your tour. You can add
@@ -114,6 +116,7 @@
 <!ATTLIST crosspoint elevation CDATA #REQUIRED >
 <!ATTLIST crosspoint latitude CDATA #REQUIRED >
 <!ATTLIST crosspoint longitude CDATA #REQUIRED >
+<!ATTLIST crosspoint showInProfile (yes|no) #IMPLIED>
 
 <!--
    You can add any number of pictures to any crosspoint:
