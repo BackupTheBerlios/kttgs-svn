@@ -24,3 +24,24 @@ anecdote=Anekdote
 
 latitude=Breitengrad
 longitude=Laengengrad
+
+legend=Legende
+legend.type.tourab=Tour von A nach B
+legend.type.tourr=Rundtour
+legend.type.dh=Reiner Downhill
+legend.type.trail=Single Trail
+legend.pavement.road=Teer/Strasse
+legend.pavement.forrest-road=Schotter-/Forstweg
+legend.pavement.trail=Trail/Wanderweg
+legend.level.easy=Einfach
+legend.level.medium=Mittel
+legend.level.high=Hoch
+legend.level.extrem=Extrem
+legend.direction.north=Norden
+legend.direction.northeast=Nordost
+legend.direction.east=Osten
+legend.direction.southeast=Suedost
+legend.direction.south=Sueden
+legend.direction.southwest=Suedwest
+legend.direction.west=Westen
+legend.direction.northwest=Nordwest

@@ -27,6 +27,7 @@
       [<a class="menu" href="#overview.map">Uebersichtskarte</a>]
       [<a class="menu" href="#profile.map">Tour-Profil</a>]
       [<a class="menu" href="#crosspoints">Detaillierte Tourinformationen</a>]
+      [<a class="menu" href="#crosspoints">Legende</a>]
    </h1>
    -->
    
@@ -37,17 +38,20 @@
       <a href="#overview.map">Uebersichtskarte</a>
       <a href="#profile.map">Tour-Profil</a>
       <a href="#crosspoints">Detaillierte Tourinformationen</a>
+      <a href="#legend">Legende</a>
    </div>
    </center>
    <xsl:apply-templates select="general"/>
    <a name="crosspoints"/>
    <h1>Detaillierte Tourinformationen</h1>
    <xsl:apply-templates select="crosspoints"/>
+   <xsl:call-template name="legend"/>
 </xsl:template>
 
 <xsl:template match="general">
      <h2><xsl:value-of select="name"/></h2>
-     <p><xsl:value-of select="desc"/></p>
+     <!-- <p><xsl:value-of select="desc"/></p> -->
+     <xsl:apply-templates select="desc"/>
      <table>
         <tr><td>Kondition</td><td>
             <xsl:choose >
@@ -122,6 +126,14 @@
      <xsl:apply-templates select="profile"/>
 </xsl:template>
 
+<xsl:template match="general/desc">
+   <xsl:apply-templates select="para"/>
+</xsl:template>
+
+<xsl:template match="general/desc/para">
+   <p><xsl:value-of select="text()"/></p>
+</xsl:template>
+
 <xsl:template match="distance">
    <xsl:value-of select="text()"/> <xsl:value-of select="@unit"/>
 </xsl:template>
@@ -152,8 +164,8 @@
 <xsl:template match="roadmap">
    <h2>Uebersichtskarte</h2>
    <a name="overview.map"/>
-   <xsl:element name = "img" >
-      <xsl:attribute name="src">images/<xsl:value-of select = "@image"/>
+   <xsl:element name="img">
+      <xsl:attribute name="src">images/<xsl:value-of select="@image"/>
       </xsl:attribute>
    </xsl:element>
 </xsl:template>
@@ -218,14 +230,21 @@
          </xsl:choose>
       </xsl:element>
    </p>
+   <div style="float:left; padding-right: 10px;">
+   <xsl:apply-templates select="images/image"/>
+   </div>
    <p>
    <xsl:apply-templates select="desc"/>
-   <xsl:apply-templates select="images/image"/>
    </p>
+   <p style="clear:left"/>
 </xsl:template>
 
 <xsl:template match="crosspoint/desc">
-   <xsl:apply-templates select="text()"/>
+   <xsl:apply-templates select="para"/>
+</xsl:template>
+
+<xsl:template match="crosspoint/desc/para">
+   <p><xsl:value-of select="text()"/></p>
 </xsl:template>
 
 <xsl:template match="/tour-guide/crosspoints/crosspoint" mode="profile">
@@ -249,6 +268,7 @@
 <xsl:template match="crosspoint/images/image">
    <p>
    <xsl:element name = "img" >
+      <!-- <xsl:attribute name="class">left_img</xsl:attribute> -->
       <xsl:attribute name="src">images/<xsl:value-of select = "@name"/>
       </xsl:attribute>
    </xsl:element>
@@ -281,41 +301,126 @@
 
 <xsl:template match="eatndrink">
     <p class="crosspoint-info">Entfernung:<b><xsl:value-of select="@distance"/></b> (Lokal/Restaurant)</p>
-    <p><xsl:value-of select="text()"/></p>
     <xsl:if test="@image != ''">
        <p>
        <xsl:element name = "img" >
+         <xsl:attribute name="class">left_img</xsl:attribute>
          <xsl:attribute name="src">images/<xsl:value-of select = "@image"/>
          </xsl:attribute>
       </xsl:element>
       </p>
     </xsl:if>
+   <p><xsl:value-of select="text()"/></p>
+   <p style="clear:left"/>
 </xsl:template>
 
 <xsl:template match="anecdote">
     <p class="crosspoint-info">Entfernung:<b><xsl:value-of select="@distance"/></b> (Anekdote)</p>
-    <p><xsl:value-of select="text()"/></p>
     <xsl:if test="@image != ''">
        <p>
        <xsl:element name = "img" >
+         <xsl:attribute name="class">left_img</xsl:attribute>
          <xsl:attribute name="src">images/<xsl:value-of select = "@image"/>
          </xsl:attribute>
       </xsl:element>
       </p>
    </xsl:if>
+   <p><xsl:value-of select="text()"/></p>
+   <p style="clear:left"/>
 </xsl:template>
 
 <xsl:template match="poi">
     <p class="crosspoint-info">Entfernung:<b><xsl:value-of select="@distance"/></b> (Interessanter Punkt)</p>
-    <p><xsl:value-of select="text()"/></p>
     <xsl:if test="@image != ''">
        <p>
        <xsl:element name = "img" >
+         <xsl:attribute name="class">left_img</xsl:attribute>
          <xsl:attribute name="src">images/<xsl:value-of select = "@image"/>
          </xsl:attribute>
       </xsl:element>
       </p>
    </xsl:if>
+   <p><xsl:value-of select="text()"/></p>
+   <p style="clear:left"/>
+</xsl:template>
+
+<xsl:template name="legend">
+   <a name="legend"/>
+   <h1>Legende</h1>
+      <h2>Kondition</h2>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar1.gif"/>Einfach
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar2.gif"/>Mittel
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar3.gif"/>Hoch
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar4.gif"/>Extrem
+	 </p>
+      <h2>Technisches Koennen</h2>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar1.gif"/>Einfach
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar2.gif"/>Mittel
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar3.gif"/>Hoch
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/bar4.gif"/>Extrem
+	 </p>
+      <h2>Typ</h2>
+         <p class="crosspoint-info">
+            <img src="images_intern/tourab.gif"/>Tour von A nach B
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/tourr.gif"/>Rundtour
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/dh.gif"/>Reiner Downhill
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/trail.gif"/>Single Trail
+	 </p>
+      <h2>Streckenbelag</h2>
+         <p class="crosspoint-info">
+            <img src="images_intern/pavement-road.png"/>Teer/Strasse
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/pavement-forrest-road.png"/>Schotter-/Forstweg
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/pavement-trail.png"/>Trail/Wanderweg
+	 </p>
+      <h2>Weiter in Richtung</h2>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-north.png"/>Norden
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-northeast.png"/>Nordost
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-east.png"/>Osten
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-southeast.png"/>Suedost
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-south.png"/>Sueden
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-southwest.png"/>Suedwest
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-west.png"/>Westen
+	 </p>
+         <p class="crosspoint-info">
+            <img src="images_intern/windrose-northwest.png"/>Nordwest
+	 </p>
 </xsl:template>
 
 </xsl:stylesheet>

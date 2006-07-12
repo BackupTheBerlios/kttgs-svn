@@ -25,4 +25,23 @@ anecdote=Anecdote
 latitude=Latitude
 longitude=Longitude
 
-
+legend=Legend
+legend.type.tourab=Tour from point A to point B
+legend.type.tourr=Round Trip
+legend.type.dh=Downhill
+legend.type.trail=Single Trail
+legend.pavement.road=Road
+legend.pavement.forrest-road=Forrestroad
+legend.pavement.trail=Trail
+legend.level.easy=Easy
+legend.level.medium=Medium
+legend.level.high=High
+legend.level.extrem=Extrem
+legend.direction.north=North
+legend.direction.northeast=Northeast
+legend.direction.east=East
+legend.direction.southeast=Southeast
+legend.direction.south=South
+legend.direction.southwest=Southwest
+legend.direction.west=West
+legend.direction.northwest=Northwest
