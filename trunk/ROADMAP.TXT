@@ -20,12 +20,12 @@ No Deadline
 Version 0.5.4
 -------------
 * If the manual reveals to be stable translate it to english.
+* Build a graphical user interface using Ruby On Rails
+* Document and explain the installation of Ruby and ROR
 
 Version 0.5.3
 -------------
-* Build a graphical user interface using Ruby On Rails
-* Document and explain the installation of Ruby and ROR
-* Document a real tour as example.
+* Build a graphical user interface using SwixAT
 
 Version 0.5.2 <----------- CURRENT VERSION
 -------------
@@ -39,6 +39,7 @@ Version 0.5.2 <----------- CURRENT VERSION
 * Update the DTD (total uphill).
 * Add a section to the manual documenting all ant calls.
 * Add author email and creation date information
+* Document a real tour as example.
 
 
 Version 0.5.1
