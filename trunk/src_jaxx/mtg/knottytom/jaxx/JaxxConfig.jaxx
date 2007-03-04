@@ -1,0 +1,40 @@
+<Application id='config' title="JaxxConfig">
+  <script>
+      import mtg.knottytom.configuration.BuildPropertiesHandler;
+  </script>
+
+  <!--
+  <style source="/mtg/knotty/tom/css/jaxx/Style.css"/>
+  -->
+
+
+  <BuildPropertiesHandler id="props"/>
+  
+
+  <HBox>
+  <JLabel icon='{new ImageIcon(getClass().getResource("/mtg/knottytom/images/logo_kttgs_rotated.png"))}'/>
+  <VBox constraints='BorderLayout.CENTER'>
+    <JLabel text='KTTGS Control Center' font-size='12' border='{new javax.swing.border.EtchedBorder()}'/>
+    <JLabel 
+        text='Current Tour: {props.getProp("tour.name")} (Lang: {props.getProp("lang")})' 
+        font-size='12' 
+        border='{new javax.swing.border.EtchedBorder()}'
+    />
+    <Table fill='both'>
+    <row><cell><JButton text='Skeleton' contentAreaFilled='true' onActionPerformed=''/></cell></row>
+    <row><cell><JButton text='HTML' onActionPerformed=''/></cell></row>
+    <row><cell><JButton text='PDF' onActionPerformed=''/></cell></row>
+    <row><cell><JButton text='Profile' onActionPerformed=''/></cell></row>
+    <row><cell><JButton text='ZIP' onActionPerformed='new Status().setVisible(true)'/></cell></row>
+    <row><cell><JButton text='Exit' onActionPerformed='dispose()' toolTipText='Press to leave this application.'/></cell></row>
+    <row><cell>
+     <HBox border='{new javax.swing.border.EtchedBorder()}'>
+        <JLabel text='Status: '/>
+        <JLabel id="status_text" text='Nothing to do.'/>
+     </HBox>
+    </cell></row>
+    </Table>
+     <JLabel icon='{new ImageIcon(getClass().getResource("/mtg/knottytom/images/logo_kttgs.png"))}'/>
+  </VBox>
+  </HBox>
+</Application>

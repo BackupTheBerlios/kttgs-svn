@@ -1,0 +1,4 @@
+
+<JDialog id='status' title='Status' modal='true'>
+  <JButton text='Close' onActionPerformed='dispose()'/>
+</JDialog>
