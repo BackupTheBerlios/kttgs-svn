@@ -218,7 +218,8 @@ Erstmal wieder ein Beispiel:
    fitness-level="easy" 
    tech-level="medium" 
    type="round" 
-   duration="01:00hrs">
+   duration="01:00hrs"
+   total-uphill="600m">
    
    <name>Nuernberger Tiergarten 
          --- Kleiner Trial inklusive 'Roller Coaster'
@@ -269,6 +270,7 @@ hierf"ur angeben kann, wird im Anschlu"s erl"autert):
 \item type: Rundtour, Single Trial, \ldots
 \item duration: Dauer der Tour. Als du sie gefahren
       bist.
+\item total-uphill: Hoehenmeter der Tour.
 \end{enumerate}
 
 Werte f"ur \textbf{fitness-level}: \texttt{easy, medium, high} 
@@ -287,6 +289,11 @@ Werte f"ur \textbf{type}:
 
 \textbf{duration}: Hier sollte man sowas wie \texttt{"01:30hrs"}
 oder \texttt{"1 Stunde, 30 Minuten"} angeben.
+
+\textbf{total-uphill}: Hiermit werden die gesamten H"ohenmeter
+der Tour angegeben. Also sowas wie \texttt{"600m"}. Vergesst die
+die Einheit wie z.B. \texttt{m} f"ur Meter nicht. Es koennte
+sich ja auch um englische Fu"s handeln.
 
 So und nun zu den restlichen Tags die innerhalb von
 <general> verwendet werden k"onnen oder m"ussen\ldots
@@ -322,6 +329,12 @@ Und das war's auch schon.
 Zwischen den <desc>-Tags wird eine Beschreibung der Tour 
 erfasst. Die kann durchaus etwas l"anger sein und soll dem
 Leser richtig Lust auf die Tour machen.
+
+Die einzelnen Abs"atze werden durch <para> eingeschlossen.
+Damit kann man (im Moment nur) die Ausgabe der HTML-Datei
+etwas h"ubscher formatieren. Das Tag muss aber benutzt werden.
+Auch wenn nur \texttt{ein} Absatz vorliegt! Hat man das Tag
+vergessen, dann erscheint in der Ausgabe keinerlei Text.
 
 \subsubsection{<reach>}
 Irgendwie mu"s der Biker ja auch an den Startpunkt der Tour
@@ -429,7 +442,7 @@ Hier mal ein Beispiel:
       distance="300" elevation="600" 
       direction="northwest" 
       latitude="000" longitude="000">
-     <desc> Ein nordwest Punkt.</desc>
+     <desc><para>Ein nordwest Punkt.</para></desc>
      <profile-desc>
         Die Stromschneisse... und los
      </profile-desc>
@@ -446,7 +459,7 @@ Hier mal ein Beispiel:
    <crosspoint distance="200" elevation="310" 
                direction="none" 
                latitude="000" longitude="000">
-     <desc>Back At Home!</desc>
+     <desc><para>Back At Home!</para></desc>
    </crosspoint>
 </crosspoints>
 </tourguide>
@@ -507,10 +520,12 @@ Attribute und zwei Subtags.
    <crosspoint 
       distance="300" elevation="600" 
       direction="northwest" 
-      latitude="000" longitude="000">
-     <desc> Ein nordwest Punkt.</desc>
+      latitude="000" longitude="000"
+      showInProfile="no">
+      
+     <desc><para>Ein nordwest Punkt.</para></desc>
      <profile-desc>
-        Die Stromschneisse... und los
+        Die Stromschneisse... und los.
      </profile-desc>
    </crosspoint>
    
@@ -521,13 +536,13 @@ Attribute und zwei Subtags.
    <crosspoint distance="200" elevation="310" 
                direction="none" 
                latitude="000" longitude="000">
-     <desc>Back At Home!</desc>
+     <desc><para>Back At Home!</para></desc>
    </crosspoint>
 </crosspoints>
 </tourguide>
 \end{lstlisting}
 
-\subsubsection{<crosspoint> Attribute}
+\subsubsection{<crosspoint> Attribute}\label{sec:crosspoint-attributes}
 
 Die Attribute (und ihre Bedeutung) lauten wie folgt.
 \begin{itemize}
@@ -541,6 +556,14 @@ Die Attribute (und ihre Bedeutung) lauten wie folgt.
       southeast, southwest} und \texttt{northwest}.
 \item \texttt{latitude}: Breitengrad (\textit{wird bisher nicht verwendet})
 \item \texttt{longitude}: L"angengrad (\textit{wird bisher nicht verwendet})
+\item \texttt{showInProfile}: Dieses Attribute gibt an, ob der 
+      Kreuzungspunkt im grafischen Profil als Nummer erscheinen soll. Wird
+      das Attribute nicht verwendet, dann erscheint der Punkt im Profile.
+      Das ist gleichedeutend mit \texttt{showInProfile="yes"}. Liegen die
+      die Kreuzungspunkt im grafischen Profil sehr dicht beisammen, dann
+      sieht das nicht gut aus und ist auch nicht gut zu lesen. In diesem
+      Fall sollte man \texttt{showInProfile="no"} angeben, dann wir die
+      Nummer weggelassen. Einfach mal ausprobieren! ;-)
 \end{itemize}
 
 \subsubsection{<desc>}
@@ -561,9 +584,13 @@ in den Wald geht. Du solltest also so Angaben machen wie:
    "rot Viereck" weiter.}
 \end{itemize}
 
+Jeden Absatz muss man wieder innerhalb von <para>\dots</para>
+schreiben. Vergisst man die <para>-Tags, dann sieht man wieder
+keine Textausgabe im generierten Dokument!
+
 \subsubsection{<images>}
 Innerhalb des <images>-Tag kann man bieliebig viel Bilder, die
-f"ur den Kreuzungspunkt relevant sind angeben. 
+f"ur den Kreuzungspunkt relevant sind, angeben. 
 
 \lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
 \begin{lstlisting}{}
@@ -571,7 +598,7 @@ f"ur den Kreuzungspunkt relevant sind angeben.
 ...
 <crosspoints>
    <crosspoint...> 
-     <desc> Ein nordwest Punkt.</desc>
+     <desc><para>Ein nordwest Punkt.</para></desc>
      <images>
         <image name="einBild.jpg"/>
         <image name="anderesBild.jpg"/>
@@ -641,7 +668,10 @@ Wir haben die beiden Attribute:
 \end{itemize}
 
 Mit \texttt{distance} wird die Entfernung zum letzten Kreuzungspunkt
-angegeben. Genaueres dazu findest du in Absschnitt 
+angegeben. Das ist jetzt \textbf{nicht} der Kreuzungspunkt zu dem
+dem dieser \texttt{<track-info>}-Abschnitt geh"ort, sondern der
+\textbf{vor} diesem!
+Genaueres dazu findest du in Absschnitt 
 \ref{sec:crosspoints-distances-explained} auf Seite 
 \pageref{sec:crosspoints-distances-explained}.
 
@@ -698,6 +728,56 @@ Egal, notiert auch das im <anecdote>-Tag z.B. wie folgt:
     fotografieren... ;-)
 </anecdote>
 \end{lstlisting}
+
+\subsubsection{<profile-points>}
+Wenn man eine Tour erfasst, dann m"ussen die H"ohenangaben
+an den Kreuzungs\-punkten nicht unbedingt das echte Profil
+widerspiegeln. Es kann durchaus vorkommen, da"s zwischen
+zwei Kreuzungspunkten ein echter Hammer liegt.
+
+Das k"onnen wir bisher aber nicht erfassen. Deswegen gibt
+es am Ende des \texttt{<track-info>}-Abschnitts den 
+\texttt{<profile-points>}-Bereich. Hier k"onnen 
+Profilpunkte notiert werden, die zwischen zwei Kreuzungs\-punkten
+auftreten.
+
+Das sieht dann z.B. so aus:
+\begin{lstlisting}{}
+<tourguide>
+...
+<crosspoints>
+   ...
+   <track-info pavement="road">
+      ...
+      <profile-points>
+        <point distance="500" elevation="300"
+	       latitude="000" longitude="000"
+	       icp="false"/>
+	<point distance="1000" elevation="150"
+	       latitude="000" longitude="000"
+	       icp="false"/>
+      </profile-points>
+   </track-info>
+   ...
+</crosspoints>
+</tourguide>
+\end{lstlisting}
+
+Jeder Profilpunkt wird mit einem \texttt{<point>}-Tag erfasst.
+Die Bedeutung der Attribute \texttt{distance, elevation, latitude}
+und \texttt{longitude} entspricht der eines \texttt{<crosspoint>}-Tags
+(siehe dazu auf den Punkt \ref{sec:crosspoint-attributes} auf Seite
+\pageref{sec:crosspoint-attributes}). Neu ist eigentlich nur das
+Attribute \texttt{icp}. Es muss immer vorhanden sein und immer
+den Wert \texttt{false} haben. Das ist seltsam. Stimmt! Das ist
+im Moment aber aus technischen Gr"unden n"otig.
+
+Mit \texttt{distance} wird die Entfernung zum letzten Kreuzungspunkt
+angegeben. Das ist jetzt \textbf{nicht} der Kreuzungspunkt zu dem
+dem dieser \texttt{<track-info>}-Abschnitt geh"ort, sondern der
+\textbf{vor} diesem! Genaueres dazu findest du in Absschnitt 
+\ref{sec:crosspoints-distances-explained} auf Seite 
+\pageref{sec:crosspoints-distances-explained}.
 
 %%%%%%%%%%%%%%%%
 %% The END

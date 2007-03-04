@@ -4,7 +4,8 @@
 \contentsline {subsection}{\numberline {1.2}Entt\"auschte Hoffnungen}{3}
 \contentsline {subsection}{\numberline {1.3}Ist-Zustand der Version 0.5.1}{4}
 \contentsline {subsection}{\numberline {1.4}Pl\"ane}{5}
-\contentsline {subsection}{\numberline {1.5}Weitere Informationsquellen}{5}
+\contentsline {subsection}{\numberline {1.5}Ist-Zustand der Version 0.5.2}{5}
+\contentsline {subsection}{\numberline {1.6}Weitere Informationsquellen}{5}
 \contentsline {section}{\numberline {2}Bevor es los geht}{6}
 \contentsline {subsection}{\numberline {2.1}Java 1.5+}{6}
 \contentsline {subsection}{\numberline {2.2}Jakarta ANT 1.6.2+}{6}
@@ -26,7 +27,7 @@
 \contentsline {subsection}{\numberline {5.6}<general>}{14}
 \contentsline {subsubsection}{\numberline {5.6.1}Die Attribute von <general>}{15}
 \contentsline {subsubsection}{\numberline {5.6.2}<name>}{15}
-\contentsline {subsubsection}{\numberline {5.6.3}<distance>}{15}
+\contentsline {subsubsection}{\numberline {5.6.3}<distance>}{16}
 \contentsline {subsubsection}{\numberline {5.6.4}<desc>}{16}
 \contentsline {subsubsection}{\numberline {5.6.5}<reach>}{16}
 \contentsline {subsubsection}{\numberline {5.6.6}<maps>}{17}
@@ -35,22 +36,23 @@
 \contentsline {subsection}{\numberline {5.7}<crosspoints>}{18}
 \contentsline {subsection}{\numberline {5.8}Entfernungen}{19}
 \contentsline {subsection}{\numberline {5.9}<crosspoint>}{19}
-\contentsline {subsubsection}{\numberline {5.9.1}<crosspoint> Attribute}{19}
+\contentsline {subsubsection}{\numberline {5.9.1}<crosspoint> Attribute}{20}
 \contentsline {subsubsection}{\numberline {5.9.2}<desc>}{20}
-\contentsline {subsubsection}{\numberline {5.9.3}<images>}{20}
+\contentsline {subsubsection}{\numberline {5.9.3}<images>}{21}
 \contentsline {subsubsection}{\numberline {5.9.4}<profile-desc>}{21}
 \contentsline {subsection}{\numberline {5.10}<track-info>}{21}
-\contentsline {subsubsection}{\numberline {5.10.1}Attribute f"ur <eatndrink>,<poi> und <anecdote>}{21}
+\contentsline {subsubsection}{\numberline {5.10.1}Attribute f"ur <eatndrink>,<poi> und <anecdote>}{22}
 \contentsline {subsubsection}{\numberline {5.10.2}<eatndrink>}{22}
 \contentsline {subsubsection}{\numberline {5.10.3}<poi>}{22}
-\contentsline {subsubsection}{\numberline {5.10.4}<anecdote>}{22}
-\contentsline {subsection}{\numberline {5.11}Keine Tags mehr!}{23}
-\contentsline {section}{\numberline {6}Aufrufen der Funktionen}{24}
-\contentsline {subsection}{\numberline {6.1}Neue Tour vorbereiten}{24}
-\contentsline {subsection}{\numberline {6.2}Grundger"ust/Skeleton anlegen}{24}
-\contentsline {subsection}{\numberline {6.3}Web-Seite generieren}{24}
-\contentsline {subsection}{\numberline {6.4}Tour per eMail verschicken}{24}
-\contentsline {section}{\numberline {7}Tips und Tricks}{25}
-\contentsline {subsection}{\numberline {7.1}Karte erstellen (TODO)}{25}
-\contentsline {subsection}{\numberline {7.2}Formulare verwenden (TODO)}{25}
-\contentsline {subsection}{\numberline {7.3}Tourerfassung mit MP3-Player (TODO)}{25}
+\contentsline {subsubsection}{\numberline {5.10.4}<anecdote>}{23}
+\contentsline {subsubsection}{\numberline {5.10.5}<profile-points>}{23}
+\contentsline {subsection}{\numberline {5.11}Keine Tags mehr!}{24}
+\contentsline {section}{\numberline {6}Aufrufen verschiedener Funktionen "uber \textit {Ant}}{25}
+\contentsline {subsection}{\numberline {6.1}Neue Tour vorbereiten}{25}
+\contentsline {subsection}{\numberline {6.2}Grundger"ust/Skeleton anlegen}{25}
+\contentsline {subsection}{\numberline {6.3}Web-Seite generieren}{25}
+\contentsline {subsection}{\numberline {6.4}Tour f"ur eMail-Versendung vorbereiten}{25}
+\contentsline {section}{\numberline {7}Tips und Tricks}{26}
+\contentsline {subsection}{\numberline {7.1}Karte erstellen (TODO)}{26}
+\contentsline {subsection}{\numberline {7.2}Formulare verwenden (TODO)}{26}
+\contentsline {subsection}{\numberline {7.3}Tourerfassung mit MP3-Player (TODO)}{26}

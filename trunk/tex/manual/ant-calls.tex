@@ -1,9 +1,27 @@
-\section{Aufrufen der Funktionen}\label{sec:ant-calls}
+\section{Aufrufen verschiedener Funktionen "uber \textit{Ant}}\label{sec:ant-calls}
 
 \subsection{Neue Tour vorbereiten}
+Nutzung der grafischen Oberflaeche:
+lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant run.config
+\end{lstlisting}
 
 \subsection{Grundger"ust/Skeleton anlegen}
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-skeleton
+\end{lstlisting}
+
 
 \subsection{Web-Seite generieren}
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant gen-tour-html
+\end{lstlisting}
 
-\subsection{Tour per eMail verschicken}
+\subsection{Tour f"ur eMail-Versendung vorbereiten}
+\lstset{numbers=left,numberstyle=\tiny,stepnumber=1}
+\begin{lstlisting}{}
+ant zip-tour-html
+\end{lstlisting}

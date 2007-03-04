@@ -12,6 +12,14 @@ src_extensions=.tex .ltx .bib .mp
 MakeIndex=
 QuickBuild=
 
+[item:ant-calls.tex]
+archive=true
+column=16
+encoding=ISO 8859-15
+highlight=LaTeX
+line=22
+open=true
+
 [item:biketour.kilepr]
 archive=true
 column=0
@@ -22,10 +30,10 @@ open=false
 
 [item:goal.tex]
 archive=true
-column=26
+column=0
 encoding=ISO 8859-15
 highlight=LaTeX
-line=135
+line=67
 open=true
 
 [item:installation.tex]
@@ -62,10 +70,10 @@ open=true
 
 [item:quick-start.tex]
 archive=true
-column=55
+column=16
 encoding=ISO 8859-15
 highlight=LaTeX
-line=22
+line=132
 open=true
 
 [item:tips-and-tricks.tex]
@@ -78,8 +86,8 @@ open=true
 
 [item:xml-structure.tex]
 archive=true
-column=0
+column=20
 encoding=ISO 8859-15
 highlight=LaTeX
-line=158
+line=798
 open=true
