@@ -17,6 +17,8 @@ import javax.swing.JTextField;
  *
  */
 public class MainGui {
+    
+    
 	private static void createAndShowGUI() {
         //Make sure we have nice window decorations.
         // JFrame.setDefaultLookAndFeelDecorated(true);

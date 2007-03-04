@@ -34,5 +34,10 @@ public class BuildPropertiesHandler extends java.lang.Object
       props.setProperty(LANG, l);
    }
    
+   public String getProp(String key) {
+       // test
+       return props.getProperty(key);
+   }
+   
 } // -- end class BuildPropertiesHandler
 
