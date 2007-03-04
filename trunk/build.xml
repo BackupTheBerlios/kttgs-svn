@@ -1,4 +1,6 @@
 <project name="Bike Tour XML" default="dist" basedir=".">
+    
+    <taskdef name="jaxxc" classname="jaxx.JaxxcAntTask" classpath="lib/jaxxc.jar"/>
 
     <!-- Give user a chance to override without editing this file
        (and without typing -D each time it compiles it) -->
@@ -41,6 +43,14 @@
             <include name="*.jar"/>
         </fileset>
     </path>
+    
+    <path id="jaxxc">
+       <pathelement location="${build.dir}"/>
+       <pathelement location="lib/jaxxc.jar"/>
+       <pathelement location="lib/jaxx-runtime.jar"/>
+       <pathelement location="${java.home}/../lib/tools.jar"/>
+    </path>
+
 
     <patternset id="support.files">
         <include name="**/*.dtd"/>
@@ -92,7 +102,7 @@
         </copy>
     </target>
 
-    <target name="compile" depends="init" description="Compile the Java source code (remember to put j2ee.jar, junit.jar in the /lib directory)">
+    <target name="compile" depends="init" description="Compile the Java source code">
 		<javac
         	srcdir="${src.dir}" 
         	destdir="${build.dir}"
@@ -352,4 +362,37 @@
         </classpath>
        </java>
     </target>
+    
+        
+    <target name="run.ant.gui" description="Run Ant GUI.">
+        <!--
+	<java fork="yes" classname="org.swixat.SwiXAT">
+        <arg value="./swixat/ant_gui/xml/context.xml"/>
+        -->
+        <java fork="yes" classname="mtg.knottytom.jaxx.JaxxConfig">
+       	<classpath refid="lib.class.path"></classpath>
+        <classpath> 
+           <pathelement location="${build.dir}"/>
+	   <pathelement location="."/>
+        </classpath>
+       </java>
+    </target>
+    
+    <target name="run.jaxx" description="Run JAXX compiler">
+        <mkdir dir="${build.dir}/mtg/knottytom/images"/>
+        <copy todir="${build.dir}/mtg/knottytom/images">
+	   <fileset dir="./images/jaxx">
+	      <include name="*.gif"/>
+               <include name="*.png"/>
+	   </fileset>
+        </copy>
+        <jaxxc 
+            srcDir="src_jaxx" 
+            destDir="${build.dir}"
+            classpath="${build.dir}"
+            keepJavaFiles="true"
+            runJavac="true">
+        </jaxxc>
+    </target>
+    
 </project>
