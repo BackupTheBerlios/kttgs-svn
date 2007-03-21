@@ -1,0 +1,20 @@
+---
+title: Welcome
+inMenu: true
+orderInfo: 0
+directoryName: Project XXX
+emoticonPack: icqstyle
+---
+h2. Welcome to KTTGS
+
+<img class="left_img" src="{resource: kt_small}" alt="knottyTom in 2006"/>
+
+Nice to see you!
+
+It's your first time here? I arranged the menu items in a
+way so it makes sense to click through them from top to bottom.
+That should give you an overview on what {customVar: project_name}
+is.
+
+Enjoy, and dont forget to blame me... 
+__<a href="{relocatable: /feedback.page}">Feedback</a>__ please I mean. ;-)

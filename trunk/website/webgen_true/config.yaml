@@ -1,0 +1,23 @@
+# Configuration file for webgen
+# Used to set the parameters of the plugins
+Core/Configuration:
+   outDirectory: "output"
+   customVars:
+      version: "0.5.1"
+      project_name: "KnottyTom's TourGuide System"
+      project_short_name: "KTTGS"
+      manual_doc_id:  "1362"
+
+#Logging:
+#   verbosityLevel: 2
+
+Core/ResourceManager:
+   resources: [
+                 ["kt_small", "src/images/knottytom_step3.jpg", "/images/knottytom_step3.jpg"],
+                 ["ruines", "src/images/ruines_two_bikes_small.jpg", "/images/ruines_two_bikes_small.jpg"],
+                 ["reuth", "src/images/bridge_reuth.jpg", "/images/bridge_reuth.jpg"],
+                 ["korfu", "src/images/korfu_church_bikes.jpg", "/images/korfu_church_bikes.jpg"],
+                 ["alcudia", "src/images/two_bike_forrest.jpg", "/images/two_bike_forrest.jpg"],
+                 ["gloves", "src/images/bike_with_gloves.jpg", "/images/bike_with_gloves.jpg"],
+                 ["tree", "src/images/bike_one_tree.jpg", "/images/bike_one_tree.jpg"]
+              ]

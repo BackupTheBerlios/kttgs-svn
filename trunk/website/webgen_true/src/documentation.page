@@ -1,0 +1,26 @@
+---
+title: Documentation
+inMenu: true
+orderInfo: 70
+emoticonPack: icqstyle
+---
+h2. Documentation
+
+<img class="left_img" src="{resource: gloves}" alt="Bike with gloves."/>
+The process of documenting and generating a KTTGS tour is described in detail in the
+<a href="http://developer.berlios.de/docman/display_doc.php?docid={customVar: manual_doc_id}&group_id=4839">Current German Manual</a>.
+
+I am sorry that there is no english manual right now.
+I hope I can provide some in the near future. If someone
+wants to do the translation go ahead. The TeX sources are
+in the subversion repository. It would be also no
+problem to send them via email... ;-)
+
+For a first quick intro you can read the following files which are
+packaged in the zip file of the base distribution 
+(see also <a href="{relocatable: /download.page}">Download</a> 
+section):
+
+* 5MINS-TO-YOUR-GUIDE.TXT
+* REQUIREMENTS.TXT
+* THE-CSS-SYSTEM.TXT

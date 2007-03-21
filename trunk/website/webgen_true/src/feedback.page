@@ -1,0 +1,15 @@
+---
+title: Feedback
+inMenu: true
+orderInfo: 80
+---
+h2. Feedback
+
+<img class="left_img" src="{resource: tree}" alt="Bike at tree."/>
+Please send feedback to: knottytom __AT__ berlios __DOT__ de
+
+Other options are to use the 
+<A href="http://developer.berlios.de/mail/?group_id=4839">mailing lists</A> 
+or the <A href="http://developer.berlios.de/forum/?group_id=4839">forum system</A> 
+of this project.
+

@@ -1,0 +1,40 @@
+---
+title: Download
+inMenu: true
+orderInfo: 50
+---
+h2. Download
+
+
+h3. {customVar: project_short_name}
+
+<img class="left_img" src="{resource: korfu}" alt="A church on Korfu."/>
+We have different zip files for the base system and the needed libraries. The zip file
+for the libraries may become fat, but may not change so much over time like the base system
+does. Hence, if you want to update your base system check if you need to download the
+
+WTF? Well, see below. If you have the libraries for base 0.5.1 you dont need to download
+them again when updating to base 0.5.2. Got it?
+
+Current version: __**{customVar: version}**__
+
+* The base system 0.5.1: {download: {url: http://download.berlios.de/kttgs/BikeTourXml-0.5.1.zip, alwaysShowDownloadIcon: true}}
+* The needed Java libraries</li>
+** Basesystem 0.5.2: Same as in base 0.5.1</li>
+** Basesystem 0.5.1: {download: {url: http://download.berlios.de/kttgs/BikeTourXml-0.5.1-libs.zip, alwaysShowDownloadIcon: true}}
+** Basesystem 0.5: {download: {url: http://download.berlios.de/kttgs/BikeTourXml-0.5-libs.zip, alwaysShowDownloadIcon: true}}
+* <a href="http://developer.berlios.de/docman/display_doc.php?docid={customVar: manual_doc_id}&group_id=4839">Current German Manual</a>
+
+
+h3. Additional Software
+
+You need some additional software. That is:
+
+* Sun Java JDK/SDK
+* Apache Jakarta ANT
+
+Please check the file *REQUIREMENTS.TXT* of the distribution
+you downloaded. There you will find the current internet
+links to get this software.
+
+

@@ -1,0 +1,47 @@
+---
+title: News
+inMenu: true
+orderInfo: 30
+---
+
+h2. What's Boiling
+
+Ok, this is what I currently work on:
+
+* Add extra profile information.
+* Add information about the author of the tour.
+* Add total uphill data.
+* Generate a printable b/w PDF document.
+* Document a real tour.
+* Update the manual.
+* Create a GUI to replace the command line ANT calls.
+* Generate homepage with **webgen**.
+
+h2. News
+
+Information about the past...
+
+h3. 2007
+
+ * Mar 20, 2007: Added four new screenshots.
+ * Mar 17, 2007: The new *webgen* generated homepage site is now online.
+ * Mar 15, 2007: Got an XML Schema description now.
+
+h3. 2006
+
+ * Jul 18, 2006: The new XML structure is done and documented in the manual. I will now start working on the PDF generator.
+ * Jul 14, 2006: Finished the first real tour. Posted it on <a href="http://www.mtb-news.de/forum/showthread.php?t=228939">MTB-News</a>. You can <a href="http://kttgs.berlios.de/tour_zips/NuernbergNeusesAmKanal.de.tour">download it</a>. Rename __'.tour'__ to __'.zip'__. It's really a zip file!
+ * Apr 20, 2006: Started to redesign this site using <a href="http://webgen.rubyforge.org">webgen</a> (and yeah, **webgen** is cool).
+
+h3. 2005
+
+* Dec 29, 2005: Version 0.5.1 released.  Happy new year and enjoy the system!.
+* Dec 05, 2005: Added a link to the german manual.
+* Nov 30, 2005: Updated this page explaining download idea for **base** and **libs**
+* Nov 30, 2005: (v0.5.1, only via subversion) GUI for configuration of 'build.properties' finished and uploaded to subversion repository.
+* Nov 4, 2005: Moved web-site to berliOS.
+* Oct 30, 2005: I finished the creation and documentation of the DTD.
+* Oct 2, 2005: I have uploaded all sources to the BerliOS subversion repository. Check out via: __svn checkout svn://svn.berlios.de/kttgs__.
+* Sept 29, 2005: I have registered the project at BerliOS. You can visit the <a href="http://developer.berlios.de/projects/kttgs/">project page</a>...
+*  Sept 12, 2005: I have started to code a graphical user interface using **Ruby on Rails**.
+* Sept 4, 2005: I am working on a manual for the current 0.5 release.

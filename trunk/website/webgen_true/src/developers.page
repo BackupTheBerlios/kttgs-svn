@@ -1,0 +1,22 @@
+---
+title: Developers
+inMenu: true
+orderInfo: 90
+---
+h2. Information For Developers
+
+<img class="left_img" src="{resource: alcudia}" alt="In a forrest near Alcudia, Mallorca."/>
+
+License: GPL v2 (__not higher__, for now).
+
+I do the whole project as a one man show. I would
+appreciate every helping hand. So don't hesitate to
+contact me if you want to join the project.
+
+The current sources you can retrieve from the
+Subversion repository at Berlios via 
+**svn checkout svn://svn.berlios.de/kttgs**.
+
+You will find an ANT __build.xml__ file in
+the checked out source tree.
+

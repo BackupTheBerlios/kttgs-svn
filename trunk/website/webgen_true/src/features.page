@@ -1,0 +1,48 @@
+---
+title: Features
+inMenu: true
+orderInfo: 20
+---
+h2. Features
+
+<img class="left_img" src="{resource: ruines}" alt="Two Bikes, Ruines, Kos 2005"/>
+
+The __current__ (my visions reach out...)  goal of this project is to generate 
+an HTML ouput, that provides the user of the system (which is the biker who uses 
+the output to bike and enjoy the tour) with all the information to do the tour.
+
+That means:
+
+ * Let him/her know how to get there.
+ * Let him/her decide if he is able to do the tour.
+ * Give means that he/she can decide he/she is still on the right way.
+ * Provide means to let him/her go back, if he/she lost the track
+ * Provide means to let them enjoy the tour.
+
+h2. And, in more detail
+
+ * XML based: The whole tour description is based on XML.
+ * XML holds data to make a bunch of tour descriptions searchable in a database.
+ * You can specify: technical skill level, fitness level, type of tour, duration, total distance.
+ * 'How to get there' section: Tell people how to get to start point via car, train, plain, **whatever**.
+ * Advise useful maps and add the image of a map that shows the tour.
+ * A graphical profile of the tour is generated automatically.
+ * Detailed way point information
+
+   * Elevation
+   * Distance from last way point
+   * Latitude
+   * Longitude
+   * Pavement
+   * Points of interest
+   * Restaurants
+   * Anecdotes
+   * Direction to go at a way point
+   * Unlimited numbers of images to give an impression of the tour
+
+ * Multi-language support.
+ * Using Java: multi-platform support.
+
+h2. And?
+
+More in the future...

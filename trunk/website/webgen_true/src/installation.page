@@ -1,0 +1,33 @@
+---
+title: Installation
+inMenu: true
+orderInfo: 60
+---
+h2. Installation
+
+<img class="left_img" src="{resource: reuth}" alt="A bride near Reuth."/>
+**Installation consists of just three easy steps**:
+
+# Create a directory for KTTGS.
+# Copy the two current zip files to this directory.
+# Unzip both files there.
+
+I use the following script to unpackage the version and to create a basic
+HTML from the provided skeleton (for further information concerning the 
+installation process please check the READ.ME file).
+<pre><code>
+mkdir kttgs_installation
+cp BikeTourXml-0.5.zip ./kttgs_installation
+cp BikeTourXml-0.5-libs.zip ./kttgs_installation
+cd ./kttgs_installation
+unzip BikeTourXml-0.5.zip
+unzip BikeTourXml-0.5-libs.zip 
+</code></pre>
+
+And the installation is done. Let's create our first tour.
+<pre><code>
+/home/tom/bin/apache-ant-1.6.2/bin/ant gen-skeleton
+/home/tom/bin/apache-ant-1.6.2/bin/ant gen-tour-html
+</code></pre>
+
+
