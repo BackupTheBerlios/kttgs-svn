@@ -25,7 +25,6 @@ Current version: __**{customVar: version}**__
 ** Basesystem 0.5: {download: {url: http://download.berlios.de/kttgs/BikeTourXml-0.5-libs.zip, alwaysShowDownloadIcon: true}}
 * <a href="http://developer.berlios.de/docman/display_doc.php?docid={customVar: manual_doc_id}&group_id=4839">Current German Manual</a>
 
-
 h3. Additional Software
 
 You need some additional software. That is:

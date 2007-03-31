@@ -6,3 +6,8 @@ orderInfo: 40
 h2. Screenshots
 
 Screenshots can be found on the "Berlios Project Page":http://developer.berlios.de/screenshots/?group_id=4839.
+
+Ok, not really a screenshot but a whole tour. You can download this
+<a href="http://kttgs.berlios.de/tour_zips/NuernbergNeusesAmKanal.de.tour">example tour</a>
+to see what KTTS can do for you. This file is a zip file. Just rename
+**.tour** to **.zip**. Unzip it in an empty directory and open __index.html__.
