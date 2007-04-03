@@ -6,6 +6,13 @@ orderInfo: 30
 
 h2. What's Boiling
 
+<a href="http://developer.berlios.de/export/rss20_bsnews.php?group_id=4839">
+<img class="left_img" src="{resource: rss}" alt="RSS Feed"/>
+</a> 
+Add this RSS feed to your feed reader to get the latest news
+about {customVar: project_short_name} every day. Just click
+on the RSS icon to get the correct URL. That's it.
+
 Ok, this is what I currently work on:
 
 * Add extra profile information.
@@ -23,6 +30,7 @@ Information about the past...
 
 h3. 2007
 
+ * April 03, 2007: Added RSS feed and RSS icon to web site.
  * Mar 20, 2007: Added four new screenshots.
  * Mar 17, 2007: The new *webgen* generated homepage site is now online.
  * Mar 15, 2007: Got an XML Schema description now.
