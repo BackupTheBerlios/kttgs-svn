@@ -1,6 +1,17 @@
 <project name="Bike Tour XML" default="dist" basedir=".">
     
     <taskdef name="jaxxc" classname="jaxx.JaxxcAntTask" classpath="lib/jaxxc.jar"/>
+    <taskdef name="fop" classname="org.apache.fop.tools.anttasks.Fop">
+       <classpath>
+          <fileset dir="./lib">
+             <include name="fop.jar"/>
+          </fileset>
+          <fileset dir="./lib">
+             <include name="fop.jar"/>
+             <include name="fop-hyph.jar" />
+          </fileset>
+       </classpath>
+    </taskdef>
 
     <!-- Give user a chance to override without editing this file
        (and without typing -D each time it compiles it) -->
@@ -33,6 +44,7 @@
     <property name="xml.tour.dir" value="${xml.dir}/${tour.name}"/>
     <property name="html.dir" value="html"/>
     <property name="html.tour.dir" value="${html.dir}/${tour.name}"/>
+    <property name="pdf.tour.dir" value="${html.dir}/${tour.name}/pdf"/>
     <property name="xsl.dir" value="xsl"/>
     <property name="images" value="images"/>
     <property name="images.intern" value="images_intern"/>
@@ -395,4 +407,20 @@
         </jaxxc>
     </target>
     
+    <target name="gen-tour-pdf" description="Generate Tour PDF.">
+       <mkdir dir="${pdf.tour.dir}"/>
+       <xslt 
+          basedir="${xml.tour.dir}"
+          includes="*.xml"
+          destdir="${pdf.tour.dir}"
+          extension=".fo" 
+          style="${xsl.dir}/biketour-fo.${lang}.xsl">
+       </xslt>
+       <fop format="application/pdf" outdir="${pdf.tour.dir}" messagelevel="debug">
+          <fileset dir="${pdf.tour.dir}">
+             <include name="*.fo"/>
+          </fileset>
+       </fop>
+    </target>
+
 </project>
