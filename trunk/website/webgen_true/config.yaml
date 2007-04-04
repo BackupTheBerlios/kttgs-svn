@@ -13,6 +13,7 @@ Core/Configuration:
 
 Core/ResourceManager:
    resources: [
+                 ["rss", "src/images/feed-icon-32x32.png", "/images/feed-icon-32x32.png"],
                  ["kt_small", "src/images/knottytom_step3.jpg", "/images/knottytom_step3.jpg"],
                  ["ruines", "src/images/ruines_two_bikes_small.jpg", "/images/ruines_two_bikes_small.jpg"],
                  ["reuth", "src/images/bridge_reuth.jpg", "/images/bridge_reuth.jpg"],
