@@ -407,10 +407,22 @@
         </jaxxc>
     </target>
     
+    <target name="run-fop-transformer" description="Prepare the PDF generation.">
+       <java fork="yes" classname="mtg.knottytom.xml.FopTransformer">
+           <arg value="${xml.tour.dir}/${tour.name}.xml"/>
+           <arg value="${pdf.tour.dir}/fop-tmp.xml"/>
+       	<classpath refid="lib.class.path"></classpath>
+        <classpath> 
+           <pathelement location="${build.dir}"/>
+	   <pathelement location="."/>
+        </classpath>
+       </java>
+    </target>
+    
     <target name="gen-tour-pdf" description="Generate Tour PDF.">
        <mkdir dir="${pdf.tour.dir}"/>
        <xslt 
-          basedir="${xml.tour.dir}"
+          basedir="${pdf.tour.dir}"
           includes="*.xml"
           destdir="${pdf.tour.dir}"
           extension=".fo" 
