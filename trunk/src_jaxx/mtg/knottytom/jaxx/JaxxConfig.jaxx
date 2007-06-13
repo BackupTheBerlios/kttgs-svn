@@ -1,28 +1,33 @@
 <Application id='config' title="JaxxConfig">
   <script>
       import mtg.knottytom.configuration.BuildPropertiesHandler;
+      import mtg.knottytom.ant.AntRunner;
+      String status_msg = "..."; 
   </script>
 
-  <!--
-  <style source="/mtg/knotty/tom/css/jaxx/Style.css"/>
-  -->
-
+  <style source="../jaxx_css/Style.css"/>
 
   <BuildPropertiesHandler id="props"/>
+  <AntRunner id="runner"/>
+  <script>
+      void pre() {status_msg = "Running...";}
+      void runAntTarget(String target) {
+         runner.run();
+      }
+      void post() {status_msg = "Done.";}
+  </script>
   
-
   <HBox>
   <JLabel icon='{new ImageIcon(getClass().getResource("/mtg/knottytom/images/logo_kttgs_rotated.png"))}'/>
   <VBox constraints='BorderLayout.CENTER'>
-    <JLabel text='KTTGS Control Center' font-size='12' border='{new javax.swing.border.EtchedBorder()}'/>
+    <JLabel id="heading" text='KTTGS Control Center'/>
     <JLabel 
+        id="tour_info"
         text='Current Tour: {props.getProp("tour.name")} (Lang: {props.getProp("lang")})' 
-        font-size='12' 
-        border='{new javax.swing.border.EtchedBorder()}'
     />
     <Table fill='both'>
     <row><cell><JButton text='Skeleton' contentAreaFilled='true' onActionPerformed=''/></cell></row>
-    <row><cell><JButton text='HTML' onActionPerformed=''/></cell></row>
+    <row><cell><JButton text='HTML' onActionPerformed='pre();runAntTarget("any");post();'/></cell></row>
     <row><cell><JButton text='PDF' onActionPerformed=''/></cell></row>
     <row><cell><JButton text='Profile' onActionPerformed=''/></cell></row>
     <row><cell><JButton text='ZIP' onActionPerformed='new Status().setVisible(true)'/></cell></row>
@@ -30,7 +35,7 @@
     <row><cell>
      <HBox border='{new javax.swing.border.EtchedBorder()}'>
         <JLabel text='Status: '/>
-        <JLabel id="status_text" text='Nothing to do.'/>
+        <JLabel id="status_text" styleClass="ok" text='{status_msg}'/>
      </HBox>
     </cell></row>
     </Table>
